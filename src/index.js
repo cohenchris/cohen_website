@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./main_pages/Home/Home.js";
 import About from "./main_pages/About/About.js";
 import Resume from "./main_pages/Resume/Resume.js";
+import Projects from "./main_pages/Projects/Projects.js";
 
 const routing = (
   <Router>
@@ -15,6 +16,7 @@ const routing = (
       <Route path="/" exact component={Home} />
       <Route path="/about" component={About} />
       <Route path="/resume" component={Resume} />
+      <Route path="/projects" component={Projects} />
     </Switch>
   </Router>
 );

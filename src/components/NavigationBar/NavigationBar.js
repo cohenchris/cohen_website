@@ -11,7 +11,7 @@ const navLinkStyle = {
 export default class NavigationBar extends React.Component {
   render() {
     return (
-      <Navbar expand="sm" bg="light" variant="light" className="navBar">
+      <Navbar bg="light" variant="light" className="navBar">
         <Link to="/">
           <Navbar.Brand href="/">CHRIS COHEN</Navbar.Brand>
         </Link>
@@ -21,6 +21,11 @@ export default class NavigationBar extends React.Component {
             <Nav.Link>
               <Link className="navBarLinks" style={navLinkStyle} to="/resume">
                 resume
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link className="navBarLinks" style={navLinkStyle} to="/projects">
+                projects
               </Link>
             </Nav.Link>
             <Nav.Link>

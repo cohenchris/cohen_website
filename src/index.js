@@ -20,9 +20,9 @@ const routing = (
           <CSSTransition key={location.key} classNames="fade" timeout={200}>
             <Switch location={location}>
               <Route path="/" exact component={Home} />
-              <Route path="/about" component={About} />
-              <Route path="/resume" component={Resume} />
-              <Route path="/projects" component={Projects} />
+              <Route path="/about" exact component={About} />
+              <Route path="/resume" exact component={Resume} />
+              <Route path="/projects" exact component={Projects} />
             </Switch>
           </CSSTransition>
         </TransitionGroup>

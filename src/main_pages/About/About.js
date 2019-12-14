@@ -12,7 +12,6 @@ export default class About extends React.Component {
         <Container>
           <Row>
             <Col lg="auto" md="auto" sm="auto" xs="auto" xl="auto">
-              <h1>About</h1>
               <h3>My name is Chris Cohen</h3>
               <p>I grew up in Chesterfield, Missouri.</p>
               <p>

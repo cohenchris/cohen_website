@@ -1,15 +1,11 @@
 .navBarLinks * {
-  color: black;
   text-decoration: none;
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  text-decoration: none;
-  width: 50%;
-  font-family: "Orbitron", sans-serif;
-}
-.navBar {
   display: flex;
-  align-items: center;
-  font-family: "Orbitron", sans-serif;
+  text-decoration: none;
+  width: 100%;
+  font-family: "Courier Prime", monospace;
+  font-size: 130%;
 }

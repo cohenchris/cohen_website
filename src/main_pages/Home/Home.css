@@ -1,0 +1,16 @@
+.homeStyle {
+  position: fixed;
+  background-image: url("../../images/Skydiving1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: fixed;
+  background-size: cover;
+  display: flex;
+}
+
+.homeText {
+  color: white;
+  text-align: left;
+  font-family: "Courier Prime", monospace;
+  margin: 50px;
+}

@@ -3,33 +3,55 @@ import { Nav, Navbar, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./NavigationBar.css";
 
-const navLinkStyle = {
-  "text-decoration": "none",
-  color: "black"
-};
-
 export default class NavigationBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      navLinkStyle: {
+        "text-decoration": "none",
+        color: this.props.color
+      }
+    };
+  }
+
   render() {
     return (
-      <Navbar bg="light" variant="light" className="navBar">
-        <Link to="/">
-          <Navbar.Brand href="/">CHRIS COHEN</Navbar.Brand>
-        </Link>
-
+      <Navbar className="navBarLinks" fixed="bottom">
         <Col>
-          <Nav className="float-right">
+          <Nav>
             <Nav.Link>
-              <Link className="navBarLinks" style={navLinkStyle} to="/resume">
+              <Link
+                className="navBarLinks"
+                style={this.state.navLinkStyle}
+                to="/"
+              >
+                home
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link
+                className="navBarLinks"
+                style={this.state.navLinkStyle}
+                to="/resume"
+              >
                 resume
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className="navBarLinks" style={navLinkStyle} to="/projects">
+              <Link
+                className="navBarLinks"
+                style={this.state.navLinkStyle}
+                to="/projects"
+              >
                 projects
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link className="navBarLinks" style={navLinkStyle} to="/about">
+              <Link
+                className="navBarLinks"
+                style={this.state.navLinkStyle}
+                to="/about"
+              >
                 about
               </Link>
             </Nav.Link>

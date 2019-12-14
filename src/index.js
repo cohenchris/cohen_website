@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 // Routing pages
 import Home from "./main_pages/Home/Home.js";
@@ -12,12 +14,20 @@ import Projects from "./main_pages/Projects/Projects.js";
 
 const routing = (
   <Router>
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/resume" component={Resume} />
-      <Route path="/projects" component={Projects} />
-    </Switch>
+    <Route
+      render={({ location }) => (
+        <TransitionGroup>
+          <CSSTransition key={location.key} classNames="fade" timeout={200}>
+            <Switch location={location}>
+              <Route path="/" exact component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/resume" component={Resume} />
+              <Route path="/projects" component={Projects} />
+            </Switch>
+          </CSSTransition>
+        </TransitionGroup>
+      )}
+    />
   </Router>
 );
 

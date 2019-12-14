@@ -1,34 +1,38 @@
 import React from "react";
-import AwesomeSlider from "react-awesome-slider";
-import withAutoplay from "react-awesome-slider/dist/autoplay";
-import "react-awesome-slider/dist/styles.css";
-import { Container } from "react-bootstrap";
-
-import Skydiving1 from "../../images/Skydiving1.jpg";
-import ColoradoPanorama from "../../images/ColoradoPanorama.jpg";
-import MountainPicture from "../../images/MountainPicture.jpg";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
-const AutoplaySlider = withAutoplay(AwesomeSlider);
-export default class Home extends React.Component {
-  render() {
-    return (
-      <div>
-        <NavigationBar />
+import "./Home.css";
+import Email from "../../images/email.png";
+import LinkedIn from "../../images/linkedin.png";
+import GitHub from "../../images/github.png";
+
+export default function Home() {
+  return (
+    <div
+      style={{
+        width: "100%",
+        height: "100%"
+      }}
+      className="homeStyle"
+    >
+      <NavigationBar color="white" />
+      <div className="homeText">
+        <h1>Hi, I'm Chris Cohen</h1>
         <br />
+        <h5>Incoming Software Engineering Intern for Qualcomm</h5>
+        <h5>Computer Science student at Purdue University</h5>
         <br />
-        <Container>
-          <AutoplaySlider
-            play={true}
-            cancelOnInteraction={false} // should stop playing on user interaction
-            interval={3000}
-            bullets={true}
-          >
-            <div data-src={Skydiving1} />
-            <div data-src={ColoradoPanorama} />
-            <div data-src={MountainPicture} />
-          </AutoplaySlider>
-        </Container>
+        <a href="https://mailto:christopher.ryan.cohen@gmail.com">
+          <img src={Email} width="2%" alt="Email" />
+        </a>
+        {"        "}
+        <a href="https://www.linkedin.com/in/chris-cohen-purdue/">
+          <img src={LinkedIn} width="2%" alt="LinkedIn" />
+        </a>
+        {"        "}
+        <a href="https://github.com/cohenchris">
+          <img src={GitHub} width="2%" alt="GitHub" />
+        </a>
       </div>
-    );
-  }
+    </div>
+  );
 }

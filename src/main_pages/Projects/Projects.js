@@ -7,7 +7,7 @@ export default class Projects extends React.Component {
     return (
       <div className="projectsStyle">
         <NavigationBar color="black" />
-        <p>ye</p>
+        <h1>PROJECTS</h1>
       </div>
     );
   }

@@ -5,9 +5,12 @@ import "./Projects.css";
 export default class Projects extends React.Component {
   render() {
     return (
-      <div className="projectsStyle">
+      <div className="projectsBackground">
         <NavigationBar color="black" />
-        <h1>PROJECTS</h1>
+
+        <div className="projectsStyle">
+          <h1>PROJECTS</h1>
+        </div>
       </div>
     );
   }

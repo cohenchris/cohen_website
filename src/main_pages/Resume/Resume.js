@@ -7,12 +7,14 @@ import pdf_resume from "../../files/Cohen_Resume_9-19-19.pdf";
 export default class Resume extends React.Component {
   render() {
     return (
-      <div className="resumeStyle">
+      <div className="resumeBackground">
         <NavigationBar color="black" />
-        <br />
-        <Button variant="outline-info" href={pdf_resume}>
-          Get Resume
-        </Button>
+        <div className="resumeStyle">
+          <br />
+          <Button variant="outline-info" href={pdf_resume}>
+            Get Resume
+          </Button>
+        </div>
       </div>
     );
   }

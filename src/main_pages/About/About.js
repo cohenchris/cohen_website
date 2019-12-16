@@ -15,8 +15,8 @@ export default class About extends React.Component {
               <NavigationBar color="black" />
               <Col>
                 <img
-                  height="505.8"
-                  width="391.4"
+                  height="548.5"
+                  width="306.5"
                   src={ChicagoNavyPier}
                   alt="Me at Chicago's Navy Pier"
                 />
@@ -27,7 +27,7 @@ export default class About extends React.Component {
                   <br />
                   <p>
                     I'm currently a junior in Purdue University's Computer
-                    Science program, focusing on a blend of cybersecurity,
+                    Science program, focusing on a blend of cyber security,
                     software engineering, and systems programming.
                   </p>
                   <p>

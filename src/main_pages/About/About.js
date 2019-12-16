@@ -13,7 +13,7 @@ export default class About extends React.Component {
         <div className="aboutStyle">
           <Container>
             <Row>
-              <Col lg="auto" md="auto" sm="auto" xs="auto" xl="auto">
+              <Col>
                 <img
                   height="505.8"
                   width="391.4"
@@ -42,12 +42,11 @@ export default class About extends React.Component {
                   <p>
                     This field can consume your life if you let it, so I make
                     sure that I keep mine well-balanced. Being from St. Louis, I
-                    love to eat and cook different types of food One of my
-                    favorite things to do is revive old family recipes and
-                    tweaking them to perfection. My favorite stress-relieving
-                    hobby, though, is playing the cello, which I have done for
-                    11 years. I currently play in the Purdue Symphony Orchestra
-                    under Professor Adam Bodony.
+                    love to eat and cook different types of food. One of my
+                    favorite things to do is revive old family recipes and tweak
+                    them to perfection. My favorite stress-relieving hobby,
+                    though, has to be playing the cello, which I have done for
+                    11 years. I currently play in the Purdue Symphony Orchestra.
                   </p>
                 </div>
               </Col>

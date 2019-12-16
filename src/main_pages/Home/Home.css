@@ -7,14 +7,14 @@
 }
 
 .homeText {
-  color: whitesmoke;
+  color: white;
   text-align: left;
   font-family: "Courier Prime", monospace;
   margin: 50px;
 }
 
 .homeTextMobile {
-  color: whitesmoke;
+  color: white;
   text-align: bottom;
   font-family: "Co1urier Prime", monospace;
   margin: 50px;
@@ -24,7 +24,7 @@
 }
 
 .contactInfoMobile {
-  color: whitesmoke;
+  color: white;
   text-align: left;
   font-family: "Courier Prime", monospace;
   margin: 20px;

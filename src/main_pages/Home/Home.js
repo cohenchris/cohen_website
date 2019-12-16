@@ -49,15 +49,13 @@ const ContactInfo = () => {
   return (
     <div>
       <a href="https://mailto:christopher.ryan.cohen@gmail.com">
-        <img src={Email} width="40" alt="Email" />
+        <img src={Email} width="40" alt="Email" hspace="10" />
       </a>
-      {"        "}
       <a href="https://www.linkedin.com/in/chris-cohen-purdue/">
-        <img src={LinkedIn} width="40" alt="LinkedIn" />
+        <img src={LinkedIn} width="40" alt="LinkedIn" hspace="10" />
       </a>
-      {"        "}
       <a href="https://github.com/cohenchris">
-        <img src={GitHub} width="40" alt="GitHub" />
+        <img src={GitHub} width="40" alt="GitHub" hspace="10" />
       </a>
     </div>
   );

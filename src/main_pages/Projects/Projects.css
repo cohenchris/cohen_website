@@ -1,6 +1,5 @@
 .projectsBackground {
-  position: fixed;
-  background-color: whitesmoke;
+  background-color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: fixed;
@@ -11,4 +10,13 @@
 .projectsStyle {
   font-family: "Courier Prime", monospace;
   margin: 50px;
+}
+
+p {
+  margin: 5;
+}
+
+li {
+  color: teal;
+  text-transform: uppercase;
 }

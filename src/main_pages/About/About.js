@@ -9,10 +9,10 @@ export default class About extends React.Component {
   render() {
     return (
       <div className="aboutBackground">
-        <NavigationBar color="black" />
         <div className="aboutStyle">
           <Container>
             <Row>
+              <NavigationBar color="black" />
               <Col>
                 <img
                   height="505.8"

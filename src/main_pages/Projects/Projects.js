@@ -6,13 +6,23 @@ export default class Projects extends React.Component {
   render() {
     return (
       <div className="projectsBackground">
-        <NavigationBar color="black" />
+        <NavigationBar color="teal" />
 
         <div className="projectsStyle">
-          <h1 style={{ color: "teal" }}>PROJECTS</h1>
+          <h1
+            style={{
+              color: "teal",
+              "font-family": "Francois One, sans-serif",
+              "text-align": "center"
+            }}
+          >
+            <strong>PROJECTS</strong>
+          </h1>
           <ul>
             <li>
-              <strong>Terminal Shell in C</strong>
+              <h4>
+                <strong>Terminal Shell in C</strong>
+              </h4>
             </li>
             <div>
               <p>
@@ -65,7 +75,9 @@ export default class Projects extends React.Component {
               </p>
             </div>
             <li>
-              <strong>Memory Allocator in C</strong>
+              <h4>
+                <strong>Memory Allocator in C</strong>
+              </h4>
             </li>
             <p>
               - This large project taught me the inner workings of memory
@@ -77,7 +89,9 @@ export default class Projects extends React.Component {
               fit, best fit, worst fit, and next fit.
             </p>
             <li>
-              <strong>HTTP/HTTPS Multithreaded Web Server in C</strong>
+              <h4>
+                <strong>HTTP/HTTPS Multithreaded Web Server in C</strong>
+              </h4>
             </li>
             <p>
               - This assignment gave me valuable introductory networking
@@ -101,7 +115,9 @@ export default class Projects extends React.Component {
               </strong>
             </p>
             <li>
-              <strong>Unix Task Manager in C</strong>
+              <h4>
+                <strong>Unix Task Manager in C</strong>
+              </h4>
             </li>
             <p>
               - During this group project, I was assigned to explore and
@@ -112,9 +128,11 @@ export default class Projects extends React.Component {
               to handle.
             </p>
             <li>
-              <strong>
-                Twistter (Twister + Reddit Crossover) in Javascript (ReactJS)
-              </strong>
+              <h4>
+                <strong>
+                  Twistter (Twister + Reddit Crossover) in Javascript (ReactJS)
+                </strong>
+              </h4>
             </li>
             <p>
               - This group project focused on the SCRUM philosophy of software
@@ -128,7 +146,9 @@ export default class Projects extends React.Component {
               difficult part was updating the GUI based on who is logged in.
             </p>
             <li>
-              <strong>NLP Database Parsing in Python</strong>
+              <h4>
+                <strong>NLP Database Parsing in Python</strong>
+              </h4>
             </li>
             <p>
               - During the Summer of 2019, I had the pleasure of working for the
@@ -138,7 +158,9 @@ export default class Projects extends React.Component {
               work that I contributed to has a patent pending as well.
             </p>
             <li>
-              <strong>printf() from scratch in ARM Assembly</strong>
+              <h4>
+                <strong>printf() from scratch in ARM Assembly</strong>
+              </h4>
             </li>
             <p>
               - In my Computer Architecture course, we had to implement
@@ -152,7 +174,9 @@ export default class Projects extends React.Component {
               shifting is not possible.
             </p>
             <li>
-              <strong>Ubuntu Tweaking</strong>
+              <h4>
+                <strong>Ubuntu Tweaking</strong>
+              </h4>
             </li>
             <p>
               - One of my main hobbies is tweaking and maintaining Ubuntu on my
@@ -164,7 +188,9 @@ export default class Projects extends React.Component {
               these are on my GitHub.
             </p>
             <li>
-              <strong>DNS-Level Adblocker</strong>
+              <h4>
+                <strong>DNS Level Adblocker</strong>
+              </h4>
             </li>
             <p>
               - Once I completed my Computer Architecture course, I had a

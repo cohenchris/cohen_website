@@ -58,9 +58,7 @@ export default function NavigationBar(props) {
       <Col>
         <Button
           variant={
-            props.color.localeCompare("black")
-              ? "outline-light"
-              : "outline-dark"
+            props.color.localeCompare("teal") ? "outline-light" : "outline-dark"
           }
           className="menuStyle"
           onClick={handleShow}

@@ -12,7 +12,7 @@ export default class About extends React.Component {
         <div className="aboutStyle">
           <Container>
             <Row>
-              <NavigationBar color="black" />
+              <NavigationBar color="teal" />
               <Col>
                 <img
                   height="548.5"
@@ -23,13 +23,21 @@ export default class About extends React.Component {
               </Col>
               <Col>
                 <div className="paragraph">
-                  <h3 style={{ color: "teal" }}>My name is Chris Cohen</h3>
+                  <h2
+                    style={{
+                      color: "teal",
+                      "font-family": "Francois One, sans-serif"
+                    }}
+                  >
+                    My name is Chris Cohen
+                  </h2>
                   <br />
                   <p>
                     I'm currently a junior in Purdue University's Computer
                     Science program, focusing on a blend of cyber security,
                     software engineering, and systems programming.
                   </p>
+
                   <p>
                     I pride myself on having experience with a multitude of
                     programming and markup languages, though my primary
@@ -39,6 +47,7 @@ export default class About extends React.Component {
                     Summer of 2020, I will be interning for Qualcomm in San
                     Diego, where I will be working in that type of field.
                   </p>
+
                   <p>
                     This field can consume your life if you let it, so I make
                     sure that I keep mine well-balanced. Being from St. Louis, I

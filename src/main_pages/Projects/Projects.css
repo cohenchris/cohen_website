@@ -20,11 +20,12 @@
   }
 }
 
-p {
-  margin: 5;
-}
-
 li {
   color: teal;
   text-transform: uppercase;
+  list-style: none;
+}
+
+h4 strong {
+  font-family: "Francois One", sans-serif;
 }

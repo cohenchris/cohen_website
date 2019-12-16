@@ -7,7 +7,15 @@
   height: 100%;
   width: 100%;
 }
+
 .aboutStyle {
   font-family: "Courier Prime", monospace;
   margin: 50px;
+}
+
+@media (max-width: 650px) {
+  .aboutStyle {
+    font-family: "Courier Prime", monospace;
+    margin: 50px;
+  }
 }

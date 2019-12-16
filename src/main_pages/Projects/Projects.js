@@ -178,6 +178,8 @@ export default class Projects extends React.Component {
           </ul>
           <br />
           <br />
+          <br />
+          <br />
         </div>
       </div>
     );

@@ -12,3 +12,10 @@
   font-family: "Courier Prime", monospace;
   margin: 50px;
 }
+
+@media (max-width: 650px) {
+  .resumeStyle {
+    font-family: "Courier Prime", monospace;
+    margin: 10px;
+  }
+}

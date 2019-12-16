@@ -11,7 +11,7 @@ export default class Resume extends React.Component {
         <NavigationBar color="black" />
         <div className="resumeStyle">
           <br />
-          <Button variant="outline-info" href={pdf_resume}>
+          <Button variant="outline-dark" href={pdf_resume}>
             Get Resume
           </Button>
         </div>

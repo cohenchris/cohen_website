@@ -16,10 +16,17 @@ export default function NavigationBar(props) {
   const handleShow = () => setShow(true);
 
   let { width } = useWindowDimensions();
+  let bg_color = navLinkStyle.color.localeCompare("white")
+    ? "rgba(255, 255, 255, 1)"
+    : "rgba(255, 255, 255, 0)";
 
   if (width >= 650) {
     return (
-      <Navbar className="navBarLinks" fixed="bottom">
+      <Navbar
+        className="navBarLinks"
+        fixed="bottom"
+        style={{ "background-color": bg_color }}
+      >
         <Col>
           <Nav>
             <Nav.Link>
@@ -63,8 +70,9 @@ export default function NavigationBar(props) {
 
         <Modal
           show={show}
+          size="xl"
           onHide={handleClose}
-          dialogClassName="modalFullscreen"
+          className="modalFullscreen"
         >
           <Modal.Body
             className="modalLinks"

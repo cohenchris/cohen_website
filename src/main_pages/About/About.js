@@ -12,8 +12,8 @@ export default class About extends React.Component {
         <div className="aboutStyle">
           <Container>
             <Row>
-              <NavigationBar color="teal" />
-              <Col>
+              <Col lg="auto" md="auto" sm="auto" xl="auto" xs="auto">
+                <NavigationBar color="teal" />
                 <img
                   height="548.5"
                   width="306.5"

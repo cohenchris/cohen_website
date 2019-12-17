@@ -1,5 +1,4 @@
 .resumeBackground {
-  position: fixed;
   background-color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,6 +10,7 @@
 .resumeStyle {
   font-family: "Courier Prime", monospace;
   margin: 90px;
+  margin-top: 10px;
 }
 
 @media (max-width: 650px) {
@@ -18,4 +18,14 @@
     font-family: "Courier Prime", monospace;
     margin: 10px;
   }
+}
+
+li {
+  list-style: none;
+}
+
+li h3 strong {
+  color: teal;
+  text-transform: uppercase;
+  list-style: none;
 }

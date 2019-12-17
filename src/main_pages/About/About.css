@@ -11,6 +11,7 @@
 .aboutStyle {
   font-family: "Courier Prime", monospace;
   margin: 90px;
+  margin-top: 10px;
 }
 
 @media (max-width: 650px) {

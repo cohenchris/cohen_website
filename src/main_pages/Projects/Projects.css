@@ -11,6 +11,7 @@
 .projectsStyle {
   font-family: "Courier Prime", monospace;
   margin: 90px;
+  margin-top: 10px;
 }
 
 @media (max-width: 650px) {
@@ -20,7 +21,7 @@
   }
 }
 
-li {
+li h4 strong {
   color: teal;
   text-transform: uppercase;
   list-style: none;

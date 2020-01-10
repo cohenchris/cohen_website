@@ -65,8 +65,8 @@ export default class Resume extends React.Component {
               <ul>
                 <li>
                   <p>
-                    Python, C, Java, Bash, ReactJS, ARM Assembly, HTML, CSS,
-                    LaTeX
+                    Python, C, C++, Java, Bash, ReactJS, ARM Assembly, HTML,
+                    CSS, LaTeX
                   </p>
                 </li>
               </ul>
@@ -85,6 +85,13 @@ export default class Resume extends React.Component {
               </h5>
               <p style={{ "font-size": "14px", color: "teal" }}>
                 Software Engineering Intern | May 2019 - Aug. 2019
+              </p>
+              <br />
+              <h5>
+                <strong>Qualcomm, QGOV Division</strong>
+              </h5>
+              <p style={{ "font-size": "14px", color: "teal" }}>
+                Software Engineering Intern | --Coming Summer 2020--
               </p>
               <br />
               <h5>

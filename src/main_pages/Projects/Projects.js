@@ -89,6 +89,37 @@ export default class Projects extends React.Component {
             </p>
             <li>
               <h4>
+                <strong>Sudoku Solver in C++</strong>
+              </h4>
+              <li>
+                <p>
+                  - During my 2019-2020 Winter break, I decided to teach myself
+                  C++, and challenge myself with a project that I had no idea
+                  how to start.
+                </p>
+                <p>
+                  - I bought a sudoku book and began completing puzzles to get a
+                  good idea of how these puzzles could be solved algorithmically
+                  with as little guessing as possible - I ended up implementing
+                  5 different algorithms, which helped me complete around 40-50%
+                  of boards that I threw at it. The challenge, though, was the
+                  rest of the boards
+                </p>
+                <p>
+                  - To finish everything else off, I implemented a recursive
+                  brute force algorithm. Basically, the idea was, when the
+                  program got stuck, solve a random Cell with a random
+                  candidate, then go on as usual. If the program got stuck
+                  again, it would recurse again, choosing another random value
+                  for another random Cell. If there were any unsolved Cells with
+                  no candidates, that brute force attempt failed, and another
+                  random candidate from the original Cell was chosen. If all
+                  candidates from that Cell failed, the board is unsolvable.
+                </p>
+              </li>
+            </li>
+            <li>
+              <h4>
                 <strong>HTTP/HTTPS Multithreaded Web Server in C</strong>
               </h4>
             </li>
@@ -180,11 +211,18 @@ export default class Projects extends React.Component {
             <p>
               - One of my main hobbies is tweaking and maintaining Ubuntu on my
               laptop, which is a great way for me to learn more about how Unix
-              works. I have written numerous bash scripts to automate some
-              mundane tasks, and heavily customized my .vimrc and .bashrc. I
-              enjoy customizing my workflow for efficiency, using a tiling
-              window manager (i3) and a task bar (polybar). The dot files for
-              these are on my GitHub.
+              works. I enjoy customizing my workflow for efficiency, using a
+              tiling window manager (i3) and a task bar (polybar). The dot files
+              for these are on my GitHub.
+            </p>
+            <p>
+              - I have written numerous bash scripts to automate some mundane
+              tasks, and heavily customized my .vimrc and .bashrc. I have also
+              written a pair of scripts that helps me maintain my Ubuntu setup
+              between computers. One of them automatically pulls the most recent
+              dotfiles off of my computer and pushes them to GitHub. The other
+              one automatically pulls the most recent dotfiles off of GitHub and
+              puts them in the right place.
             </p>
             <li>
               <h4>

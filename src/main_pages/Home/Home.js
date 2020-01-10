@@ -48,7 +48,7 @@ export default function Home() {
 const ContactInfo = () => {
   return (
     <div>
-      <a href="https://mailto:christopher.ryan.cohen@gmail.com">
+      <a href="mailto:chriscohen@chriscohen.dev">
         <img src={Email} width="40" alt="Email" hspace="10" />
       </a>
       <a href="https://www.linkedin.com/in/chris-cohen-purdue/">

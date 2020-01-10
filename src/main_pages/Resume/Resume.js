@@ -2,7 +2,7 @@ import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import "./Resume.css";
 import { Button } from "react-bootstrap";
-import pdf_resume from "../../files/Cohen_Resume_9-19-19.pdf";
+import pdf_resume from "../../files/Cohen_Resume_1-10-20.pdf";
 
 export default class Resume extends React.Component {
   render() {

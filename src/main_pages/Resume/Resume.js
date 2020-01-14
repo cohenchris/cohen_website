@@ -5,6 +5,9 @@ import { Button } from "react-bootstrap";
 import pdf_resume from "../../files/Cohen_Resume_1-10-20.pdf";
 
 export default class Resume extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="resumeBackground">

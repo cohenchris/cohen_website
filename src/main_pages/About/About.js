@@ -60,6 +60,11 @@ export default class About extends React.Component {
                 </div>
               </Col>
             </Row>
+            <p>Visitors:</p>
+            <script
+              type="text/javascript"
+              src="//counter.websiteout.net/js/36/0/0/1"
+            ></script>
           </Container>
         </div>
       </div>

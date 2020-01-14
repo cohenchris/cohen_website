@@ -6,6 +6,9 @@ import "./About.css";
 import ChicagoNavyPier from "../../images/ChicagoNavyPierCropped.jpg";
 
 export default class About extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="aboutBackground">
@@ -49,13 +52,13 @@ export default class About extends React.Component {
                   </p>
 
                   <p>
-                    This field can consume your life if you let it, so I make
-                    sure that I keep mine well-balanced. Being from St. Louis, I
-                    love to eat and cook different types of food. One of my
-                    favorite things to do is revive old family recipes and tweak
-                    them to perfection. My favorite stress-relieving hobby,
-                    though, has to be playing the cello, which I have done for
-                    11 years. I currently play in the Purdue Symphony Orchestra.
+                    Computer Science can consume your life if you let it, so I
+                    make sure that I avoid that. Being from St. Louis, I love to
+                    eat and cook different types of food. One of my favorite
+                    things to do is revive old family recipes and tweak them to
+                    perfection. My hobby, though, has to be playing the cello,
+                    which I have done for 11 years. I currently play in the
+                    Purdue Symphony Orchestra.
                   </p>
                 </div>
               </Col>

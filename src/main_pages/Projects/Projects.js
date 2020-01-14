@@ -3,6 +3,9 @@ import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import "./Projects.css";
 
 export default class Projects extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className="projectsBackground">

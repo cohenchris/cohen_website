@@ -15,10 +15,10 @@ export default class About extends React.Component {
         <br/>
         <br/>
         <div>
-        <NavigationBar color="teal" />
           <Container className="aboutStyle">
             <Row>
               <Col lg="auto" md="auto" sm="auto" xl="auto" xs="auto">
+              <NavigationBar color="teal" />
                 <img
                   width="370px"
                   height="auto"

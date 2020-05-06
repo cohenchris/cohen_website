@@ -55,7 +55,9 @@ export default class Projects extends React.Component {
             <p>
               - I temporarily mapped the subdomain 'webserver.chriscohen.dev' to the IP of the server that was
               running the honeypot. In just a few days, I got hundreds of requests. The full analysis and breakdown
-              of the requests can be read in its GitHub repository, linked above.
+              of the requests can be read in its GitHub repository, linked above. If you'd like to test it for yourself,
+              an interactive script is available that installs all dependencies, sets up the local MySQL server to log,
+              and creates a script that starts the server that serves the IP of your choosing.
             </p>
             <br/>
             <br/>

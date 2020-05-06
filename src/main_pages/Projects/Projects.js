@@ -18,15 +18,54 @@ export default class Projects extends React.Component {
               "text-align": "center"
             }}
           >
-            <strong>PROJECTS</strong>
+            <strong>NOTABLE PROJECTS</strong>
           </h1>
           <ul>
+
+          <li>
+              <h4>
+                <strong>Webserver Honeypot in Python</strong>
+              </h4>
+            </li>  
+            <p>
+              - Realizing that I lacked experience in cybersecurity, I decided to 
+              take the plunge with a large personal project. A honeypot is a term 
+              used in cybersecurity describing a network entity that purposefully 
+              lures attackers away from some more important part of a network. Among 
+              other functionalities, I decided to implement this. The full project proposal, 
+              source code, and final analysis/report can be found on 
+              my <a href="https://github.com/cohenchris/webserver_honeypot">GitHub</a>.
+            </p>
+            <p>
+              - I began by creating a robust, legitimate-looking HTTP web server. The
+               final product implemented 14 different response codes, and support for 10 
+               different file types. There is also full-fledged graphical directory browsing,
+                starting at the 'server_root' folder.
+            </p>
+            <p>
+              - Each request made to the server is stored in a local MySQL database, recording the
+               number of the request, time requested, source IP, source port, and hostname if the 
+               IP is known. This logging proved to be extremely useful for later analysis.
+            </p>
+            <p>
+              - Parsing the server logs, I wrote a blacklisting program that would automatically ban
+               any IP that attempted to connect 10 or more times in 3 seconds, and returned a specialized
+               HTTP response code to the client. This helped decrease any excess load on the honeypot.
+            </p>
+            <p>
+              - I temporarily mapped the subdomain 'webserver.chriscohen.dev' to the IP of the server that was
+              running the honeypot. In just a few days, I got hundreds of requests. The full analysis and breakdown
+              of the requests can be read in its GitHub repository, linked above.
+            </p>
+            <br/>
+            <br/>
+
+
             <li>
               <h4>
-                <strong>Terminal Shell in C</strong>
+                <strong>Shell Interpreter in C</strong>
               </h4>
-            </li>
-            <div>
+            </li>              
               <p>
                 - This month-long project covered an absurd amount of content.
                 We were tasked to create what is essentially a bash clone. The
@@ -75,30 +114,20 @@ export default class Projects extends React.Component {
                 history was pretty straightforward, and I ended up imitating
                 bash's ctrl-R searching mode.
               </p>
-            </div>
-            <li>
-              <h4>
-                <strong>Memory Allocator in C</strong>
-              </h4>
-            </li>
-            <p>
-              - This large project taught me the inner workings of memory
-              allocation. I created a program that has functionality for
-              malloc(), free(), realloc(), and calloc(). The main, most
-              difficult parts were managing large blocks of heap memory obtained
-              by sbrk() to avoid over-allocation and fragmentation of memory.
-              Multiple different block-finding methods were implemented - first
-              fit, best fit, worst fit, and next fit.
-            </p>
+              <br/>
+              <br/>
+            
+
             <li>
               <h4>
                 <strong>Sudoku Solver in C++</strong>
               </h4>
-              <li>
+              </li>
                 <p>
                   - During my 2019-2020 Winter break, I decided to teach myself
                   C++, and challenge myself with a project that I had no idea
-                  how to start.
+                  how to start. The full source code of this project can be found 
+                  on <a href="https://github.com/cohenchris/sudoku_solver">GitHub</a>.
                 </p>
                 <p>
                   - I bought a sudoku book and began completing puzzles to get a
@@ -119,47 +148,28 @@ export default class Projects extends React.Component {
                   random candidate from the original Cell was chosen. If all
                   candidates from that Cell failed, the board is unsolvable.
                 </p>
-              </li>
-            </li>
+                <br/>
+              <br/>
+
+
             <li>
               <h4>
-                <strong>HTTP/HTTPS Multithreaded Web Server in C</strong>
+                <strong>Memory Allocation Library in C</strong>
               </h4>
             </li>
             <p>
-              - This assignment gave me valuable introductory networking
-              information. We first learned about HTTP request/response formats.
-              To give my server some security, I learned about basic
-              authentication using the 'Authorization' header. I also ended up
-              being able to serve static and executable files to the client.
+              - This large project taught me the inner workings of memory
+              allocation. I created a program that has functionality for
+              malloc(), free(), realloc(), and calloc(). The main, most
+              difficult parts were managing large blocks of heap memory obtained
+              by sbrk() to avoid over-allocation and fragmentation of memory.
+              Multiple different block-finding methods were implemented - first
+              fit, best fit, worst fit, and next fit.
             </p>
-            <p>
-              - One of the more important parts of this server was learning
-              about different types of <strong>concurrent processing</strong>.
-              The server that I created supported concurrency through forking,
-              threading, and using a thread pool for each request. Using mutexes
-              I made sure that the server was thread safe.
-            </p>
-            <p>
-              - Due to this project,{" "}
-              <strong>
-                I am very comfortable with semaphores, mutexes, forking, and
-                threading.
-              </strong>
-            </p>
-            <li>
-              <h4>
-                <strong>Unix Task Manager in C</strong>
-              </h4>
-            </li>
-            <p>
-              - During this group project, I was assigned to explore and
-              understand what goes on in /proc on a Unix system, and pulled
-              information such as system information, process name, PID, process
-              resources, disk size, and disk usage. From there, I put the
-              information into easily-accessible structs for the front-end team
-              to handle.
-            </p>
+            <br/>
+            <br/>
+
+
             <li>
               <h4>
                 <strong>
@@ -178,6 +188,28 @@ export default class Projects extends React.Component {
               well as a Direct Messaging system between users. The most
               difficult part was updating the GUI based on who is logged in.
             </p>
+            <br/>
+            <br/>
+
+
+            <li>
+              <h4>
+                <strong>Unix Task Manager in C</strong>
+              </h4>
+            </li>
+            <p>
+              - During this group project, I was assigned to explore and
+              understand what goes on in /proc on a Unix system, and pulled
+              information such as system information, process name, PID, process
+              resources, disk size, and disk usage. From there, I put the
+              information into easily-accessible structs for the front-end team
+              to handle.
+            </p>
+            <br/>
+            <br/>
+
+
+
             <li>
               <h4>
                 <strong>NLP Database Parsing in Python</strong>
@@ -190,6 +222,10 @@ export default class Projects extends React.Component {
               language processing algorithm to process failure databases. The
               work that I contributed to has a patent pending as well.
             </p>
+            <br/>
+            <br/>
+
+
             <li>
               <h4>
                 <strong>printf() from scratch in ARM Assembly</strong>
@@ -206,27 +242,36 @@ export default class Projects extends React.Component {
               tougher than %x since base 10 is not a multiple of 2, so bit
               shifting is not possible.
             </p>
+            <br/>
+            <br/>
+
+            
             <li>
               <h4>
-                <strong>Ubuntu Tweaking</strong>
+                <strong>Tweaking Linux</strong>
               </h4>
             </li>
             <p>
               - One of my main hobbies is tweaking and maintaining Ubuntu on my
-              laptop, which is a great way for me to learn more about how Unix
+              laptop and desktop, which is a great way for me to learn more about how Unix
               works. I enjoy customizing my workflow for efficiency, using a
-              tiling window manager (i3) and a task bar (polybar). The dot files
-              for these are on my GitHub.
+              tiling window manager (i3) and a task bar (polybar). The dotfiles
+              for these are on my <a href="https://github.com/cohenchris/dotfiles">GitHub</a>.
             </p>
             <p>
               - I have written numerous bash scripts to automate some mundane
-              tasks, and heavily customized my .vimrc and .bashrc. I have also
-              written a pair of scripts that helps me maintain my Ubuntu setup
-              between computers. One of them automatically pulls the most recent
-              dotfiles off of my computer and pushes them to GitHub. The other
-              one automatically pulls the most recent dotfiles off of GitHub and
-              puts them in the right place.
+              tasks, and heavily customized my .vimrc and .bashrc. I currently use  
+              <a href="https://yadm.io/"> YADM</a> (Yet Another Dotfiles Manager) to 
+              keep track of all of my dotfiles. With such a heavily customized workflow,
+              It makes it easy to transition between computers when needed. It even
+              features a bootstrapping script that takes a fresh install of Linux and 
+              changes the settings to exactly what I want them to, an exact copy of my
+              normal workstation.
             </p>
+            <br/>
+            <br/>
+
+
             <li>
               <h4>
                 <strong>DNS Level Adblocker</strong>
@@ -241,6 +286,17 @@ export default class Projects extends React.Component {
               them before they even reach your device. I particularly like it
               because it blocks advertisements AND trackers.
             </p>
+            <br/>
+            <br/>
+
+            
+            <li>
+              <h4>
+                <strong>...And many more!</strong>
+              </h4>
+            </li>
+
+
           </ul>
           <br />
           <br />

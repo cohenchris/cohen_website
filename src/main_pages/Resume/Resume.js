@@ -2,7 +2,7 @@ import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import "./Resume.css";
 import { Button } from "react-bootstrap";
-import pdf_resume from "../../files/Cohen_Resume_1-10-20.pdf";
+import pdf_resume from "../../files/resume.pdf";
 
 export default class Resume extends React.Component {
   componentDidMount() {
@@ -37,41 +37,58 @@ export default class Resume extends React.Component {
                     Bachelor's Degree in Computer Science -{" "}
                     <strong>3.83 GPA</strong>
                   </p>
-                  <p>Security and Software Engineering Tracks</p>
-                  <p>Purdue Dean's List and Semester Honors</p>
+                  <p>Cybersecurity and Software Engineering Tracks</p>
+                  <p>6x Dean's List and 5x Semester Honors</p>
                 </li>
               </ul>
             </div>
             <br />
             <br />
-
             <li>
               <h3>
                 <strong>Technical Skills</strong>
               </h3>
             </li>
             <div>
+
               <h5>
-                <strong>Software/Hardware</strong>
+                <strong>Languages</strong>
               </h5>
               <ul>
                 <li>
                   <p>
-                    UNIX, VSCode, PyCharm, IntelliJ, VIM, Anaconda, Android
-                    Studio, Raspberry Pi
+                    C, C++, Python, ARM Assembly, x86 Assembly, Bash, Javascript, HTML/CSS, LaTeX
                   </p>
                 </li>
               </ul>
+
               <h5>
-                <strong>Computer Programming and Markup</strong>
+                <strong>Memory Management</strong>
               </h5>
               <ul>
-                <li>
-                  <p>
-                    Python, C, C++, Java, Bash, ReactJS, ARM Assembly, HTML,
-                    CSS, LaTeX
-                  </p>
-                </li>
+                <li>Paging, Virtualization</li>
+                <li>Cache Memory Hierarchy</li>
+                <li>Stack and Heap Management for ARM and x86</li>
+              </ul>
+
+              <h5>
+                <strong>OS and Systems Programming</strong>
+              </h5>
+              <ul>
+                <li>Software/Hardware Interrupts and Device Management</li>
+                <li>Asynchronous Inter-Process Communication</li>
+                <li>Return-Oriented Programming</li>
+                <li>Concurrency and Parallelism (Semaphores, Locks, Forking, Threading, Scheduling)</li>
+              </ul>
+
+              <h5>
+                <strong>OSI/ISO 7-Layer Model</strong>
+              </h5>
+              <ul>
+                <li>TCP, UDP, HTTP</li>
+                <li>IP addressing/routing, DHCP, DNS translation</li>
+                <li>MAC addressing/routing, ARP</li>
+                <li>Basic cryptography and security approaches</li>
               </ul>
             </div>
             <br />
@@ -94,17 +111,19 @@ export default class Resume extends React.Component {
                 <strong>Qualcomm, QGOV Division</strong>
               </h5>
               <p style={{ "font-size": "14px", color: "teal" }}>
-                Software Engineering Intern | --Coming Summer 2020--
+                Software Engineering Intern | May 2020 - Present
               </p>
               <br />
               <h5>
                 <strong>Classes Taken</strong>
               </h5>
               <ul>
+                <li>Computer Architecture</li>
+                <li>Data Structures and Algorithms</li>
                 <li>Systems Programming</li>
                 <li>Software Engineering</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Computer Architecture</li>
+                <li>Operating Systems</li>
+                <li>Computer Networks</li>
               </ul>
             </div>
             <br />
@@ -122,7 +141,7 @@ export default class Resume extends React.Component {
                 </strong>
               </h5>
               <p style={{ "font-size": "14px", color: "teal" }}>
-                CS25000 (Computer Architecture) | Aug. 2019 - Present
+                CS25000 (Computer Architecture) | Aug. 2019 - May 2020
               </p>
               <br />
               <h5>

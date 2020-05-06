@@ -3,7 +3,7 @@ import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import "react-awesome-slider/dist/styles.css";
 import { Row, Col, Container } from "react-bootstrap";
 import "./About.css";
-import ChicagoNavyPier from "../../images/ChicagoNavyPierCropped.jpg";
+import Me from "../../images/me.png";
 
 export default class About extends React.Component {
   componentDidMount() {
@@ -12,16 +12,18 @@ export default class About extends React.Component {
   render() {
     return (
       <div className="aboutBackground">
-        <div className="aboutStyle">
-          <Container>
+        <br/>
+        <br/>
+        <div>
+          <Container className="aboutStyle">
+          <NavigationBar color="teal" />
             <Row>
               <Col lg="auto" md="auto" sm="auto" xl="auto" xs="auto">
-                <NavigationBar color="teal" />
                 <img
-                  height="548.5"
-                  width="306.5"
-                  src={ChicagoNavyPier}
-                  alt="Me at Chicago's Navy Pier"
+                  width="370px"
+                  height="auto"
+                  src={Me}
+                  alt="Me in front of the Elliot Hall of Music at Purdue University"
                 />
               </Col>
               <Col>
@@ -47,18 +49,17 @@ export default class About extends React.Component {
                     experience lies in low-level work like C and Assembly. I am
                     particularly interested in fields concerning systems
                     programming, embedded systems, or cyber security. During the
-                    Summer of 2020, I will be interning for Qualcomm in San
-                    Diego, where I will be working in that type of field.
+                    Summer of 2020, I will be remotely interning for Qualcomm, 
+                    where I will be working in embedded software engineering.
                   </p>
 
                   <p>
-                    Computer Science can consume your life if you let it, so I
-                    make sure that I avoid that. Being from St. Louis, I love to
-                    eat and cook different types of food. One of my favorite
-                    things to do is revive old family recipes and tweak them to
-                    perfection. My hobby, though, has to be playing the cello,
-                    which I have done for 11 years. I currently play in the
-                    Purdue Symphony Orchestra.
+                    Fortunately, I have other hobbies besides Computer Science.
+                    Being from St. Louis, I consider myself a huge foodie. One 
+                    of my favorite things to do is revive old family recipes and 
+                    tweak them to perfection. One of my favorite hobbies, though,
+                    is playing the cello, which I have done for 11 years. I currently
+                    play in the Purdue Symphony Orchestra.
                   </p>
                 </div>
               </Col>

@@ -15,8 +15,8 @@ export default class About extends React.Component {
         <br/>
         <br/>
         <div>
+        <NavigationBar color="teal" />
           <Container className="aboutStyle">
-          <NavigationBar color="teal" />
             <Row>
               <Col lg="auto" md="auto" sm="auto" xl="auto" xs="auto">
                 <img

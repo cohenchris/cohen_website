@@ -9,15 +9,18 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
+    "es-abstract": "^1.17.5",
     "js-file-download": "^0.4.11",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-awesome-slider": "^2.4.0",
     "react-bootstrap": "^1.0.1",
+    "react-collapse": "^5.0.1",
     "react-dfb": "^1.0.4",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.4.0"
+    "react-ui-cards": "^2.0.0",
+    "typeface-roboto": "0.0.75"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-dev-utils": "^10.2.1",
+    "react-scripts": "^3.4.1"
   }
 }

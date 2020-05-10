@@ -9,25 +9,25 @@ const muiBaseTheme = createMuiTheme();
 export default function ProjectCard(props) {
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const modalHide = () => setShow(false);
+  const modalShow = () => setShow(true);
 
   return (
       <Col>
         <MuiThemeProvider theme={createMuiTheme({
-          overrides: ProjectCard.getTheme(muiBaseTheme)
+          palette: {
+            type: 'dark'
+          },
+          overrides: ProjectCard.getTheme(muiBaseTheme),
         })} >
-          <Card className="card" variant="outlined">
-              <CardMedia className="pic" component="img" src={props.img_src} />
+          <Card className="card" variant="outlined" onClick={modalShow}>
+              {/*<CardMedia className="pic" component="img" src={props.img_src} />*/}
               <CardContent className="content">
                   <Typography variant="h4" className="title" gutterBottom>
                     {props.title.toUpperCase()}
                   </Typography>
                   <Typography className="body">
                     {props.desc}
-                  </Typography>
-                  <Typography className="link">
-                    <Link onClick={handleShow}>LEARN MORE</Link>
                   </Typography>
               </CardContent>
           </Card>
@@ -36,7 +36,7 @@ export default function ProjectCard(props) {
 
       {/* POPUP MODAL FOR EACH PROJECT */}
 
-      <Modal show={show} onHide={handleClose} size="lg">
+      <Modal show={show} onHide={modalHide} size="lg">
           <Modal.Header closeButton>
             <Modal.Title>
               {props.fulltitle}
@@ -64,30 +64,24 @@ ProjectCard.getTheme = muiBaseTheme => ({
   MuiCard: {
     root: {
       "&.card": {
-        maxWidth: 304,
+        width: 300,
+        height: 300,
         position: "relative",
-        borderRadius: 50,
+        borderRadius: 0,
         "&:hover": {
-          "& .link": {
-            transform: "scale(1.2)"
-          }
+          transition: "0.75s cubic-bezier(0.2,0.2,1.2,1.2)",
+          transform: "scale(1.04)" 
         },
         "& .content": {
           position: "absolute",
-          bottom: 0,
-          padding: muiBaseTheme.spacing(5),
+          padding: muiBaseTheme.spacing(4),
           color: muiBaseTheme.palette.common.white,
           textAlign: "center",
           "& .body": {
-            lineHeight: 1.8,
-            letterSpacing: 0.5,
-            marginBottom: "40%"
+            lineHeight: 1.5,
+            letterSpacing: 1,
+            marginBottom: "10%"
           },
-          "& .link": {
-            marginBottom: 16,
-            transition: "0.3s cubic-bezier(.47,1.64,.41,.8)",
-            letterSpacing: 2
-          }
         }
       }
     }

@@ -117,7 +117,7 @@ const ProjectList =
         /* SUDOKU SOLVER */
         "fulltitle":    "Sudoku Solver in C++", 
         "title":        "Sudoku Solver",
-        "desc":         "An sudoku solver using 5 different solving algorithms plus a brute force solving algorithm.",
+        "desc":         "An sudoku solver with 5 different solving algorithms plus brute force.",
         "body":         `<p>
                             During my 2019-2020 Winter break, I decided to teach myself
                             C++, and challenge myself with a project that I had no idea

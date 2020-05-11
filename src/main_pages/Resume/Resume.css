@@ -1,13 +1,14 @@
 .resumeStyle {
   font-family: "Oswald", sans-serif;
-  margin: 90px;
-  margin-top: 10px;
+  margin: auto;
+  text-align: center;
+  margin-top: auto;
 }
 
 @media (max-width: 650px) {
   .resumeStyle {
     font-family: "Oswald", sans-serif;
-    margin: 10px;
+    margin: auto;
   }
 }
 

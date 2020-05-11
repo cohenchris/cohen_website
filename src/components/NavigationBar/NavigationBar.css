@@ -3,7 +3,7 @@
   justify-content: left;
   list-style: none;
   font-family: "Oswald", sans-serif;
-  font-size: 150%;
+  font-size: 200%;
   width: 100%;
 }
 
@@ -24,4 +24,9 @@
   margin: auto;
   font-family: "Oswald", sans-serif;
   font-size: 150%;
+}
+
+.desktopnav {
+  margin-left: 150px;
+  margin-right: 150px;
 }

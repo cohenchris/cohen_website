@@ -4,16 +4,36 @@ import Footer from "../../components/Footer/Footer.js";
 import "./Home.css";
 import "../../helper_functions";
 import "../../index.css";
+import CoverImg from "../../images/sideview.jpg";
+import { useWindowDimensions } from "../../helper_functions";
 
 export default function Home() {
+  let { width } = useWindowDimensions();
+
   return (
     <div className="background">
       <NavigationBar />
       <div className="home">
-        <h1>Hi, I'm Chris Cohen</h1>
+        <img
+          className={width >= 650 ? "cover" : "coverMobile"}
+          src={CoverImg}
+          alt="Me in front of the Elliot Hall of Music at Purdue University"
+        />
         <br />
-        <h5>Incoming Software Engineering Intern for Qualcomm</h5>
-        <h5>Computer Science student at Purdue University</h5>
+        <br />
+        <h1>CHRIS COHEN</h1>
+        {width >= 650 && (
+          <div>
+            <h2>Incoming Software Engineering Intern for Qualcomm</h2>
+            <h2>Computer Science Student at Purdue University</h2>
+          </div>
+        )}
+        {width < 650 && (
+          <div>
+            <h4>Incoming Software Engineering Intern for Qualcomm</h4>
+            <h4>Computer Science Student at Purdue University</h4>
+          </div>
+        )}
       </div>
       <Footer />
     </div>

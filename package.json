@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.13",
     "@material-ui/icons": "^4.9.1",
+    "@react-pdf/renderer": "^1.6.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -18,6 +19,7 @@
     "react-collapse": "^5.0.1",
     "react-dfb": "^1.0.4",
     "react-dom": "^16.13.1",
+    "react-pdf": "^4.1.0",
     "react-router-dom": "^5.1.2",
     "react-ui-cards": "^2.0.0",
     "typeface-roboto": "0.0.75"

@@ -1,10 +1,11 @@
 import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
+import Footer from "../../components/Footer/Footer.js";
 import "react-awesome-slider/dist/styles.css";
 import { Row, Col, Container } from "react-bootstrap";
 import "./About.css";
 import "../../index.css";
-import Me from "../../images/me.png";
+//import Me from "../../images/me.png";
 
 export default class About extends React.Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ export default class About extends React.Component {
   render() {
     return (
       <div className="background">
-        <NavigationBar color="black" highlight="about" />
+        <NavigationBar />
 
         <Container className="aboutStyle">
           <Row>
@@ -21,7 +22,7 @@ export default class About extends React.Component {
               <img
                 width="370px"
                 height="auto"
-                src={Me}
+                //src={Me}
                 alt="Me in front of the Elliot Hall of Music at Purdue University"
               />
             </Col>
@@ -64,6 +65,7 @@ export default class About extends React.Component {
             </Col>
           </Row>
         </Container>
+        <Footer />
       </div>
     );
   }

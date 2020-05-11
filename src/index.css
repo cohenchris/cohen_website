@@ -13,6 +13,6 @@
   background-attachment: fixed;
   background-position: fixed;
   background-size: cover;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  min-height: 100vh;
 }

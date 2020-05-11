@@ -1,5 +1,6 @@
 import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
+import Footer from "../../components/Footer/Footer.js";
 import "./Resume.css";
 import "../../index.css";
 import { Button } from "react-bootstrap";
@@ -11,7 +12,7 @@ export default class Resume extends React.Component {
   }
   render() {
     return (
-      <div className="resumeBackground">
+      <div className="background">
         <NavigationBar color="black" highlight="resume" />
         <div className="resumeStyle">
           <ul>
@@ -160,6 +161,7 @@ export default class Resume extends React.Component {
         <br />
         <br />
         <br />
+        <Footer />
       </div>
     );
   }

@@ -1,26 +1,6 @@
-.homeText {
-  color: white;
-  text-align: left;
-  font-family: 'Oswald', sans-serif;
-  margin: 50px;
-}
-
-.homeTextMobile {
-  color: white;
-  text-align: bottom;
-  font-family: 'Oswald', sans-serif;
-  margin: 20px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.contactInfoMobile {
-  color: white;
-  text-align: left;
-  font-family: 'Oswald', sans-serif;
-  margin: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
+.home {
+  text-align: center;
+  color: black;
+  font-family: "Oswald", sans-serif;
+  margin: auto;
 }

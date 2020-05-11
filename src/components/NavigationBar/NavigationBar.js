@@ -7,37 +7,40 @@ import {
   IconButton,
   ListItem,
   ListItemText,
-  ListItemIcon,
   Divider,
 } from "@material-ui/core";
 import "./NavigationBar.css";
 import "../../helper_functions";
 import { useWindowDimensions } from "../../helper_functions";
 
-export default function NavigationBar(props) {
+export default function NavigationBar() {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
 
   let { width } = useWindowDimensions();
-  let bg_color = props.color.localeCompare("white")
-    ? "rgba(255, 255, 255, 1)"
-    : "rgba(255, 255, 255, 0)";
 
   if (width >= 650) {
     return (
       <div>
-        <Navbar style={{ "background-color": bg_color }} className="brand">
+        <Navbar>
           <Navbar.Brand className="brand" href="/">
             CHRIS COHEN
           </Navbar.Brand>
-
-          <Nav className="link">
-            <Nav.Link href="/">HOME</Nav.Link>
-            <Nav.Link href="/resume">RESUME</Nav.Link>
-            <Nav.Link href="/projects">PROJECTS</Nav.Link>
-            <Nav.Link href="/about">ABOUT</Nav.Link>
+          <Nav>
+            <Nav.Link className="link" href="/">
+              HOME
+            </Nav.Link>
+            <Nav.Link className="link" href="/resume">
+              RESUME
+            </Nav.Link>
+            <Nav.Link className="link" href="/projects">
+              PROJECTS
+            </Nav.Link>
+            <Nav.Link className="link" href="/about">
+              ABOUT
+            </Nav.Link>
           </Nav>
         </Navbar>
         <br />
@@ -47,7 +50,7 @@ export default function NavigationBar(props) {
     return (
       <div>
         <Navbar className="mobileMenu" bg="bg-black" variant="dark">
-          <Navbar.Brand className="mobileBrand" href="/">
+          <Navbar.Brand className="mr-auto" href="/">
             CHRIS COHEN
           </Navbar.Brand>
           <IconButton onClick={handleOpen}>
@@ -66,40 +69,65 @@ export default function NavigationBar(props) {
             </div>
 
             <ListItem button key="HOME">
-              <ListItemText primary="HOME" />
-              <ListItemIcon>{}</ListItemIcon>
+              <a href="/" style={{ "text-decoration": "none", color: "black" }}>
+                <ListItemText primary="HOME" />
+              </a>
             </ListItem>
 
             <ListItem button key="PROJECTS">
-              <ListItemText primary="PROJECTS" />
-              <ListItemIcon>{}</ListItemIcon>
+              <a
+                href="/projects"
+                style={{ "text-decoration": "none", color: "black" }}
+              >
+                <ListItemText primary="PROJECTS" />
+              </a>
             </ListItem>
 
             <ListItem button key="RESUME">
-              <ListItemText primary="RESUME" />
-              <ListItemIcon>{}</ListItemIcon>
+              <a
+                href="/resume"
+                style={{ "text-decoration": "none", color: "black" }}
+              >
+                <ListItemText primary="RESUME" />
+              </a>
             </ListItem>
 
             <ListItem button key="ABOUT">
-              <ListItemText primary="ABOUT" />
-              <ListItemIcon>{}</ListItemIcon>
+              <a
+                href="/about"
+                style={{ "text-decoration": "none", color: "black" }}
+              >
+                <ListItemText primary="ABOUT" />
+              </a>
             </ListItem>
 
             <Divider />
 
             <ListItem button key="EMAIL">
-              <ListItemText primary="EMAIL" />
-              <ListItemIcon>{}</ListItemIcon>
+              <a
+                href="mailto:chriscohen@chriscohen.dev"
+                style={{ "text-decoration": "none", color: "black" }}
+              >
+                <ListItemText primary="EMAIL" />
+              </a>
             </ListItem>
 
             <ListItem button key="LINKEDIN">
-              <ListItemText primary="LINKEDIN" />
-              <ListItemIcon>{}</ListItemIcon>
+              <a
+                href="https://www.linkedin.com/in/chris-cohen-purdue/"
+                style={{ "text-decoration": "none", color: "black" }}
+              >
+                <ListItemText primary="LINKEDIN" />
+              </a>
             </ListItem>
 
             <ListItem button key="GITHUB">
-              <ListItemText primary="GITHUB" />
-              <ListItemIcon>{}</ListItemIcon>
+              <a
+                href="https://github.com/cohenchris"
+                style={{ "text-decoration": "none", color: "black" }}
+              >
+                <ListItemText primary="GITHUB" />
+              </a>
             </ListItem>
           </Drawer>
         </Navbar>

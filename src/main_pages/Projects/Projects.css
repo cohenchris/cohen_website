@@ -1,22 +1,11 @@
 .projectsStyle {
-  font-family: 'Oswald', sans-serif;
-  margin: 90px;
-  margin-top: 10px;
+  font-family: "Oswald", sans-serif;
+  margin: auto;
 }
 
 @media (max-width: 650px) {
-  .projectsStyle {
-    font-family: 'Oswald', sans-serif;
-    margin: 10px;
+  .projectsStyle * {
+    font-family: "Oswald", sans-serif;
+    margin: auto;
   }
-}
-
-li h4 strong {
-  color: teal;
-  text-transform: uppercase;
-  list-style: none;
-}
-
-h4 strong {
-  font-family: 'Oswald', sans-serif;
 }

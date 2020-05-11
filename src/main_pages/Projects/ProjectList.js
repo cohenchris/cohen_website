@@ -281,7 +281,7 @@ const ProjectList = [
   {
     /* PIHOLE */
     fulltitle: "Raspberry Pi DNS-Level AdBlocker - PiHole",
-    title: "PiHole",
+    title: "Pi-Hole",
     desc: "A DNS-level adblocker hooked up to my router.",
     body: `<p>
                             Once I completed my Computer Architecture course, I had a

@@ -1,6 +1,7 @@
 import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
-import ProjectCard from "../../components/ProjectCard/ProjectCard.js";
+import Footer from "../../components/Footer/Footer.js";
+import ProjectCard from "./ProjectCard.js";
 import { Container, Col, Row } from "react-bootstrap";
 import "./Projects.css";
 import "../../index.css";
@@ -12,10 +13,10 @@ export default class Projects extends React.Component {
   }
   render() {
     return (
-      <div className="projectsBackground">
-        <NavigationBar color="black" highlight="projects" />
+      <div className="background">
+        <NavigationBar />
 
-        <div>
+        <div className="projectsStyle">
           <Container fluid>
             <Row noGutters />
             <Row>
@@ -34,6 +35,7 @@ export default class Projects extends React.Component {
             </Row>
           </Container>
         </div>
+        <Footer />
       </div>
     );
   }

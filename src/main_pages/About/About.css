@@ -1,22 +1,12 @@
-.aboutBackground {
-  background-color: white;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: fixed;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}
-
 .aboutStyle {
-  font-family: "Courier Prime", monospace;
+  font-family: 'Oswald', sans-serif;
   margin: 90px;
   margin-top: 10px;
 }
 
 @media (max-width: 650px) {
   .aboutStyle {
-    font-family: "Courier Prime", monospace;
+    font-family: 'Oswald', sans-serif;
     margin: 10px;
   }
 }

@@ -7,6 +7,7 @@ import GitHub from "../../images/github.png";
 import Skydiving1 from "../../images/Skydiving1.jpg";
 import Skydiving1_mobile from "../../images/Skydiving1_mobile.jpg";
 import "../../helper_functions";
+import "../../index.css";
 import { useWindowDimensions } from "../../helper_functions";
 
 export default function Home() {
@@ -15,15 +16,8 @@ export default function Home() {
   let bg_image = width > 650 ? Skydiving1 : Skydiving1_mobile;
 
   return (
-    <div
-      style={{
-        height: "100%",
-        width: "100%",
-        "background-image": `url(${bg_image})`
-      }}
-      className="homeStyle"
-    >
-      <NavigationBar color="white" />
+    <div className="homeStyle">
+      <NavigationBar color="white" highlight="home" />
       {width < 650 && (
         <div className="contactInfoMobile">
           <ContactInfo />

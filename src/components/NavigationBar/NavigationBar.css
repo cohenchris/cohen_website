@@ -1,18 +1,48 @@
-.navBarLinks * {
-  color: white;
+:root {
+  --bg-black: black;
+}
+
+.brand {
   text-decoration: none;
-  justify-content: space-around;
+  justify-content: left;
   align-items: center;
   list-style: none;
   display: flex;
+  padding: 10px;
   width: 100%;
-  font-family: "Courier Prime", monospace;
-  font-size: 130%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 150%;
+}
+
+.link * {
+  justify-content: right;
+  list-style: none;
+  display: flex;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 80%;
 }
 
 .menuStyle {
   margin: 10px;
   float: right;
+}
+
+.mobileMenu {
+  background-color: #262522;
+
+}
+
+.mobileBrand {
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  font-size: 150%;
 }
 
 .modalLinks * {
@@ -22,7 +52,7 @@
   align-items: center;
   list-style: none;
   width: 100%;
-  font-family: "Courier Prime", monospace;
+  font-family: 'Oswald', sans-serif;
   font-size: 130%;
 }
 .modalFullscreen {

@@ -1,98 +1,110 @@
 import React, { useState } from "react";
-import { Nav, Navbar, Col, Button, Modal } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Nav, Navbar } from "react-bootstrap";
+import MenuIcon from "@material-ui/icons/Menu";
+import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import {
+  Drawer,
+  IconButton,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+  Divider,
+} from "@material-ui/core";
 import "./NavigationBar.css";
 import "../../helper_functions";
 import { useWindowDimensions } from "../../helper_functions";
 
 export default function NavigationBar(props) {
-  const [show, setShow] = useState(false);
-  const navLinkStyle = {
-    "text-decoration": "none",
-    color: props.color
-  };
+  const [open, setOpen] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => setOpen(false);
+  const handleOpen = () => setOpen(true);
 
   let { width } = useWindowDimensions();
-  let bg_color = navLinkStyle.color.localeCompare("white")
+  let bg_color = props.color.localeCompare("white")
     ? "rgba(255, 255, 255, 1)"
     : "rgba(255, 255, 255, 0)";
 
   if (width >= 650) {
     return (
-      <Navbar
-        className="navBarLinks"
-        fixed="bottom"
-        style={{ "background-color": bg_color }}
-      >
-        <Col>
-          <Nav>
-            <Nav.Link>
-              <Link className="navBarLinks" style={navLinkStyle} to="/">
-                home
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link className="navBarLinks" style={navLinkStyle} to="/resume">
-                resume
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link className="navBarLinks" style={navLinkStyle} to="/projects">
-                projects
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link className="navBarLinks" style={navLinkStyle} to="/about">
-                about
-              </Link>
-            </Nav.Link>
+      <div>
+        <Navbar style={{ "background-color": bg_color }} className="brand">
+          <Navbar.Brand className="brand" href="/">
+            CHRIS COHEN
+          </Navbar.Brand>
+
+          <Nav className="link">
+            <Nav.Link href="/">HOME</Nav.Link>
+            <Nav.Link href="/resume">RESUME</Nav.Link>
+            <Nav.Link href="/projects">PROJECTS</Nav.Link>
+            <Nav.Link href="/about">ABOUT</Nav.Link>
           </Nav>
-        </Col>
-      </Navbar>
+        </Navbar>
+        <br />
+      </div>
     );
   } else {
     return (
-      <Col>
-        <Button
-          variant={
-            props.color.localeCompare("teal") ? "outline-light" : "outline-dark"
-          }
-          className="menuStyle"
-          onClick={handleShow}
-        >
-          MENU
-        </Button>
-
-        <Modal
-          show={show}
-          size="xl"
-          onHide={handleClose}
-          className="modalFullscreen"
-        >
-          <Modal.Body
-            className="modalLinks"
-            style={{ "text-decoration": "none" }}
+      <div>
+        <Navbar className="mobileMenu" bg="bg-black" variant="dark">
+          <Navbar.Brand className="mobileBrand" href="/">
+            CHRIS COHEN
+          </Navbar.Brand>
+          <IconButton onClick={handleOpen}>
+            <MenuIcon style={{ color: "white" }} />
+          </IconButton>
+          <Drawer
+            variant="temporary"
+            open={open}
+            onClose={handleClose}
+            anchor="right"
           >
-            <ul>
-              <Link to="/" style={{ "text-decoration": "none" }}>
-                <li>home</li>
-              </Link>
-              <Link to="/resume" style={{ "text-decoration": "none" }}>
-                <li>resume</li>
-              </Link>
-              <Link to="/projects" style={{ "text-decoration": "none" }}>
-                <li>projects</li>
-              </Link>
-              <Link to="/about" style={{ "text-decoration": "none" }}>
-                <li>about</li>
-              </Link>
-            </ul>
-          </Modal.Body>
-        </Modal>
-      </Col>
+            <div>
+              <IconButton onClick={handleClose}>
+                <ChevronRightIcon style={{ color: "white" }} />
+              </IconButton>
+            </div>
+
+            <ListItem button key="HOME">
+              <ListItemText primary="HOME" />
+              <ListItemIcon>{}</ListItemIcon>
+            </ListItem>
+
+            <ListItem button key="PROJECTS">
+              <ListItemText primary="PROJECTS" />
+              <ListItemIcon>{}</ListItemIcon>
+            </ListItem>
+
+            <ListItem button key="RESUME">
+              <ListItemText primary="RESUME" />
+              <ListItemIcon>{}</ListItemIcon>
+            </ListItem>
+
+            <ListItem button key="ABOUT">
+              <ListItemText primary="ABOUT" />
+              <ListItemIcon>{}</ListItemIcon>
+            </ListItem>
+
+            <Divider />
+
+            <ListItem button key="EMAIL">
+              <ListItemText primary="EMAIL" />
+              <ListItemIcon>{}</ListItemIcon>
+            </ListItem>
+
+            <ListItem button key="LINKEDIN">
+              <ListItemText primary="LINKEDIN" />
+              <ListItemIcon>{}</ListItemIcon>
+            </ListItem>
+
+            <ListItem button key="GITHUB">
+              <ListItemText primary="GITHUB" />
+              <ListItemIcon>{}</ListItemIcon>
+            </ListItem>
+          </Drawer>
+        </Navbar>
+        <br />
+      </div>
     );
   }
 }

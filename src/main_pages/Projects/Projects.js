@@ -1,11 +1,10 @@
 import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
-import ProjectCard from "../../components/ProjectCard/ProjectCard.js"
+import ProjectCard from "../../components/ProjectCard/ProjectCard.js";
 import { Container, Col, Row } from "react-bootstrap";
 import "./Projects.css";
-import ProjectList from "./ProjectList.js"
-
-
+import "../../index.css";
+import ProjectList from "./ProjectList.js";
 
 export default class Projects extends React.Component {
   componentDidMount() {
@@ -14,28 +13,28 @@ export default class Projects extends React.Component {
   render() {
     return (
       <div className="projectsBackground">
-        <NavigationBar color="black" />
+        <NavigationBar color="black" highlight="projects" />
 
         <div>
           <Container fluid>
-            <Row noGutters/>
+            <Row noGutters />
             <Row>
-              {ProjectList.map( (project) => (
+              {ProjectList.map((project) => (
                 <Col lg="2" md="6" sm="12" className="mb-2">
-                  <ProjectCard  fulltitle={project.fulltitle}
-                                title={project.title}
-                                desc={project.desc}
-                                body={project.body}
-                                img_src={project.img_src}
-                                timestamp={project.timestamp}
-                                />
+                  <ProjectCard
+                    fulltitle={project.fulltitle}
+                    title={project.title}
+                    desc={project.desc}
+                    body={project.body}
+                    img_src={project.img_src}
+                    timestamp={project.timestamp}
+                  />
                 </Col>
               ))}
-              </Row>
+            </Row>
           </Container>
         </div>
       </div>
     );
   }
 }
-

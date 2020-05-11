@@ -1,26 +1,25 @@
 /* PROJECT POST TEMPLATE
 
 {
-    "fulltitle":    "", 
-    "title":        "",
-    "desc":         "",
-    "body":         ``,
-    "img_src":      "",
-    "timestamp":    ""
+    fulltitle:    "", 
+    title:        "",
+    desc:         "",
+    body:         ``,
+    img_src:      "",
+    timestamp:    ""
   },
 
 */
 /*
 
 */
-const ProjectList = 
-[
-    {
-        /* HONEYPOT */
-        "fulltitle":    "HTTPS Webserver Honeypot in Python",
-        "title":        "Webserver Honeypot",
-        "desc":         "An HTTPS honeypot server built in Python",
-        "body":         `<p>
+const ProjectList = [
+  {
+    /* HONEYPOT */
+    fulltitle: "HTTPS Webserver Honeypot in Python",
+    title: "Webserver Honeypot",
+    desc: "An HTTPS honeypot server built in Python",
+    body: `<p>
                             Realizing that I lacked experience in cybersecurity, I decided to 
                             take the plunge with a large personal project. A honeypot is a term 
                             used in cybersecurity describing a network entity that purposefully 
@@ -52,16 +51,18 @@ const ProjectList =
                             an interactive script is available that installs all dependencies, sets up the local MySQL server to log,
                             and creates a script that starts the server that serves the IP of your choosing.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "April 2020 - May 2020"
-    },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "April 2020 - May 2020",
+  },
 
-    {
-        /* SHELL */
-        "fulltitle":    "Shell Interpreter In C", 
-        "title":        "Shell",
-        "desc":         "A shell interpreter written in C to combine behavior from common shells.",
-        "body":         `<p>
+  {
+    /* SHELL */
+    fulltitle: "Shell Interpreter In C",
+    title: "Shell",
+    desc:
+      "A shell interpreter written in C to combine behavior from common shells.",
+    body: `<p>
                             This month-long project covered an absurd amount of content.
                             We were tasked to create what is essentially a bash clone. The
                             lexical analysis was done using <strong>flex and bison</strong>,
@@ -109,16 +110,18 @@ const ProjectList =
                             history was pretty straightforward, and I ended up imitating
                             bash's ctrl-R searching mode.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "September 2019 - October 2019"
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "September 2019 - October 2019",
+  },
 
-      {
-        /* SUDOKU SOLVER */
-        "fulltitle":    "Sudoku Solver in C++", 
-        "title":        "Sudoku Solver",
-        "desc":         "An sudoku solver with 5 different solving algorithms plus brute force.",
-        "body":         `<p>
+  {
+    /* SUDOKU SOLVER */
+    fulltitle: "Sudoku Solver in C++",
+    title: "Sudoku Solver",
+    desc:
+      "An sudoku solver with 5 different solving algorithms plus brute force.",
+    body: `<p>
                             During my 2019-2020 Winter break, I decided to teach myself
                             C++, and challenge myself with a project that I had no idea
                             how to start. The full source code of this project can be found 
@@ -143,16 +146,18 @@ const ProjectList =
                             random candidate from the original Cell was chosen. If all
                             candidates from that Cell failed, the board is unsolvable.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "December 2019 - January 2020"
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "December 2019 - January 2020",
+  },
 
-      {
-        /* MALLOC */
-        "fulltitle":    "Memory Allocation Library in C, Replacement for 'stdlib.c'", 
-        "title":        "Memory Allocation Library",
-        "desc":         "A memory allocation library written in C, helping me learn how UNIX memory allocation works.",
-        "body":         `<p>
+  {
+    /* MALLOC */
+    fulltitle: "Memory Allocation Library in C, Replacement for 'stdlib.c'",
+    title: "Memory Allocation Library",
+    desc:
+      "A memory allocation library written in C, helping me learn how UNIX memory allocation works.",
+    body: `<p>
                             This large project taught me the inner workings of memory
                             allocation. I created a program that has functionality for
                             malloc(), free(), realloc(), and calloc(). The main, most
@@ -161,16 +166,17 @@ const ProjectList =
                             Multiple different block-finding methods were implemented - first
                             fit, best fit, worst fit, and next fit.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "September 2019"
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "September 2019",
+  },
 
-      {
-        /* TWISTTER */
-        "fulltitle":    "Twistter (Twitter + Reddit Crossover) in Javascript (ReactJS)", 
-        "title":        "Twistter",
-        "desc":         "A twitter/reddit hybrid. I worked on front-end with ReactJS.",
-        "body":         `<p>
+  {
+    /* TWISTTER */
+    fulltitle: "Twistter (Twitter + Reddit Crossover) in Javascript (ReactJS)",
+    title: "Twistter",
+    desc: "A twitter/reddit hybrid. I worked on front-end with ReactJS.",
+    body: `<p>
                             This group project focused on the SCRUM philosophy of software
                             development and making a full-fledged application. I was assigned
                             to the front end team, since I already knew ReactJS, and did an
@@ -181,16 +187,18 @@ const ProjectList =
                             well as a Direct Messaging system between users. The most
                             difficult part was updating the GUI based on who is logged in.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "August 2019 - December 2019"
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "August 2019 - December 2019",
+  },
 
-      {
-        /* TASK MANAGER */
-        "fulltitle":    "UNIX Task Manager in C", 
-        "title":        "Task Manager",
-        "desc":         "A task manager for UNIX written to learn about the structure of '/proc'",
-        "body":         `<p>
+  {
+    /* TASK MANAGER */
+    fulltitle: "UNIX Task Manager in C",
+    title: "Task Manager",
+    desc:
+      "A task manager for UNIX written to learn about the structure of '/proc'",
+    body: `<p>
                             During this group project, I was assigned to explore and
                             understand what goes on in /proc on a Unix system, and pulled
                             information such as system information, process name, PID, process
@@ -198,32 +206,35 @@ const ProjectList =
                             information into easily-accessible structs for the front-end team
                             to handle.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "November 2019 - December 2019"
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "November 2019 - December 2019",
+  },
 
-      {
-        /* CRANE NLP PROJECT */
-        "fulltitle":    "NLP (Natural Language Processing) Database Parsing in Python", 
-        "title":        "NLP on Databases",
-        "desc":         "I used NLP to parse navy databases, making problem diagnosis significantly faster.",
-        "body":         `<p>
+  {
+    /* CRANE NLP PROJECT */
+    fulltitle: "NLP (Natural Language Processing) Database Parsing in Python",
+    title: "NLP on Databases",
+    desc:
+      "I used NLP to parse navy databases, making problem diagnosis significantly faster.",
+    body: `<p>
                             During the Summer of 2019, I had the pleasure of working for the
                             Naval Surface Warfare Center, Crane Division. I improved US Navy
                             missile sustainment efforts by upgrading an existing natural
                             language processing algorithm to process failure databases. The
                             work that I contributed to has a patent pending as well.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     ""
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "",
+  },
 
-      {
-        /* PRINTF */
-        "fulltitle":    "printf() Replacement in ARM Assembly", 
-        "title":        "printf()",
-        "desc":         "A functional replacement for printf() written in ARM Assembly.",
-        "body":         `<p>
+  {
+    /* PRINTF */
+    fulltitle: "printf() Replacement in ARM Assembly",
+    title: "printf()",
+    desc: "A functional replacement for printf() written in ARM Assembly.",
+    body: `<p>
                             In my Computer Architecture course, we had to implement
                             functionality for{" "}
                             <strong>printf()'s %c, %s, %d, and %x in ARM Assembly</strong>. %c
@@ -234,16 +245,18 @@ const ProjectList =
                             tougher than %x since base 10 is not a multiple of 2, so bit
                             shifting is not possible.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "April 2019"
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "April 2019",
+  },
 
-      {
-        /* LINUX TWEAKING */
-        "fulltitle":    "Linux Tweaking and Exploration", 
-        "title":        "Linux",
-        "desc":         "I primarily run Linux since it's efficient for programming. I heavily customize my workflow.",
-        "body":         `<p>
+  {
+    /* LINUX TWEAKING */
+    fulltitle: "Linux Tweaking and Exploration",
+    title: "Linux",
+    desc:
+      "I primarily run Linux since it's efficient for programming. I heavily customize my workflow.",
+    body: `<p>
                             One of my main hobbies is tweaking and maintaining Ubuntu on my
                             laptop and desktop, which is a great way for me to learn more about how Unix
                             works. I enjoy customizing my workflow for efficiency, using a
@@ -260,16 +273,17 @@ const ProjectList =
                             changes the settings to exactly what I want them to, an exact copy of my
                             normal workstation.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "August 2017 - Present"
-      },
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "August 2017 - Present",
+  },
 
-      {
-        /* PIHOLE */
-        "fulltitle":    "Raspberry Pi DNS-Level AdBlocker - PiHole", 
-        "title":        "PiHole",
-        "desc":         "A DNS-level adblocker hooked up to my router.",
-        "body":         `<p>
+  {
+    /* PIHOLE */
+    fulltitle: "Raspberry Pi DNS-Level AdBlocker - PiHole",
+    title: "PiHole",
+    desc: "A DNS-level adblocker hooked up to my router.",
+    body: `<p>
                             Once I completed my Computer Architecture course, I had a
                             Raspberry PI 3B+ left over, so I decided to download a program
                             called PiHole. This program functions as a DNS server for your
@@ -278,9 +292,10 @@ const ProjectList =
                             them before they even reach your device. I particularly like it
                             because it blocks advertisements AND trackers.
                         </p>`,
-        "img_src":      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
-        "timestamp":     "August 2019 - Present"
-      },
-]
+    img_src:
+      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
+    timestamp: "August 2019 - Present",
+  },
+];
 
 export default ProjectList;

@@ -1,6 +1,7 @@
 import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import "./Resume.css";
+import "../../index.css";
 import { Button } from "react-bootstrap";
 import pdf_resume from "../../files/resume.pdf";
 
@@ -11,10 +12,8 @@ export default class Resume extends React.Component {
   render() {
     return (
       <div className="resumeBackground">
-        <NavigationBar color="teal" />
+        <NavigationBar color="black" highlight="resume" />
         <div className="resumeStyle">
-          <br />
-          <br />
           <ul>
             <li>
               <Button variant="outline-dark" href={pdf_resume}>
@@ -50,14 +49,14 @@ export default class Resume extends React.Component {
               </h3>
             </li>
             <div>
-
               <h5>
                 <strong>Languages</strong>
               </h5>
               <ul>
                 <li>
                   <p>
-                    C, C++, Python, ARM Assembly, x86 Assembly, Bash, Javascript, HTML/CSS, LaTeX
+                    C, C++, Python, ARM Assembly, x86 Assembly, Bash,
+                    Javascript, HTML/CSS, LaTeX
                   </p>
                 </li>
               </ul>
@@ -78,7 +77,10 @@ export default class Resume extends React.Component {
                 <li>Software/Hardware Interrupts and Device Management</li>
                 <li>Asynchronous Inter-Process Communication</li>
                 <li>Return-Oriented Programming</li>
-                <li>Concurrency and Parallelism (Semaphores, Locks, Forking, Threading, Scheduling)</li>
+                <li>
+                  Concurrency and Parallelism (Semaphores, Locks, Forking,
+                  Threading, Scheduling)
+                </li>
               </ul>
 
               <h5>

@@ -1,8 +1,16 @@
 /* eslint-disable max-len,no-script-url,jsx-a11y/anchor-is-valid */
 
-import React, { useState } from 'react';
-import { Card, CardMedia, CardContent, Typography, Link, MuiThemeProvider, createMuiTheme } from '@material-ui/core';
-import { Col, Modal } from "react-bootstrap"
+import React, { useState } from "react";
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Link,
+  MuiThemeProvider,
+  createMuiTheme,
+} from "@material-ui/core";
+import { Col, Modal } from "react-bootstrap";
 
 const muiBaseTheme = createMuiTheme();
 
@@ -13,54 +21,49 @@ export default function ProjectCard(props) {
   const modalShow = () => setShow(true);
 
   return (
-      <Col>
-        <MuiThemeProvider theme={createMuiTheme({
+    <Col>
+      <MuiThemeProvider
+        theme={createMuiTheme({
           palette: {
-            type: 'dark'
+            type: "dark",
           },
           overrides: ProjectCard.getTheme(muiBaseTheme),
-        })} >
-          <Card className="card" variant="outlined" onClick={modalShow}>
-              {/*<CardMedia className="pic" component="img" src={props.img_src} />*/}
-              <CardContent className="content">
-                  <Typography variant="h4" className="title" gutterBottom>
-                    {props.title.toUpperCase()}
-                  </Typography>
-                  <Typography className="body">
-                    {props.desc}
-                  </Typography>
-              </CardContent>
-          </Card>
-        </MuiThemeProvider>
-
+          typography: {
+            fontFamily: "Oswald",
+          },
+        })}
+      >
+        <Card className="card" variant="outlined" onClick={modalShow}>
+          {/*<CardMedia className="pic" component="img" src={props.img_src} />*/}
+          <CardContent className="content">
+            <Typography variant="h4" className="title" gutterBottom>
+              {props.title.toUpperCase()}
+            </Typography>
+            <Typography className="body">{props.desc}</Typography>
+          </CardContent>
+        </Card>
+      </MuiThemeProvider>
 
       {/* POPUP MODAL FOR EACH PROJECT */}
 
       <Modal show={show} onHide={modalHide} size="lg">
-          <Modal.Header closeButton>
-            <Modal.Title>
-              {props.fulltitle}
-            </Modal.Title>
-          </Modal.Header>
+        <Modal.Header closeButton>
+          <Modal.Title>{props.fulltitle}</Modal.Title>
+        </Modal.Header>
 
-          <Modal.Body>
-            <p dangerouslySetInnerHTML={{__html: props.body}}></p>
-          </Modal.Body>
+        <Modal.Body>
+          <p dangerouslySetInnerHTML={{ __html: props.body }}></p>
+        </Modal.Body>
 
-          <Modal.Footer>
-            {props.timestamp}
-          </Modal.Footer>
-        </Modal>
-
-      </Col>
-
+        <Modal.Footer>{props.timestamp}</Modal.Footer>
+      </Modal>
+    </Col>
   );
 }
 
-
 /* THEME FOR MATERIAL-UI */
 
-ProjectCard.getTheme = muiBaseTheme => ({
+ProjectCard.getTheme = (muiBaseTheme) => ({
   MuiCard: {
     root: {
       "&.card": {
@@ -70,7 +73,7 @@ ProjectCard.getTheme = muiBaseTheme => ({
         borderRadius: 0,
         "&:hover": {
           transition: "0.75s cubic-bezier(0.2,0.2,1.2,1.2)",
-          transform: "scale(1.04)" 
+          transform: "scale(1.04)",
         },
         "& .content": {
           position: "absolute",
@@ -80,10 +83,10 @@ ProjectCard.getTheme = muiBaseTheme => ({
           "& .body": {
             lineHeight: 1.5,
             letterSpacing: 1,
-            marginBottom: "10%"
+            marginBottom: "10%",
           },
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 });

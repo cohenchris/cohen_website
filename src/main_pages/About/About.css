@@ -1,12 +1,32 @@
 .aboutStyle {
-  font-family: 'Oswald', sans-serif;
-  margin: 90px;
-  margin-top: 10px;
+  font-family: "Oswald", sans-serif;
+  margin: auto;
+  width: 520px;
 }
 
 @media (max-width: 650px) {
   .aboutStyle {
-    font-family: 'Oswald', sans-serif;
-    margin: 10px;
+    font-family: "Oswald", sans-serif;
+    margin: auto;
+    width: 400px;
   }
+}
+
+.me {
+  filter: saturate(150%);
+  width: 520px;
+  height: 650px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.meMobile {
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+h2 {
+  text-align: center;
 }

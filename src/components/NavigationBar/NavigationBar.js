@@ -23,8 +23,9 @@ export default function NavigationBar() {
 
   if (width >= 650) {
     return (
+      // DESKTOP MENU
       <div>
-        <Navbar>
+        <Navbar className="desktopnav">
           <Navbar.Brand className="brand" href="/">
             CHRIS COHEN
           </Navbar.Brand>
@@ -47,6 +48,7 @@ export default function NavigationBar() {
       </div>
     );
   } else {
+    // MOBILE MENU
     return (
       <div>
         <Navbar className="mobileMenu" bg="bg-black" variant="dark">

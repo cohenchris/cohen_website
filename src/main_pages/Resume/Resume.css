@@ -12,12 +12,12 @@
   }
 }
 
-li {
-  list-style: none;
+.downloadButton {
+  text-decoration: "none";
+  color: "black";
+  font-family: "Oswald", sans-serif;
 }
 
-li h3 strong {
-  color: teal;
-  text-transform: uppercase;
-  list-style: none;
+.resume * {
+  max-width: 1000;
 }

@@ -5,18 +5,10 @@
   margin: auto;
 }
 
-.cover {
+.cover * {
   filter: grayscale(100%);
-  width: 520px;
-  height: 650px;
-  object-fit: cover;
-  object-position: center top;
-}
-
-.coverMobile {
-  filter: grayscale(100%);
-  width: 400px;
-  height: 500px;
-  object-fit: cover;
-  object-position: center top;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 1080px;
 }

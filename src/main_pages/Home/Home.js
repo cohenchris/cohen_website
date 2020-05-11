@@ -14,14 +14,12 @@ export default function Home() {
     <div className="background">
       <NavigationBar />
       <div className="home">
-        <img
-          className={width >= 650 ? "cover" : "coverMobile"}
-          src={CoverImg}
-          alt="Me in front of the Elliot Hall of Music at Purdue University"
-        />
+        <div className="cover">
+          <img src={CoverImg} />
+        </div>
+
         <br />
         <br />
-        <h1>CHRIS COHEN</h1>
         {width >= 650 && (
           <div>
             <h2>Incoming Software Engineering Intern for Qualcomm</h2>

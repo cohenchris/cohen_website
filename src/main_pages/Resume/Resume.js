@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import "./Resume.css";
@@ -10,6 +10,10 @@ import GetAppIcon from "@material-ui/icons/GetApp";
 import { useWindowDimensions } from "../../helper_functions";
 
 export default function Resume() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   let { width } = useWindowDimensions();
 
   return (

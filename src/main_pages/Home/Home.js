@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import "./Home.css";
@@ -8,6 +8,10 @@ import CoverImg from "../../images/cover.png";
 import { useWindowDimensions } from "../../helper_functions";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   let { width } = useWindowDimensions();
 
   return (

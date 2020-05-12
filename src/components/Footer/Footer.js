@@ -20,7 +20,7 @@ export default function Footer() {
         </Nav>
 
         <Navbar.Brand className="copyright">
-          © 2019-2020 Chris Cohen. All rights reserved.
+          © 2019-2020 Chris Cohen
         </Navbar.Brand>
       </Navbar>
     </div>

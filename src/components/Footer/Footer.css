@@ -14,6 +14,12 @@
   width: 100%;
 }
 
+@media (max-width: 650px) {
+  .link {
+    font-size: 100%;
+  }
+}
+
 .copyright {
   font-size: 75%;
 }

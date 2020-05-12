@@ -1,14 +1,10 @@
 .aboutStyle {
   font-family: "Oswald", sans-serif;
   margin: auto;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   text-align: justify;
-}
-
-@media (max-width: 650px) {
-  .aboutStyle {
-    width: 450px;
-  }
+  position: relative;
 }
 
 .me * {
@@ -16,17 +12,11 @@
   justify-content: center;
   margin: auto;
   filter: saturate(150%);
-  width: 520px;
-  height: 650px;
+  width: 100%;
+  height: auto;
+  max-width: 520px;
   object-fit: cover;
   object-position: center top;
-}
-
-@media (max-width: 650px) {
-  .me * {
-    width: 400px;
-    height: 500px;
-  }
 }
 
 h2 {

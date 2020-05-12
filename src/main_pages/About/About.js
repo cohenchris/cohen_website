@@ -5,11 +5,14 @@ import "react-awesome-slider/dist/styles.css";
 import "./About.css";
 import "../../index.css";
 import Me from "../../images/me.jpg";
+import { useWindowDimensions } from "../../helper_functions";
 
 export default function About() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  let { width } = useWindowDimensions();
 
   return (
     <div className="background">
@@ -47,7 +50,7 @@ export default function About() {
         </p>
       </div>
       <div className="me">
-        <img src={Me} alt="" />
+        <img src={Me} width={width} alt="" />
       </div>
 
       <Footer />

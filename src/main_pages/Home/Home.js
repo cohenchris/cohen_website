@@ -15,7 +15,7 @@ export default function Home() {
       <NavigationBar />
       <div className="home">
         <div className="cover">
-          <img src={CoverImg} />
+          <img src={CoverImg} alt="" />
         </div>
 
         <br />

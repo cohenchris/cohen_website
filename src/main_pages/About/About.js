@@ -2,7 +2,6 @@ import React from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import "react-awesome-slider/dist/styles.css";
-import { Row, Col, Container } from "react-bootstrap";
 import "./About.css";
 import "../../index.css";
 import Me from "../../images/me.jpg";
@@ -44,7 +43,7 @@ export default function About() {
         </p>
       </div>
       <div className="me">
-        <img src={Me} />
+        <img src={Me} alt="" />
       </div>
 
       <Footer />

@@ -4,7 +4,7 @@ npm run build
 if ! [[ -d ../cohenchris.github.io ]]; then
     cd ..
     git clone https://github.com/cohenchris/cohenchris.github.io.git
-    cd ..
+    cd cohen_website
 fi
 
 rm -rf ../cohenchris.github.io/*

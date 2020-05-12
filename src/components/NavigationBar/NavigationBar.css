@@ -7,10 +7,16 @@
   width: 100%;
 }
 
-.link {
+.link * {
   list-style: none;
+  color: grey;
   font-family: "Oswald", sans-serif;
-  font-size: 70%;
+  font-size: 100%;
+}
+
+.link:hover * {
+  text-decoration-line: none;
+  color: black;
 }
 
 .mobileMenu {

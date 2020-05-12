@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import {
-  Drawer,
-  IconButton,
-  ListItem,
-  ListItemText,
-  Divider,
-} from "@material-ui/core";
+import { Drawer, IconButton, ListItem, Divider } from "@material-ui/core";
 import "./NavigationBar.css";
 import "../../helper_functions";
 import { useWindowDimensions } from "../../helper_functions";
@@ -30,17 +25,17 @@ export default function NavigationBar() {
             CHRIS COHEN
           </Navbar.Brand>
           <Nav>
-            <Nav.Link className="link" href="/">
-              HOME
+            <Nav.Link className="link">
+              <Link to="/">HOME</Link>
             </Nav.Link>
             <Nav.Link className="link" href="/resume">
-              RESUME
+              <Link to="/resume">RESUME</Link>
             </Nav.Link>
             <Nav.Link className="link" href="/projects">
-              PROJECTS
+              <Link to="/projects">PROJECTS</Link>
             </Nav.Link>
             <Nav.Link className="link" href="/about">
-              ABOUT
+              <Link to="/about">ABOUT</Link>
             </Nav.Link>
           </Nav>
         </Navbar>
@@ -66,70 +61,40 @@ export default function NavigationBar() {
           >
             <div>
               <IconButton onClick={handleClose}>
-                <ChevronRightIcon style={{ color: "white" }} />
+                <ChevronRightIcon style={{ color: "black" }} />
               </IconButton>
             </div>
 
-            <ListItem button key="HOME">
-              <a href="/" style={{ "text-decoration": "none", color: "black" }}>
-                <ListItemText primary="HOME" />
-              </a>
+            <ListItem className="link" button key="HOME">
+              <Link to="/">HOME</Link>
             </ListItem>
 
-            <ListItem button key="PROJECTS">
-              <a
-                href="/projects"
-                style={{ "text-decoration": "none", color: "black" }}
-              >
-                <ListItemText primary="PROJECTS" />
-              </a>
+            <ListItem className="link" button key="PROJECTS">
+              <Link to="/projects">PROJECTS</Link>
             </ListItem>
 
-            <ListItem button key="RESUME">
-              <a
-                href="/resume"
-                style={{ "text-decoration": "none", color: "black" }}
-              >
-                <ListItemText primary="RESUME" />
-              </a>
+            <ListItem className="link" button key="RESUME">
+              <Link to="/resume">RESUME</Link>
             </ListItem>
 
-            <ListItem button key="ABOUT">
-              <a
-                href="/about"
-                style={{ "text-decoration": "none", color: "black" }}
-              >
-                <ListItemText primary="ABOUT" />
-              </a>
+            <ListItem className="link" button key="ABOUT">
+              <Link to="/about">ABOUT</Link>
             </ListItem>
 
             <Divider />
 
-            <ListItem button key="EMAIL">
-              <a
-                href="mailto:chriscohen@chriscohen.dev"
-                style={{ "text-decoration": "none", color: "black" }}
-              >
-                <ListItemText primary="EMAIL" />
+            <ListItem className="link" button key="EMAIL">
+              <a href="mailto:chriscohen@chriscohen.dev">EMAIL</a>
+            </ListItem>
+
+            <ListItem className="link" button key="LINKEDIN">
+              <a href="https://www.linkedin.com/in/chris-cohen-purdue/">
+                LINKEDIN
               </a>
             </ListItem>
 
-            <ListItem button key="LINKEDIN">
-              <a
-                href="https://www.linkedin.com/in/chris-cohen-purdue/"
-                style={{ "text-decoration": "none", color: "black" }}
-              >
-                <ListItemText primary="LINKEDIN" />
-              </a>
-            </ListItem>
-
-            <ListItem button key="GITHUB">
-              <a
-                href="https://github.com/cohenchris"
-                style={{ "text-decoration": "none", color: "black" }}
-              >
-                <ListItemText primary="GITHUB" />
-              </a>
+            <ListItem className="link" button key="GITHUB">
+              <a href="https://github.com/cohenchris">GITHUB</a>
             </ListItem>
           </Drawer>
         </Navbar>

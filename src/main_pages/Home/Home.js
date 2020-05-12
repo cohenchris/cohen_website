@@ -32,7 +32,7 @@ export default function Home() {
         )}
         {width < 650 && (
           <div>
-            <h4>Incoming Software Engineering Intern for Qualcomm</h4>
+            <h4>Embedded Software Engineering Intern for Qualcomm</h4>
             <h4>Cybersecurity Student at Purdue University</h4>
           </div>
         )}

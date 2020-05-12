@@ -1,18 +1,20 @@
 .aboutStyle {
   font-family: "Oswald", sans-serif;
   margin: auto;
-  width: 520px;
+  width: 700px;
+  text-align: justify;
 }
 
 @media (max-width: 650px) {
   .aboutStyle {
-    font-family: "Oswald", sans-serif;
-    margin: auto;
-    width: 400px;
+    width: 450px;
   }
 }
 
-.me {
+.me * {
+  display: flex;
+  justify-content: center;
+  margin: auto;
   filter: saturate(150%);
   width: 520px;
   height: 650px;
@@ -20,13 +22,17 @@
   object-position: center top;
 }
 
-.meMobile {
-  width: 400px;
-  height: 500px;
-  object-fit: cover;
-  object-position: center top;
+@media (max-width: 650px) {
+  .me * {
+    width: 400px;
+    height: 500px;
+  }
 }
 
 h2 {
   text-align: center;
+}
+
+p {
+  font-size: 120%;
 }

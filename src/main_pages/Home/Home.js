@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer.js";
 import "./Home.css";
 import "../../helper_functions";
 import "../../index.css";
-import CoverImg from "../../images/sideview.jpg";
+import CoverImg from "../../images/cover.png";
 import { useWindowDimensions } from "../../helper_functions";
 
 export default function Home() {
@@ -23,13 +23,13 @@ export default function Home() {
         {width >= 650 && (
           <div>
             <h2>Incoming Software Engineering Intern for Qualcomm</h2>
-            <h2>Computer Science Student at Purdue University</h2>
+            <h2>Cybersecurity Student at Purdue University</h2>
           </div>
         )}
         {width < 650 && (
           <div>
             <h4>Incoming Software Engineering Intern for Qualcomm</h4>
-            <h4>Computer Science Student at Purdue University</h4>
+            <h4>Cybersecurity Student at Purdue University</h4>
           </div>
         )}
       </div>

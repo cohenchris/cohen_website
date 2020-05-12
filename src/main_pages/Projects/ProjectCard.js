@@ -8,7 +8,8 @@ import {
   MuiThemeProvider,
   createMuiTheme,
 } from "@material-ui/core";
-import { Col, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
+import "./Projects.css";
 
 const muiBaseTheme = createMuiTheme();
 
@@ -19,7 +20,7 @@ export default function ProjectCard(props) {
   const modalShow = () => setShow(true);
 
   return (
-    <Col>
+    <div>
       <MuiThemeProvider
         theme={createMuiTheme({
           palette: {
@@ -31,8 +32,12 @@ export default function ProjectCard(props) {
           },
         })}
       >
-        <Card className="card" variant="outlined" onClick={modalShow}>
-          {/*<CardMedia className="pic" component="img" src={props.img_src} />*/}
+        <Card
+          className="card"
+          variant="outlined"
+          onClick={modalShow}
+          style={{ "background-color": "#262522" }}
+        >
           <CardContent className="content">
             <Typography variant="h4" className="title" gutterBottom>
               {props.title.toUpperCase()}
@@ -43,19 +48,24 @@ export default function ProjectCard(props) {
       </MuiThemeProvider>
 
       {/* POPUP MODAL FOR EACH PROJECT */}
+      <div className="popupDescription">
+        <Modal show={show} onHide={modalHide} size="lg">
+          <Modal.Header closeButton style={{ "font-family": "Oswald" }}>
+            <Modal.Title>
+              <strong>{props.fulltitle}</strong>
+            </Modal.Title>
+          </Modal.Header>
 
-      <Modal show={show} onHide={modalHide} size="lg">
-        <Modal.Header closeButton style={{ "font-family": "Oswald" }}>
-          <Modal.Title>{props.fulltitle}</Modal.Title>
-        </Modal.Header>
+          <Modal.Body className="popupDescription">
+            <p dangerouslySetInnerHTML={{ __html: props.body }}></p>
+          </Modal.Body>
 
-        <Modal.Body>
-          <p dangerouslySetInnerHTML={{ __html: props.body }}></p>
-        </Modal.Body>
-
-        <Modal.Footer>{props.timestamp}</Modal.Footer>
-      </Modal>
-    </Col>
+          <Modal.Footer className="popupDescription">
+            {props.timestamp}
+          </Modal.Footer>
+        </Modal>
+      </div>
+    </div>
   );
 }
 

@@ -10,6 +10,7 @@ fi
 rm -rf ../cohenchris.github.io/*
 mv ./build/* ../cohenchris.github.io
 cp ./CNAME ../cohenchris.github.io/CNAME
+cp ./404.html ../cohenchris.github.io/404.html
 rm -rf ./build
 cd ../cohenchris.github.io
 curr_date=$(date +"%m-%d-%Y_%T")

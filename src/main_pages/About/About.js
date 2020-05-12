@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import "react-awesome-slider/dist/styles.css";
@@ -7,6 +7,10 @@ import "../../index.css";
 import Me from "../../images/me.jpg";
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="background">
       <NavigationBar />

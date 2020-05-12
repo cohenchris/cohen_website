@@ -1,11 +1,11 @@
-.projectsStyle {
+.projectsStyle * {
   font-family: "Oswald", sans-serif;
   margin: auto;
+  justify-content: center;
 }
 
-@media (max-width: 650px) {
-  .projectsStyle * {
-    font-family: "Oswald", sans-serif;
-    margin: auto;
-  }
+.popupDescription * {
+  font-family: "Oswald", sans-serif;
+  font-size: 110%;
+  text-align: justify;
 }

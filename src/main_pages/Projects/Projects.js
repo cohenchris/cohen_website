@@ -18,16 +18,14 @@ export default class Projects extends React.Component {
 
         <div className="projectsStyle">
           <Container fluid>
-            <Row noGutters />
             <Row>
               {ProjectList.map((project) => (
-                <Col lg="2" md="6" sm="12" className="mb-2">
+                <Col className="m-2">
                   <ProjectCard
                     fulltitle={project.fulltitle}
                     title={project.title}
                     desc={project.desc}
                     body={project.body}
-                    img_src={project.img_src}
                     timestamp={project.timestamp}
                   />
                 </Col>

@@ -18,18 +18,14 @@ export default function Resume() {
       <div className="resumeStyle">
         <h3>If you'd like to know more, please don't hesitate to ask!</h3>
         <br />
-        <a
-          className="downloadButton"
-          href={resume_pdf}
-          download="ChrisCohen_Resume"
-        >
-          <Button variant="outline-dark">
+        <a href={resume_pdf} download="ChrisCohen_Resume">
+          <Button className="downloadButton">
             Download Resume
             <GetAppIcon />
           </Button>
         </a>
         <div className="resume">
-          <img src={resume_png} width={width} height="auto" />
+          <img src={resume_png} width={width} height="auto" alt="" />
         </div>
       </div>
       <Footer />

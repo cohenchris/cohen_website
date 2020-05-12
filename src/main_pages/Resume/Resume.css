@@ -13,11 +13,18 @@
 }
 
 .downloadButton {
-  text-decoration: "none";
-  color: "black";
+  color: black;
   font-family: "Oswald", sans-serif;
+  background-color: white;
+  border-color: black;
 }
 
+.downloadButton:hover {
+  color: white;
+  background-color: black;
+  border-color: black;
+  font-family: "Oswald", sans-serif;
+}
 .resume * {
   max-width: 1000;
 }

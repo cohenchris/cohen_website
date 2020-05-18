@@ -42,6 +42,9 @@ export default function ProjectCard(props) {
             <Typography variant="h4" className="title" gutterBottom>
               {props.title.toUpperCase()}
             </Typography>
+            <Typography variant="h6" className="subtitle" gutterBottom>
+              {props.subtitle.toUpperCase()}
+            </Typography>
             <Typography className="body">{props.desc}</Typography>
           </CardContent>
         </Card>

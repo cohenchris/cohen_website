@@ -3,9 +3,10 @@
 {
     fulltitle:    "", 
     title:        "",
+    subtitle:     "",
     desc:         "",
-    body:         ``,
-    img_src:      "",
+    body:         `<p>
+                  </p>`,
     timestamp:    ""
   },
 
@@ -18,7 +19,9 @@ const ProjectList = [
     /* HONEYPOT */
     fulltitle: "HTTPS Webserver Honeypot in Python",
     title: "Webserver Honeypot",
-    desc: "An HTTPS honeypot server built in Python",
+    subtitle: "Extracurricular",
+    desc:
+      "An HTTPS honeypot designed to lure attackers and study attack methodology.",
     body: `<p>
               Realizing that I lacked experience in cybersecurity, I decided to 
               take the plunge with a large personal project. A honeypot is a term 
@@ -51,8 +54,6 @@ const ProjectList = [
               an interactive script is available that installs all dependencies, sets up the local MySQL server to log,
               and creates a script that starts the server that serves the IP of your choosing.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "April 2020 - May 2020",
   },
 
@@ -60,6 +61,7 @@ const ProjectList = [
     /* SHELL */
     fulltitle: "Shell Interpreter In C",
     title: "Shell",
+    subtitle: "",
     desc:
       "A shell interpreter written in C to combine behavior from common shells.",
     body: `<p>
@@ -110,8 +112,6 @@ const ProjectList = [
               history was pretty straightforward, and I ended up imitating
               bash's ctrl-R searching mode.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "September 2019 - October 2019",
   },
 
@@ -119,8 +119,9 @@ const ProjectList = [
     /* SUDOKU SOLVER */
     fulltitle: "Sudoku Solver in C++",
     title: "Sudoku Solver",
+    subtitle: "Extracurricular",
     desc:
-      "An sudoku solver with 5 different solving algorithms plus brute force.",
+      "A sudoku solver with 4 specialized solving algorithms. Uses recursive brute-forcing to help when needed.",
     body: `<p>
               During my 2019-2020 Winter break, I decided to teach myself
               C++, and challenge myself with a project that I had no idea
@@ -146,17 +147,113 @@ const ProjectList = [
               random candidate from the original Cell was chosen. If all
               candidates from that Cell failed, the board is unsolvable.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "December 2019 - January 2020",
+  },
+
+  {
+    fulltitle: "Kernel Instrumentation and Completely Fair Scheduling in XINU",
+    title: "Completely Fair Scheduling",
+    subtitle: "",
+    desc:
+      "A scheduling algorithm that attempts to efficiently juggle CPU and I/O bound processes based on typical behavior.",
+    body: `<p>
+              The ideology behind this algorithm, currently used in Linux as of 2007, is relatively simple.
+              CPU-bound processes need the CPU as much as possible, so that they can finish
+              any needed calculations as quickly as they can. However, I/O-bound processes are not
+              bottlenecked by the CPU, but rather, the user. Therefore, whenever an I/O-bound process is running,
+              we should context-switch it out until it's ready. When it's finally ready, it's immediately given
+              control of the CPU.
+          </p>
+          <p>
+              Since, in this case, priority of a process clearly changes throughout its lifetime, we cannot use
+              XINU's default static priorities. A new field for each process is created, which increases in parallel
+              to the time that it's been running. This makes it easy to balance all CPU-bound processes and make sure
+              they get equal control of the CPU.
+          </p>
+          <p>
+              First, on creation of a process, it is created a priority value equal to the lowest priority value
+              in the ready list. This helps make sure that a newly created process doesn't starve any existing processes.
+              Just completing this simple step already makes sure that every process in the queue gets equal share of
+              the CPU, without starving any other process. This means that CPU-bound process scheduling is complete.
+          </p>
+          <p>
+              Secondly, we need to handle I/O-bound processes. There are many cases when a process would be I/O-bound,
+              but for simplicity in this lab, we were instructed to only handle the case of a sleeping process.
+              When a process is put to sleep, it is taken out of the ready list, so we don't have to worry about anything
+              there. However, when the process is woken up, it is given a priority value equal to the maximum priority
+              in the ready list. This makes it so that a woken process immediately gets the CPU. Setting the priority
+              value equal to the max in the list, rather than the max total, makes sure that it doesn't starve other
+              processes.
+          </p>`,
+    timestamp: "February 2020 - March 2020",
+  },
+
+  {
+    fulltitle:
+      "Asynchronous Inter-Process Communication with Callback Functions",
+    title: "Asynchronous IPC and Callbacks",
+    subtitle: "",
+    desc:
+      "Implementation of a responsive callback function using  ways for processes to communicate and return-oriented programming.",
+    body: `<p>
+              This lab was used as both illustration for how callback functions work, and training for return-oriented programming.
+              IPC (inter-process communication) is used for a processe to signal another process, which would then execute the callback
+              function once the receiver is running.
+          </p>
+          <p>
+              The sender process first puts a message into the receiver's inbox. It will stay there until the receivier has been
+              context-switched back in. Once that happens, the receiver checks the inbox. If there is a message, return-oriented
+              programming is used to maniuplate the stack. The address of the callback function overwrites the original return address,
+              and the original return address is moved down one space. This cases the callback function to first be executed, then the
+              original place in the receiver's code.
+          </p
+          <p>
+              This is not the most responsive way to implement a callback function, but there are advantages with this method.
+              XINU is meant to be run on a single-core machine, and on a relatively weak back end. If we simply ran the callback
+              function immedately when a receiver receives a message, the overhead involved in doing so could slow down execution
+              significantly. XINU's single-core approach means that only one process holds the CPU at a given time, so there's no
+              advantage in doing it that way in the first place, since the sender can never send a message while the receiver runs.
+          </p>`,
+    timestamp: "April 2020",
+  },
+  {
+    fulltitle: "A Personal Website written using ReactJS",
+    title: "This Website",
+    subtitle: "Extracurricular",
+    desc:
+      "A personal website written using ReactJS. Emphasis on learning hooks and sleek, modern design.",
+    body: `<p>
+              The inspiration for this website began after working on the front
+              end of 'Twistter', another project listed on the page. Twistter
+              was rushed, so I really enjoyed being able to take my time to
+              make the site how I wanted. I decided to buy a custom domain, too,
+              since it was only $12 per year!
+          </p>
+          <p>
+              I primarily use this website as a learning platform, keeping myself
+              loosely up-to-date on current practices. When I started, <strong>ReactJS hooks</strong>
+              were just introduced, so I targeted that. When hooks are needed, they are
+              used in favor in classes throughout the source code, located on
+              <a href="https://github.com/cohenchris/cohen_website">GitHub</a>.
+          <p>
+          <p>
+              For deployment, the website is compiled into an efficient build-ready state
+              using the command 'npm run build.' From there, it is deployed using GitHub pages.
+              The build files are uploaded to another specially-named repository, located
+              <a href="https://github.com/cohenchris/cohenchris.github.io">here</a>.
+              GitHub takes care of the rest, after I mapped 'chriscohen.dev' to resolve to
+              'cohenchris.github.io'.1
+          </p>`,
+    timestamp: "December 2020 - Present",
   },
 
   {
     /* MALLOC */
     fulltitle: "Memory Allocation Library in C, Replacement for 'stdlib.c'",
     title: "Memory Allocation Library",
+    subtitle: "",
     desc:
-      "A memory allocation library written in C, helping me learn how UNIX memory allocation works.",
+      "A memory allocation library written in C, helping me learn how traditional UNIX memory allocation works.",
     body: `<p>
               This large project taught me the inner workings of memory
               allocation. I created a program that has functionality for
@@ -166,8 +263,6 @@ const ProjectList = [
               Multiple different block-finding methods were implemented - first
               fit, best fit, worst fit, and next fit.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "September 2019",
   },
 
@@ -175,7 +270,8 @@ const ProjectList = [
     /* TWISTTER */
     fulltitle: "Twistter (Twitter + Reddit Crossover) in Javascript (ReactJS)",
     title: "Twistter",
-    desc: "A twitter/reddit hybrid. I worked on front-end with ReactJS.",
+    subtitle: "",
+    desc: "A twitter/reddit hybrid. I worked on front-end using ReactJS.",
     body: `<p>
               This group project focused on the SCRUM philosophy of software
               development and making a full-fledged application. I was assigned
@@ -187,8 +283,6 @@ const ProjectList = [
               well as a Direct Messaging system between users. The most
               difficult part was updating the GUI based on who is logged in.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "August 2019 - December 2019",
   },
 
@@ -196,6 +290,7 @@ const ProjectList = [
     /* TASK MANAGER */
     fulltitle: "UNIX Task Manager in C",
     title: "Task Manager",
+    subtitle: "",
     desc:
       "A task manager for UNIX written to learn about the structure of '/proc'",
     body: `<p>
@@ -206,8 +301,6 @@ const ProjectList = [
               information into easily-accessible structs for the front-end team
               to handle.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "November 2019 - December 2019",
   },
 
@@ -215,6 +308,7 @@ const ProjectList = [
     /* CRANE NLP PROJECT */
     fulltitle: "NLP (Natural Language Processing) Database Parsing in Python",
     title: "NLP on Databases",
+    subtitle: "Internship at NSWC Crane",
     desc:
       "I used NLP to parse navy databases, making problem diagnosis significantly faster.",
     body: `<p>
@@ -224,8 +318,6 @@ const ProjectList = [
               language processing algorithm to process failure databases. The
               work that I contributed to has a patent pending as well.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "",
   },
 
@@ -233,20 +325,19 @@ const ProjectList = [
     /* PRINTF */
     fulltitle: "printf() Replacement in ARM Assembly",
     title: "printf()",
+    subtitle: "",
     desc: "A functional replacement for printf() written in ARM Assembly.",
     body: `<p>
               In my Computer Architecture course, we had to implement
               functionality for{" "}
               <strong>printf()'s %c, %s, %d, and %x in ARM Assembly</strong>. %c
               and %s were accomplished using looping and putchar(). %x was a bit
-              more difficult - I used bit shifting to isolate 4 bits, translated
+              more difficult - I used bit shifting to isolate 4 bits at a time, translated
               into a hex digit, and print the hex digit. %d was the toughest. I
               isolated each base 10 digit and printed it, but it was much
               tougher than %x since base 10 is not a multiple of 2, so bit
               shifting is not possible.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "April 2019",
   },
 
@@ -254,6 +345,7 @@ const ProjectList = [
     /* LINUX TWEAKING */
     fulltitle: "Linux Tweaking and Exploration",
     title: "Linux",
+    subtitle: "Extracurricular",
     desc:
       "I primarily run Linux since it's efficient for programming. I heavily customize my workflow.",
     body: `<p>
@@ -273,8 +365,6 @@ const ProjectList = [
               changes the settings to exactly what I want them to, an exact copy of my
               normal workstation.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "August 2017 - Present",
   },
 
@@ -282,6 +372,7 @@ const ProjectList = [
     /* PIHOLE */
     fulltitle: "Raspberry Pi DNS-Level AdBlocker - PiHole",
     title: "Pi-Hole",
+    subtitle: "Extracurricular",
     desc: "A DNS-level adblocker hooked up to my router.",
     body: `<p>
               Once I completed my Computer Architecture course, I had a
@@ -292,8 +383,6 @@ const ProjectList = [
               them before they even reach your device. I particularly like it
               because it blocks advertisements AND trackers.
           </p>`,
-    img_src:
-      "https://images.unsplash.com/photo-1519810755548-39cd217da494?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80",
     timestamp: "August 2019 - Present",
   },
 ];

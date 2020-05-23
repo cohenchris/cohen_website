@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Modal } from "react-bootstrap";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import "./Home.css";
@@ -6,6 +7,9 @@ import "../../helper_functions";
 import "../../index.css";
 import CoverImg from "../../images/cover.png";
 import { useWindowDimensions } from "../../helper_functions";
+
+// Detects if user is using Internet Explorer
+var isIE = false || !!document.documentMode;
 
 export default function Home() {
   useEffect(() => {
@@ -18,6 +22,7 @@ export default function Home() {
     <div className="background">
       <NavigationBar />
       <div className="home">
+        {isIE && <IEModal />}
         <div className="cover">
           <img src={CoverImg} alt="" />
         </div>
@@ -39,5 +44,26 @@ export default function Home() {
       </div>
       <Footer />
     </div>
+  );
+}
+
+function IEModal() {
+  const [show, setShow] = useState(isIE);
+
+  const handleClose = () => setShow(false);
+
+  return (
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Header closeButton>
+        <Modal.Title>Attention</Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        You seem to be using Internet Explorer to view this webpage. For
+        compatibility, I have allowed Internet Explorer users to see this
+        webpage, but ReactJS does not work well with it. Please switch to a more
+        compatible browser for optimal viewing. Chrome and Firefox are the best
+        choices, but Edge or Safari both work too.
+      </Modal.Body>
+    </Modal>
   );
 }

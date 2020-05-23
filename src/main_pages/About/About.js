@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer.js";
 import "react-awesome-slider/dist/styles.css";
 import "./About.css";
 import "../../index.css";
-import Me from "../../images/me.jpg";
+import Me from "../../images/me.png";
 import { useWindowDimensions } from "../../helper_functions";
 
 export default function About() {

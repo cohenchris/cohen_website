@@ -22,7 +22,7 @@ fi
 rm -rf ../cohenchris.github.io/*
 mv ./build/* ../cohenchris.github.io
 cp ./CNAME ../cohenchris.github.io/CNAME
-cp ./404.html ../cohenchris.github.io/404.html
+cp ./404.* ../cohenchris.github.io/
 rm -rf ./build
 cd ../cohenchris.github.io
 

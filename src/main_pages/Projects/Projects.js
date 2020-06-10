@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import ProjectCard from "./ProjectCard.js";
-import { Container, Col, Row, Toast } from "react-bootstrap";
+import { Container, Col, Row, Modal } from "react-bootstrap";
 import "./Projects.css";
 import "../../index.css";
 import ProjectList from "./ProjectList.js";
 
 export default function Projects() {
-  const [showToast, setShowToast] = useState(true);
-
-  const closeToast = () => setShowToast(false);
+  const [show, setShow] = useState(true);
+  const handleClose = () => setShow(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,12 +20,11 @@ export default function Projects() {
       <NavigationBar />
 
       <div className="projectsStyle">
-        <Toast show={showToast} onClose={closeToast}>
-          <Toast.Header>
-            <strong>Click on a tile to learn more about the project!</strong>
-          </Toast.Header>
-        </Toast>
-
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Click on any tile to learn more!</Modal.Title>
+          </Modal.Header>
+        </Modal>
         <Container fluid>
           <Row>
             {ProjectList.map((project) => (

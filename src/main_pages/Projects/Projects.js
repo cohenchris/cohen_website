@@ -17,11 +17,7 @@ export default function Projects() {
 
   return (
     <div className="background">
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Click on any tile to learn more!</Modal.Title>
-        </Modal.Header>
-      </Modal>
+
       <NavigationBar />
       <div className="projectsStyle">
         <Container fluid>
@@ -42,6 +38,11 @@ export default function Projects() {
         </Container>
       </div>
       <Footer />
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Click on any tile to learn more!</Modal.Title>
+        </Modal.Header>
+      </Modal>
     </div>
   );
 }

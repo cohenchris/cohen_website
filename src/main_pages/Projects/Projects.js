@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import ProjectCard from "./ProjectCard.js";
-import { Container, Col, Row, Modal } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import "./Projects.css";
 import "../../index.css";
 import ProjectList from "./ProjectList.js";
 
 export default function Projects() {
-  const [show, setShow] = useState(true);
-  const handleClose = () => setShow(false);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,6 +17,7 @@ export default function Projects() {
 
       <NavigationBar />
       <div className="projectsStyle">
+        <h1 className="header">Click on any tile to learn more!</h1>
         <Container fluid>
           <Row>
             {ProjectList.map((project) => (
@@ -38,11 +36,6 @@ export default function Projects() {
         </Container>
       </div>
       <Footer />
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Click on any tile to learn more!</Modal.Title>
-        </Modal.Header>
-      </Modal>
     </div>
   );
 }

@@ -32,7 +32,7 @@ git add .
 git commit -m "website build $curr_date"
 git push origin master
 
-cd ../website
+cd ../cohen_website
 rm -rf ../cohenchris.github.io
 
 # Commit to development repository

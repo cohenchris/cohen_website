@@ -13,7 +13,7 @@ rm -rf resume/
 # Create optimized build for upload
 npm run build
 # For use with custom 404 page
-cp ./error_pages/ ./build/
+cp -r ./error_pages/ ./build/
 # Move 
 scp -r build/* chris@chriscohen.dev:/var/www/chriscohen.dev/html
 rm -rf ./build

@@ -1,13 +1,20 @@
 # Personal Website for Chris Cohen
+---
 
-## Written in ReactJS
-- Emphasis on learning Hooks
-- Modern, Minimal Design
+## Domains served
+- chriscohen.dev
+- searx.chriscohen.dev
+
+## Pages
+- Home Page
+- Resume Page
+- Projects Page
+  - Interactive tiles giving a brief overview of each project
+- About Page
+- Searx (searx.chriscohen.dev)
+  - Privacy-oriented metasearch engine
 
 ## Features
-- Routing
-  - External contact links
-  - React Router
-    - Client-sided routing
-    - Fade transition
-
+- Deployed on Vultr using Nginx
+- HTTPS Certificate using Let's Encrypt
+- Routing with React Router

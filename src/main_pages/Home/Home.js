@@ -31,13 +31,13 @@ export default function Home() {
         <br />
         {width >= 650 && (
           <div>
-            <h2>Embedded Software Engineering Intern for Qualcomm</h2>
+            <h2>Software Engineering Intern for Qualcomm</h2>
             <h2>Cybersecurity Student at Purdue University</h2>
           </div>
         )}
         {width < 650 && (
           <div>
-            <h4>Embedded Software Engineering Intern for Qualcomm</h4>
+            <h4>Software Engineering Intern for Qualcomm</h4>
             <h4>Cybersecurity Student at Purdue University</h4>
           </div>
         )}

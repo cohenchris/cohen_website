@@ -52,8 +52,7 @@ export default function About() {
       <div className="me">
         <img src={Me} width={width} alt="" />
       </div>
-
       <Footer />
-    </div>
+    </div >
   );
 }

@@ -12,6 +12,7 @@ rm -rf resume/
 
 # Create optimized build for upload
 npm run build
+cp ./404.* ./build/
 
 # # Old commands for deploying to GitHub Pages
 # if ! [[ -d ../cohenchris.github.io ]]; then

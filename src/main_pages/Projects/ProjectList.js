@@ -238,13 +238,35 @@ const ProjectList = [
           <p>
           <p>
               For deployment, the website is compiled into an efficient build-ready state
-              using the command 'npm run build.' From there, it is deployed using GitHub pages.
-              The build files are uploaded to another specially-named repository, located
-              <a href="https://github.com/cohenchris/cohenchris.github.io">here</a>.
-              GitHub takes care of the rest, after I mapped 'chriscohen.dev' to resolve to
-              'cohenchris.github.io'.1
+              using the command 'npm run build.' From there, I automatically pull down
+              the latest version of my resume and deploy it to my Nginx web server.
+              More information on Nginx in the next tile.              
           </p>`,
     timestamp: "December 2020 - Present",
+  },
+
+  {
+    fulltitle: "A Web Server Deployed Using Nginx",
+    title: "Nginx Web Server",
+    subtitle: "Extracurricular",
+    desc: "A web server deployed using Nginx, hosting my website and the privacy-oriented metasearch engine 'Searx'",
+    body: `<p>
+              I used to deploy my website on GitHub Pages, but it was quite limiting.
+              If I ever wanted to make some part of my website non-static, there would be
+              a complete roadblock. I decided to take the opportunity to convert over to
+              a real web server using Nginx, and learn along the way.
+          </p>
+          <p>
+              Right now, this web server hosts 2 different sites: <a href="https://chriscohen.dev">https://chriscohen.dev</a> and <a href="https://searx.chriscohen.dev">https://searx.chriscohen.dev</a>
+              The main portion of my website is meant to be a portfolio of sorts, and a place that I can experiment
+              and keep up-to-date with ReactJS. The other portion, Searx, is an open-source, metasearch engine that you can find on <a href="https://github.com/asciimoo/searx">GitHub</a>.
+              It uses proxies to prevent your privacy from being compromised. It seemed like a fun project to learn about proxies.
+          </p>
+          <p>
+            I have this Nginx web server deployed on a <a href="https://www.vultr.com/">Vultr</a> VPS. I would highly
+            recommend their service - it's been the smoothest out of anything that I've tried so far!
+          </p>`,
+    timestamp: "June 2020 - Present"
   },
 
   {

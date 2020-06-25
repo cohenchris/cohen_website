@@ -12,14 +12,6 @@ rm -rf resume/
 
 # Create optimized build for upload
 npm run build
-# For use with custom 404 page
-cp -r ./error_pages/ ./build/
 # Move 
 scp -r build/* chris@chriscohen.dev:/var/www/chriscohen.dev/html
 rm -rf ./build
-
-# Commit to development repository
-read -p "Commit message for ReactJS repository: " msg
-git add .
-git commit -m "${msg}"
-git push origin master

@@ -263,8 +263,9 @@ const ProjectList = [
               It uses proxies to prevent your privacy from being compromised. It seemed like a fun project to learn about proxies.
           </p>
           <p>
-            I have this Nginx web server deployed on a <a href="https://www.vultr.com/">Vultr</a> VPS. I would highly
-            recommend their service - it's been the smoothest out of anything that I've tried so far!
+            I have this Nginx web server deployed on a <a href="https://www.vultr.com/">Vultr</a> VPS.
+            There's also an OpenVPN server running on this VPS, and it runs perfectly and is very convenient.
+            I would highly recommend Vultr - it's been the smoothest experience osut of anything that I've tried so far!
           </p>`,
     timestamp: "June 2020 - Present"
   },

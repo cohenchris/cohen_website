@@ -49,7 +49,7 @@ export default function NavigationBar() {
     // MOBILE MENU
     return (
       <div>
-        <Navbar className="mobileMenu" bg="bg-black" variant="dark">
+        <Navbar className="mobileMenu" variant="dark">
           <Navbar.Brand className="mr-auto" href="/">
             CHRIS COHEN
           </Navbar.Brand>
@@ -84,7 +84,7 @@ export default function NavigationBar() {
               <Link to="/about">ABOUT</Link>
             </ListItem>
 
-            <ListItem className="link" button key="LINK">
+            <ListItem className="link" button key="SEARX">
               <a href="https://searx.chriscohen.dev">SEARX</a>
             </ListItem>
 

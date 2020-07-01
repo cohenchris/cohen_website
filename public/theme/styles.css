@@ -141,7 +141,7 @@ tr {
 }
 tr:hover td {
 	color: #FFFFFF;	
-	background: #3D4351;
+	background: #404040;
 }
 tr td:first-of-type {
 	padding-left: 10px;

@@ -9,17 +9,18 @@
 
 .link * {
   list-style: none;
-  color: grey;
+  color: #262522;
   font-family: "Oswald", sans-serif;
   font-size: 100%;
 }
 
 .link:hover * {
   text-decoration-line: none;
-  color: black;
+  color: grey;
 }
 
 .mobileMenu {
+  color: #262522;
   background-color: #262522;
   font-family: "Oswald", sans-serif;
 }

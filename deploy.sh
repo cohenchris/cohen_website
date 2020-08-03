@@ -1,5 +1,7 @@
 #!/bin/bash
 
+npm i
+
 # Upload updated resume from github repository
 git clone https://github.com/cohenchris/resume.git
 rm -f ./src/files/ChrisCohen_resume.pdf

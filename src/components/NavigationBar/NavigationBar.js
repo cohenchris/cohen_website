@@ -37,9 +37,6 @@ export default function NavigationBar() {
             <Nav.Link className="link" href="/about">
               <Link to="/about">ABOUT</Link>
             </Nav.Link>
-            <Nav.Link className="link" href="https://searx.chriscohen.dev">
-              SEARX
-            </Nav.Link>
           </Nav>
         </Navbar>
         <br />
@@ -82,10 +79,6 @@ export default function NavigationBar() {
 
             <ListItem className="link" button key="ABOUT">
               <Link to="/about">ABOUT</Link>
-            </ListItem>
-
-            <ListItem className="link" button key="SEARX">
-              <a href="https://searx.chriscohen.dev">SEARX</a>
             </ListItem>
 
             <Divider />

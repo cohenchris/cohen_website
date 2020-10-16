@@ -16,5 +16,6 @@ rm -rf resume/
 # Create optimized build for upload
 npm run build
 # Move 
-scp -r build/* root@chriscohen.dev:/root/vps_docker/nginx/config/www/chriscohen.dev/html
-rm -rf ./build
+mv build/ html/
+scp -r html/ root@chriscohen.dev:/root/vps_docker/nginx/config/www/chriscohen.dev/
+rm -rf ./html

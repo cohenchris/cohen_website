@@ -23,9 +23,9 @@ const ProjectList = [
     desc:
       "An HTTPS honeypot designed to lure attackers and study attack methodology.",
     body: `<p>
-              Realizing that I lacked experience in cybersecurity, I decided to 
+              Realizing that I lacked experience in cyber security, I decided to 
               take the plunge with a large personal project. A honeypot is a term 
-              used in cybersecurity describing a network entity that purposefully 
+              used in cyber security describing a network entity that purposefully 
               lures attackers away from some more important part of a network. Among 
               other functionalities, I decided to implement this. The full project proposal, 
               source code, and final analysis/report can be found on 
@@ -197,20 +197,20 @@ const ProjectList = [
       "Implementation of a responsive callback function using  ways for processes to communicate and return-oriented programming.",
     body: `<p>
               This lab was used as both illustration for how callback functions work, and training for return-oriented programming.
-              IPC (inter-process communication) is used for a processe to signal another process, which would then execute the callback
+              IPC (inter-process communication) is used for a process to signal another process, which would then execute the callback
               function once the receiver is running.
           </p>
           <p>
-              The sender process first puts a message into the receiver's inbox. It will stay there until the receivier has been
+              The sender process first puts a message into the receiver's inbox. It will stay there until the receiver has been
               context-switched back in. Once that happens, the receiver checks the inbox. If there is a message, return-oriented
-              programming is used to maniuplate the stack. The address of the callback function overwrites the original return address,
+              programming is used to manipulate the stack. The address of the callback function overwrites the original return address,
               and the original return address is moved down one space. This cases the callback function to first be executed, then the
               original place in the receiver's code.
           </p
           <p>
               This is not the most responsive way to implement a callback function, but there are advantages with this method.
               XINU is meant to be run on a single-core machine, and on a relatively weak back end. If we simply ran the callback
-              function immedately when a receiver receives a message, the overhead involved in doing so could slow down execution
+              function immediately when a receiver receives a message, the overhead involved in doing so could slow down execution
               significantly. XINU's single-core approach means that only one process holds the CPU at a given time, so there's no
               advantage in doing it that way in the first place, since the sender can never send a message while the receiver runs.
           </p>`,
@@ -246,10 +246,10 @@ const ProjectList = [
   },
 
   {
-    fulltitle: "A Web Server Deployed Using Nginx",
-    title: "Nginx Web Server",
+    fulltitle: "A Web Server Deployed Using Docker-Compose and Nginx",
+    title: "Web Server",
     subtitle: "Extracurricular",
-    desc: "A web server deployed using Nginx, hosting my website and the privacy-oriented metasearch engine 'Searx'",
+    desc: "A web server deployed using Nginx and docker-compose, hosting my website, the privacy-oriented metasearch engine 'Searx', and a personal news RSS feed",
     body: `<p>
               I used to deploy my website on GitHub Pages, but it was quite limiting.
               If I ever wanted to make some part of my website non-static, there would be
@@ -257,15 +257,15 @@ const ProjectList = [
               a real web server using Nginx, and learn along the way.
           </p>
           <p>
-              Right now, this web server hosts 2 different sites: <a href="https://chriscohen.dev">https://chriscohen.dev</a> and <a href="https://searx.chriscohen.dev">https://searx.chriscohen.dev</a>
+              Right now, this web server hosts 3 different sites: <a href="https://chriscohen.dev">Main Website</a>, <a href="https://searx.chriscohen.dev">SearX</a>, and <a href="https://chriscohen.dev/tt-rss"/>TinyTinyRSS</a>.
               The main portion of my website is meant to be a portfolio of sorts, and a place that I can experiment
-              and keep up-to-date with ReactJS. The other portion, Searx, is an open-source, metasearch engine that you can find on <a href="https://github.com/asciimoo/searx">GitHub</a>.
+              and keep up-to-date with ReactJS. Another portion, Searx, is an open-source, metasearch engine that you can find on <a href="https://github.com/asciimoo/searx">GitHub</a>.
               It uses proxies to prevent your privacy from being compromised. It seemed like a fun project to learn about proxies.
+              The last portion is my personal RSS feed. I use this to centralize all of my news, keeping up-to-date with news and current events.
           </p>
           <p>
             I have this Nginx web server deployed on a <a href="https://www.vultr.com/">Vultr</a> VPS.
-            There's also an OpenVPN server running on this VPS, and it runs perfectly and is very convenient.
-            I would highly recommend Vultr - it's been the smoothest experience osut of anything that I've tried so far!
+            I would highly recommend Vultr - it's been the smoothest experience out of anything that I've tried so far!
           </p>`,
     timestamp: "June 2020 - Present"
   },
@@ -377,6 +377,7 @@ const ProjectList = [
               works. I enjoy customizing my workflow for efficiency, using a
               tiling window manager (i3) and a task bar (polybar). The dotfiles
               for these are on my <a href="https://github.com/cohenchris/dotfiles">GitHub</a>.
+              These are currently private because they contain school documents. Sorry for the inconvenience.
           </p>
           <p>
               I have written numerous bash scripts to automate some mundane

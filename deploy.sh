@@ -19,3 +19,5 @@ npm run build
 mv build/ html/
 scp -r html/ root@chriscohen.dev:/root/vps_docker/nginx/config/www/chriscohen.dev/
 rm -rf ./html
+
+echo "Don't forget to commit to cohenchris/website!"

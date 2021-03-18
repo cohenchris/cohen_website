@@ -1,5 +1,7 @@
 #!/bin/bash
 
+GREEN=`tpu setaf 2`
+
 npm i
 npm audit fix
 
@@ -20,4 +22,4 @@ mv build/ html/
 scp -r html/ root@chriscohen.dev:/root/vps/nginx/config/www/chriscohen.dev/
 rm -rf ./html
 
-echo "Don't forget to commit to cohenchris/website!"
+echo "${GREEN}Don't forget to commit to cohenchris/website!"

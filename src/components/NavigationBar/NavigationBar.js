@@ -82,13 +82,8 @@ export default function NavigationBar() {
             </ListItem>
 
             <Divider />
-
-            <ListItem className="link" button key="EMAIL">
-              <a href="mailto:chriscohen@chriscohen.dev">EMAIL</a>
-            </ListItem>
-
             <ListItem className="link" button key="LINKEDIN">
-              <a href="https://www.linkedin.com/in/chris-cohen-purdue/">
+              <a href="https://www.linkedin.com/in/cohenchristopher/">
                 LINKEDIN
               </a>
             </ListItem>

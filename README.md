@@ -1,20 +1,23 @@
-# Personal Website for Chris Cohen
+# Personal Website
+
 ---
 
 ## Domains served
+
 - chriscohen.dev
+  - Home Page
+  - Resume Page
+  - Projects Page
+    - Interactive tiles giving a brief overview of each project
+  - About Page
+
+#### Subdomains served
+
 - searx.chriscohen.dev
-
-## Pages
-- Home Page
-- Resume Page
-- Projects Page
-  - Interactive tiles giving a brief overview of each project
-- About Page
-- Searx (searx.chriscohen.dev)
-  - Privacy-oriented metasearch engine
-
-## Features
-- Deployed on Vultr using Nginx
-- HTTPS Certificate using Let's Encrypt
-- Routing with React Router
+  - Privacy-oriented metasearch engine SearX
+- rss.chriscohen.dev
+  - FreshRSS instance for my news
+- nextcloud.chriscohen.dev
+  - Self-hosted cloud server as my Google Drive replacement
+- privatebin.chriscohen.dev
+  - Self-hosted, encrypted pastebin with self-destruction options

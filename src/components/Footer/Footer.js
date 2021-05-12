@@ -12,7 +12,6 @@ export default function Footer() {
 
       <Navbar className="footer" variant="dark">
         <Nav className="link">
-          <Nav.Link href="mailto:chris@chriscohen.dev">EMAIL</Nav.Link>
           <Nav.Link href="https://www.linkedin.com/in/cohenchristopher/">
             LINKEDIN
           </Nav.Link>

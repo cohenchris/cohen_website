@@ -4,6 +4,7 @@
     fulltitle:    "", 
     title:        "",
     subtitle:     "",
+    category:     "",
     desc:         "",
     body:         `<p>
                   </p>`,
@@ -20,6 +21,7 @@ const ProjectList = [
     fulltitle: "HTTPS Webserver Honeypot in Python",
     title: "Webserver Honeypot",
     subtitle: "Extracurricular",
+    category: "networks",
     desc:
       "An HTTPS honeypot designed to lure attackers and study attack methodology.",
     body: `<p>
@@ -62,6 +64,7 @@ const ProjectList = [
     fulltitle: "Shell Interpreter In C",
     title: "Shell",
     subtitle: "",
+    category: "linux",
     desc:
       "A shell interpreter written in C to combine behavior from common shells.",
     body: `<p>
@@ -120,6 +123,7 @@ const ProjectList = [
     fulltitle: "Sudoku Solver in C++",
     title: "Sudoku Solver",
     subtitle: "Extracurricular",
+    category: "fun",
     desc:
       "A sudoku solver with 4 specialized solving algorithms. Uses recursive brute-forcing to help when needed.",
     body: `<p>
@@ -154,6 +158,7 @@ const ProjectList = [
     fulltitle: "Kernel Instrumentation and Completely Fair Scheduling in XINU",
     title: "Completely Fair Scheduling",
     subtitle: "",
+    category: "linux",
     desc:
       "A scheduling algorithm that attempts to efficiently juggle CPU and I/O bound processes based on typical behavior.",
     body: `<p>
@@ -193,6 +198,7 @@ const ProjectList = [
       "Asynchronous Inter-Process Communication with Callback Functions",
     title: "Asynchronous IPC and Callbacks",
     subtitle: "",
+    category: "linux",
     desc:
       "Implementation of a responsive callback function using  ways for processes to communicate and return-oriented programming.",
     body: `<p>
@@ -220,6 +226,7 @@ const ProjectList = [
     fulltitle: "A Personal Website written using ReactJS",
     title: "This Website",
     subtitle: "Extracurricular",
+    category: "web dev",
     desc:
       "A personal website written using ReactJS. Emphasis on learning hooks and sleek, modern design.",
     body: `<p>
@@ -249,7 +256,9 @@ const ProjectList = [
     fulltitle: "A Web Server Deployed Using Docker-Compose and Nginx",
     title: "Web Server",
     subtitle: "Extracurricular",
-    desc: "A web server deployed using Nginx and docker-compose, hosting my website, the privacy-oriented metasearch engine 'Searx', and a personal news RSS feed",
+    category: "networks",
+    desc:
+      "A web server deployed using Nginx and docker-compose, hosting my website, the privacy-oriented metasearch engine 'Searx', and a personal news RSS feed",
     body: `<p>
               I used to deploy my website on GitHub Pages, but it was quite limiting.
               If I ever wanted to make some part of my website non-static, there would be
@@ -267,7 +276,7 @@ const ProjectList = [
             I have this Nginx web server deployed on a <a href="https://www.vultr.com/">Vultr</a> VPS.
             I would highly recommend Vultr - it's been the smoothest experience out of anything that I've tried so far!
           </p>`,
-    timestamp: "June 2020 - Present"
+    timestamp: "June 2020 - Present",
   },
 
   {
@@ -275,6 +284,7 @@ const ProjectList = [
     fulltitle: "Memory Allocation Library in C, Replacement for 'stdlib.c'",
     title: "Memory Allocation Library",
     subtitle: "",
+    category: "linux",
     desc:
       "A memory allocation library written in C, helping me learn how traditional UNIX memory allocation works.",
     body: `<p>
@@ -294,6 +304,7 @@ const ProjectList = [
     fulltitle: "Twistter (Twitter + Reddit Crossover) in Javascript (ReactJS)",
     title: "Twistter",
     subtitle: "",
+    category: "web dev",
     desc: "A twitter/reddit hybrid. I worked on front-end using ReactJS.",
     body: `<p>
               This group project focused on the SCRUM philosophy of software
@@ -314,6 +325,7 @@ const ProjectList = [
     fulltitle: "UNIX Task Manager in C",
     title: "Task Manager",
     subtitle: "",
+    category: "linux",
     desc:
       "A task manager for UNIX written to learn about the structure of '/proc'",
     body: `<p>
@@ -332,6 +344,7 @@ const ProjectList = [
     fulltitle: "NLP (Natural Language Processing) Database Parsing in Python",
     title: "NLP on Databases",
     subtitle: "Internship at NSWC Crane",
+    category: "misc",
     desc:
       "I used NLP to parse navy databases, making problem diagnosis significantly faster.",
     body: `<p>
@@ -349,6 +362,7 @@ const ProjectList = [
     fulltitle: "printf() Replacement in ARM Assembly",
     title: "printf()",
     subtitle: "",
+    category: "linux",
     desc: "A functional replacement for printf() written in ARM Assembly.",
     body: `<p>
               In my Computer Architecture course, we had to implement
@@ -369,6 +383,7 @@ const ProjectList = [
     fulltitle: "Linux Tweaking and Exploration",
     title: "Linux",
     subtitle: "Extracurricular",
+    category: "linux",
     desc:
       "I primarily run Linux since it's efficient for programming. I heavily customize my workflow.",
     body: `<p>
@@ -397,6 +412,7 @@ const ProjectList = [
     fulltitle: "Raspberry Pi DNS-Level AdBlocker - PiHole",
     title: "Pi-Hole",
     subtitle: "Extracurricular",
+    category: "networks",
     desc: "A DNS-level adblocker hooked up to my router.",
     body: `<p>
               Once I completed my Computer Architecture course, I had a
@@ -408,6 +424,40 @@ const ProjectList = [
               because it blocks advertisements AND trackers.
           </p>`,
     timestamp: "August 2019 - Present",
+  },
+
+  {
+    /* WEEKLY BUDGET APP ON F-DROID */
+    fulltitle: "A Minimalistic Weekly Budgeting App available on F-Droid",
+    title: "WeeklyBudget Android App",
+    subtitle: "Extracurricular",
+    category: "android",
+    desc:
+      "A minimalistic budgeting app designed for people who have a set weekly budget.",
+    body: `
+          <img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="75">
+          <p>
+            For this project, I forked <a href="https://github.com/GittyMac/WalletCount">WalletCount</a>.
+            Since I am graduating college shortly, I wanted a simple budgeting app that suited my needs.
+            Personally, I give myself a set budget each week. If I go over the budget for the week, the
+            next week's budget is lessened. If I stay under, the available funds are carried over for the
+            next week. This project was the closest to what I wanted (a minimalistic, slim budgeting app).
+            The core functionality had to be changed for my purposes, though, so I set out to do it.
+          </p>
+          <p>
+          If you set your weekly spending budget to $100, $100 would be added to your
+          available funds. Every time that you make a purchase, you subtract that
+          amount from your available funds. Every Sunday, another $100 would be added into
+          your available funds. I designed this for my purposes specifically, but I
+          hope that somebody else will find it useful!
+          </p>
+          <p>
+          The GitHub link for this project can be found <a href="https://github.com/cohenchris/WeeklyBudget">here</a>.
+          </p>
+          <p>
+          The Android app is fully open-source software, and is available on F-Droid <a href="">here</a>.
+          </p>`,
+    timestamp: "April 2021",
   },
 ];
 

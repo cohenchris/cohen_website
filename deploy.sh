@@ -6,7 +6,7 @@ npm i
 npm audit fix
 
 # Upload updated resume from github repository
-git clone https://github.com/cohenchris/resume.git
+git clone git@github.com:cohenchris/website.git
 rm -f ./src/files/ChrisCohen_resume.pdf
 mv resume/ChrisCohen_resume.pdf ./src/files/
 

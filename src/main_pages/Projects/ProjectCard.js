@@ -39,10 +39,10 @@ export default function ProjectCard(props) {
           style={{ "background-color": "#262522" }}
         >
           <CardContent className="content">
-            <Typography variant="h4" className="title" gutterBottom>
+            <Typography variant="h4" className="title">
               {props.title.toUpperCase()}
             </Typography>
-            <Typography variant="h6" className="subtitle" gutterBottom>
+            <Typography variant="h7" className="subtitle" gutterBottom>
               {props.subtitle.toUpperCase()}
             </Typography>
             <Typography className="body">{props.desc}</Typography>

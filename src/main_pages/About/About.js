@@ -4,7 +4,8 @@ import Footer from "../../components/Footer/Footer.js";
 import "react-awesome-slider/dist/styles.css";
 import "./About.css";
 import "../../index.css";
-import Me from "../../images/me.png";
+import me from "../../images/me.png";
+
 import { useWindowDimensions } from "../../helper_functions";
 
 export default function About() {
@@ -50,9 +51,9 @@ export default function About() {
         </p>
       </div>
       <div className="me">
-        <img src={Me} width={width} alt="" />
+        <img src={me} width={width} alt="" />
       </div>
       <Footer />
-    </div >
+    </div>
   );
 }

@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer.js";
 import "./Home.css";
 import "../../helper_functions";
 import "../../index.css";
-import CoverImg from "../../images/cover.png";
+import cover from "../../images/cover.png";
 import { useWindowDimensions } from "../../helper_functions";
 
 // Detects if user is using Internet Explorer
@@ -24,7 +24,7 @@ export default function Home() {
       <div className="home">
         {isIE && <IEModal />}
         <div className="cover">
-          <img src={CoverImg} alt="" />
+          <img src={cover} alt="" />
         </div>
 
         <br />

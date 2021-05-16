@@ -1,6 +1,6 @@
 /* PROJECT POST TEMPLATE
 
-{
+  {
     fulltitle:    "", 
     title:        "",
     subtitle:     "",
@@ -12,9 +12,18 @@
   },
 
 */
-/*
 
-*/
+/*
+  CURRENT CATEGORIES:
+    - linux
+    - networks
+    - web dev
+    - fun
+    - android
+    - security
+    - misc
+ */
+
 const ProjectList = [
   {
     /* HONEYPOT */
@@ -458,6 +467,19 @@ const ProjectList = [
           The Android app is fully open-source software, and is available on F-Droid <a href="">here</a>.
           </p>`,
     timestamp: "April 2021",
+  },
+
+  {
+    fulltitle: "TRACE - a digital footprint tracker",
+    title: "TRACE",
+    subtitle: "",
+    category: "web dev",
+    desc: "A privacy-focused website to track and manage your digital footprint",
+    body: `<p>
+    https://github.com/TRACE-Digital/
+    https://tracedigital.tk/
+           </p>`,
+    timestamp: ""
   },
 ];
 

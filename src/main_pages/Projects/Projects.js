@@ -2,22 +2,36 @@ import React, { useEffect, useState } from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import ProjectCard from "./ProjectCard.js";
-import { Container, Col, Row, Dropdown, DropdownItem } from "react-bootstrap";
+import { Container, Col, Row, Dropdown } from "react-bootstrap";
 import "./Projects.css";
 import "../../index.css";
 import ProjectList from "./ProjectList.js";
 
 // Sort types
-const ALL = "all";
-const LINUX = "linux";
-const NETWORKS = "networks";
-const WEBDEV = "web dev";
-const FUN = "fun";
-const ANDROID = "android";
-const MISC = "misc";
+// name: numProjects
+let CATEGORIES = {
+  "all": ProjectList.length,
+  "linux": 0,
+  "networks": 0,
+  "security": 0,
+  "web dev": 0,
+  "android": 0,
+  "extracurricular": 0,
+  "professional": 0
+}
 
-export default function Projects() {
-  const [sortMethod, setSortMethod] = useState(ALL);
+/**
+ * Find number of projects for each category
+ */
+for (let i = 1; i < ProjectList.length; i++) {
+  for (const category of ProjectList[i].categories) {
+    CATEGORIES[category] = CATEGORIES[category] + 1;
+  }
+}
+
+
+const Projects = () => {
+  const [sortMethod, setSortMethod] = useState("all");
   const [Projects, setProjects] = useState(ProjectList);
 
   useEffect(() => {
@@ -26,13 +40,13 @@ export default function Projects() {
 
   useEffect(() => {
     const sortProjects = (projects) => {
-      if (sortMethod === ALL) {
+      if (sortMethod === "all") {
         return ProjectList;
       }
 
       let sorted = [];
       for (let p of projects) {
-        if (p.category === sortMethod) {
+        if (p.categories.includes(sortMethod)) {
           sorted.push(p);
         }
       }
@@ -45,42 +59,32 @@ export default function Projects() {
   return (
     <div className="background">
       <NavigationBar />
+
       <div className="projectsStyle">
         <Container fluid>
+
+          {/* DROPDOWN */}
           <Dropdown className="header">
             <Dropdown.Toggle variant="secondary" id="dropdown-basic">
               {sortMethod.toUpperCase()}
             </Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item onClick={() => setSortMethod(ALL)}>
-                All
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setSortMethod(LINUX)}>
-                Linux
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setSortMethod(NETWORKS)}>
-                Networks
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setSortMethod(WEBDEV)}>
-                Web Dev
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setSortMethod(FUN)}>
-                Fun
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setSortMethod(ANDROID)}>
-                Android
-              </Dropdown.Item>
-              <Dropdown.Item onClick={() => setSortMethod(MISC)}>
-                Misc
-              </Dropdown.Item>
+              {Object.entries(CATEGORIES).map((category) => (
+                <Dropdown.Item onClick={() => setSortMethod(category[0])}>
+                  {category[0].toUpperCase()} ({category[1]})
+                </Dropdown.Item>
+              ))}
             </Dropdown.Menu>
           </Dropdown>
+
           <h5 className="header">Click on any tile to learn more!</h5>
+
+          {/* CARDS */}
           <Row>
             {Projects.map((project) => (
               <Col className="m-2">
                 <ProjectCard
-                  fulltitle={project.fulltitle}
+                  fullTitle={project.fullTitle}
                   title={project.title}
                   subtitle={project.subtitle}
                   desc={project.desc}
@@ -90,9 +94,12 @@ export default function Projects() {
               </Col>
             ))}
           </Row>
+
         </Container>
       </div>
       <Footer />
     </div>
   );
 }
+
+export default Projects;

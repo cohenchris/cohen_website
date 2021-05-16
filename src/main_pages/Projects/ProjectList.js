@@ -1,10 +1,10 @@
 /* PROJECT POST TEMPLATE
 
   {
-    fulltitle:    "", 
+    fullTitle:    "", 
     title:        "",
     subtitle:     "",
-    category:     "",
+    categories:   [],
     desc:         "",
     body:         `<p>
                   </p>`,
@@ -18,19 +18,19 @@
     - linux
     - networks
     - web dev
-    - fun
+    - extracurricular
     - android
     - security
-    - misc
+    - professional
  */
 
 const ProjectList = [
   {
     /* HONEYPOT */
-    fulltitle: "HTTPS Webserver Honeypot in Python",
+    fullTitle: "HTTPS Webserver Honeypot in Python",
     title: "Webserver Honeypot",
     subtitle: "Extracurricular",
-    category: "networks",
+    categories: ["networks", "security", "web dev", "extracurricular"],
     desc:
       "An HTTPS honeypot designed to lure attackers and study attack methodology.",
     body: `<p>
@@ -70,10 +70,10 @@ const ProjectList = [
 
   {
     /* SHELL */
-    fulltitle: "Shell Interpreter In C",
+    fullTitle: "Shell Interpreter In C",
     title: "Shell",
     subtitle: "",
-    category: "linux",
+    categories: ["linux"],
     desc:
       "A shell interpreter written in C to combine behavior from common shells.",
     body: `<p>
@@ -129,10 +129,10 @@ const ProjectList = [
 
   {
     /* SUDOKU SOLVER */
-    fulltitle: "Sudoku Solver in C++",
+    fullTitle: "Sudoku Solver in C++",
     title: "Sudoku Solver",
     subtitle: "Extracurricular",
-    category: "fun",
+    categories: ["extracurricular"],
     desc:
       "A sudoku solver with 4 specialized solving algorithms. Uses recursive brute-forcing to help when needed.",
     body: `<p>
@@ -164,17 +164,17 @@ const ProjectList = [
   },
 
   {
-    fulltitle: "Kernel Instrumentation and Completely Fair Scheduling in XINU",
+    fullTitle: "Kernel Instrumentation and Completely Fair Scheduling in XINU OS",
     title: "Completely Fair Scheduling",
     subtitle: "",
-    category: "linux",
+    categories: ["linux"],
     desc:
       "A scheduling algorithm that attempts to efficiently juggle CPU and I/O bound processes based on typical behavior.",
     body: `<p>
               The ideology behind this algorithm, currently used in Linux as of 2007, is relatively simple.
               CPU-bound processes need the CPU as much as possible, so that they can finish
               any needed calculations as quickly as they can. However, I/O-bound processes are not
-              bottlenecked by the CPU, but rather, the user. Therefore, whenever an I/O-bound process is running,
+              bottle necked by the CPU, but rather, the user. Therefore, whenever an I/O-bound process is running,
               we should context-switch it out until it's ready. When it's finally ready, it's immediately given
               control of the CPU.
           </p>
@@ -203,11 +203,11 @@ const ProjectList = [
   },
 
   {
-    fulltitle:
+    fullTitle:
       "Asynchronous Inter-Process Communication with Callback Functions",
     title: "Asynchronous IPC and Callbacks",
     subtitle: "",
-    category: "linux",
+    categories: ["linux"],
     desc:
       "Implementation of a responsive callback function using  ways for processes to communicate and return-oriented programming.",
     body: `<p>
@@ -232,10 +232,10 @@ const ProjectList = [
     timestamp: "April 2020",
   },
   {
-    fulltitle: "A Personal Website written using ReactJS",
+    fullTitle: "A Personal Website written using ReactJS",
     title: "This Website",
     subtitle: "Extracurricular",
-    category: "web dev",
+    categories: ["web dev", "extracurricular"],
     desc:
       "A personal website written using ReactJS. Emphasis on learning hooks and sleek, modern design.",
     body: `<p>
@@ -262,10 +262,10 @@ const ProjectList = [
   },
 
   {
-    fulltitle: "A Web Server Deployed Using Docker-Compose and Nginx",
+    fullTitle: "A Web Server Deployed Using Docker-Compose and Nginx",
     title: "Web Server",
     subtitle: "Extracurricular",
-    category: "networks",
+    categories: ["networks", "extracurricular", "web dev"],
     desc:
       "A web server deployed using Nginx and docker-compose, hosting my website, the privacy-oriented metasearch engine 'Searx', and a personal news RSS feed",
     body: `<p>
@@ -275,25 +275,32 @@ const ProjectList = [
               a real web server using Nginx, and learn along the way.
           </p>
           <p>
-              Right now, this web server hosts 3 different sites: <a href="https://chriscohen.dev">Main Website</a>, <a href="https://searx.chriscohen.dev">SearX</a>, and <a href="https://chriscohen.dev/tt-rss"/>TinyTinyRSS</a>.
+              Right now, this web server hosts 5 different sites:
+              <a href="https://chriscohen.dev">Main Website</a>,
+              <a href="https://searx.chriscohen.dev">SearX</a>,
+              <a href="https://rss.chriscohen.dev"/>FreshRSS</a>,
+              <a href="https://privatebin.chriscohen.dev"/>PrivateBin</a>, and
+              <a href="https://nextcloud.chriscohen.dev"/>NextCloud</a>
               The main portion of my website is meant to be a portfolio of sorts, and a place that I can experiment
               and keep up-to-date with ReactJS. Another portion, Searx, is an open-source, metasearch engine that you can find on <a href="https://github.com/asciimoo/searx">GitHub</a>.
               It uses proxies to prevent your privacy from being compromised. It seemed like a fun project to learn about proxies.
-              The last portion is my personal RSS feed. I use this to centralize all of my news, keeping up-to-date with news and current events.
+              FreshRSS is for my personal RSS feed. I use this to centralize all of my news.
+              PrivateBin is a convenient, self-hosted, <strong>encrypted</strong> alternative to PasteBin, featuring self-destruct capability.
+              NextCloud is my personal cloud server, away from the prying eyes of Google. Check out the NextCloud tile among my other projects.
           </p>
           <p>
-            I have this Nginx web server deployed on a <a href="https://www.vultr.com/">Vultr</a> VPS.
-            I would highly recommend Vultr - it's been the smoothest experience out of anything that I've tried so far!
+            I have this Nginx web server deployed on a <a href="https://njal.la/">Njalla</a> VPS.
+            I would highly recommend Njalla - it's a fantastic privacy-oriented provider that is not based in the United States (and most importantly, outside of the <a href="https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives">9 eyes</a)
           </p>`,
     timestamp: "June 2020 - Present",
   },
 
   {
     /* MALLOC */
-    fulltitle: "Memory Allocation Library in C, Replacement for 'stdlib.c'",
+    fullTitle: "Memory Allocation Library in C, Replacement for 'stdlib.c'",
     title: "Memory Allocation Library",
     subtitle: "",
-    category: "linux",
+    categories: ["linux"],
     desc:
       "A memory allocation library written in C, helping me learn how traditional UNIX memory allocation works.",
     body: `<p>
@@ -310,10 +317,10 @@ const ProjectList = [
 
   {
     /* TWISTTER */
-    fulltitle: "Twistter (Twitter + Reddit Crossover) in Javascript (ReactJS)",
+    fullTitle: "Twistter (Twitter + Reddit Crossover) in Javascript (ReactJS)",
     title: "Twistter",
     subtitle: "",
-    category: "web dev",
+    categories: ["web dev"],
     desc: "A twitter/reddit hybrid. I worked on front-end using ReactJS.",
     body: `<p>
               This group project focused on the SCRUM philosophy of software
@@ -331,10 +338,10 @@ const ProjectList = [
 
   {
     /* TASK MANAGER */
-    fulltitle: "UNIX Task Manager in C",
+    fullTitle: "UNIX Task Manager in C",
     title: "Task Manager",
     subtitle: "",
-    category: "linux",
+    categories: ["linux"],
     desc:
       "A task manager for UNIX written to learn about the structure of '/proc'",
     body: `<p>
@@ -350,10 +357,10 @@ const ProjectList = [
 
   {
     /* CRANE NLP PROJECT */
-    fulltitle: "NLP (Natural Language Processing) Database Parsing in Python",
+    fullTitle: "NLP (Natural Language Processing) Database Parsing in Python",
     title: "NLP on Databases",
     subtitle: "Internship at NSWC Crane",
-    category: "misc",
+    categories: ["professional"],
     desc:
       "I used NLP to parse navy databases, making problem diagnosis significantly faster.",
     body: `<p>
@@ -368,16 +375,16 @@ const ProjectList = [
 
   {
     /* PRINTF */
-    fulltitle: "printf() Replacement in ARM Assembly",
+    fullTitle: "printf() Replacement in ARM Assembly",
     title: "printf()",
     subtitle: "",
-    category: "linux",
+    categories: ["linux"],
     desc: "A functional replacement for printf() written in ARM Assembly.",
     body: `<p>
               In my Computer Architecture course, we had to implement
               functionality for{" "}
               <strong>printf()'s %c, %s, %d, and %x in ARM Assembly</strong>. %c
-              and %s were accomplished using looping and putchar(). %x was a bit
+              and %s were accomplished using loops and the function putchar(). %x was a bit
               more difficult - I used bit shifting to isolate 4 bits at a time, translated
               into a hex digit, and print the hex digit. %d was the toughest. I
               isolated each base 10 digit and printed it, but it was much
@@ -389,24 +396,23 @@ const ProjectList = [
 
   {
     /* LINUX TWEAKING */
-    fulltitle: "Linux Tweaking and Exploration",
+    fullTitle: "Linux Tweaking and Exploration",
     title: "Linux",
     subtitle: "Extracurricular",
-    category: "linux",
+    categories: ["linux", "extracurricular"],
     desc:
       "I primarily run Linux since it's efficient for programming. I heavily customize my workflow.",
     body: `<p>
               One of my main hobbies is tweaking and maintaining Ubuntu on my
-              laptop and desktop, which is a great way for me to learn more about how Unix
+              laptop and desktop, which is a great way for me to learn more about how Linux
               works. I enjoy customizing my workflow for efficiency, using a
-              tiling window manager (i3) and a task bar (polybar). The dotfiles
+              tiling window manager (i3) and a taskbar (polybar). The dotfiles
               for these are on my <a href="https://github.com/cohenchris/dotfiles">GitHub</a>.
-              These are currently private because they contain school documents. Sorry for the inconvenience.
           </p>
           <p>
               I have written numerous bash scripts to automate some mundane
               tasks, and heavily customized my .vimrc and .bashrc. I currently use  
-              <a href="https://yadm.io/"> YADM</a> (Yet Another Dotfiles Manager) to 
+              <a href="https://yadm.io/">YADM</a> (Yet Another Dotfiles Manager) to 
               keep track of all of my dotfiles. With such a heavily customized workflow,
               It makes it easy to transition between computers when needed. It even
               features a bootstrapping script that takes a fresh install of Linux and 
@@ -418,10 +424,10 @@ const ProjectList = [
 
   {
     /* PIHOLE */
-    fulltitle: "Raspberry Pi DNS-Level AdBlocker - PiHole",
+    fullTitle: "Raspberry Pi DNS-Level AdBlocker - PiHole",
     title: "Pi-Hole",
     subtitle: "Extracurricular",
-    category: "networks",
+    categories: ["networks", "security"],
     desc: "A DNS-level adblocker hooked up to my router.",
     body: `<p>
               Once I completed my Computer Architecture course, I had a
@@ -437,12 +443,12 @@ const ProjectList = [
 
   {
     /* WEEKLY BUDGET APP ON F-DROID */
-    fulltitle: "A Minimalistic Weekly Budgeting App available on F-Droid",
+    fullTitle: "A Minimalist Weekly Budgeting App available on F-Droid",
     title: "WeeklyBudget Android App",
     subtitle: "Extracurricular",
-    category: "android",
+    categories: ["android", "extracurricular"],
     desc:
-      "A minimalistic budgeting app designed for people who have a set weekly budget.",
+      "A minimalist budgeting app designed for people who have a set weekly budget.",
     body: `
           <img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="75">
           <p>
@@ -470,16 +476,28 @@ const ProjectList = [
   },
 
   {
-    fulltitle: "TRACE - a digital footprint tracker",
+    fullTitle: "TRACE - a digital footprint tracker",
     title: "TRACE",
     subtitle: "",
-    category: "web dev",
+    categories: ["web dev", "security"],
     desc: "A privacy-focused website to track and manage your digital footprint",
     body: `<p>
-    https://github.com/TRACE-Digital/
-    https://tracedigital.tk/
+          https://github.com/TRACE-Digital/
+          https://tracedigital.tk/
            </p>`,
-    timestamp: ""
+    timestamp: "January 2021 - May 2021"
+  },
+
+  {
+    fullTitle: "Personal Nextcloud Instance",
+    title: "Nextcloud",
+    subtitle: "Extracurricular",
+    categories: ["linux", "web dev", "extracurricular", "security"],
+    desc: "A personal cloud server that I host myself - goodbye Google Drive!",
+    body: `<p>
+
+           </p>`,
+    timestamp: "January 2021 - Present"
   },
 ];
 

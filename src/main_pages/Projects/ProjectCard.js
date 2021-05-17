@@ -55,7 +55,7 @@ export default function ProjectCard(props) {
         <Modal show={show} onHide={modalHide} size="lg">
           <Modal.Header closeButton style={{ "font-family": "Oswald" }}>
             <Modal.Title>
-              <strong>{props.fulltitle}</strong>
+              <strong>{props.fullTitle}</strong>
             </Modal.Title>
           </Modal.Header>
 

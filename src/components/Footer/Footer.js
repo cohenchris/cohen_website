@@ -4,6 +4,7 @@ import "./Footer.css";
 import "../../helper_functions";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
   return (
     <div>
       <br />
@@ -19,7 +20,7 @@ export default function Footer() {
         </Nav>
 
         <Navbar.Brand className="copyright">
-          © 2019-2021 Chris Cohen
+          © 2019-{currentYear} Chris Cohen
         </Navbar.Brand>
       </Navbar>
     </div>

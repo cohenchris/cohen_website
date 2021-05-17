@@ -15,6 +15,7 @@ import Home from "./main_pages/Home/Home.js";
 import About from "./main_pages/About/About.js";
 import Resume from "./main_pages/Resume/Resume.js";
 import Projects from "./main_pages/Projects/Projects.js";
+import Music from "./main_pages/Music/Music.js";
 
 const routing = (
   <Router>
@@ -26,6 +27,7 @@ const routing = (
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={About} />
               <Route path="/resume" exact component={Resume} />
+              <Route path="/music" exact component={Music} />
               <Route path="/projects" exact component={Projects} />
             </Switch>
           </CSSTransition>

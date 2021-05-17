@@ -6,9 +6,12 @@ import { Container, Col, Row, Dropdown } from "react-bootstrap";
 import "./Projects.css";
 import "../../index.css";
 import ProjectList from "./ProjectList.js";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 // Sort types
-// name: numProjects
+// name: numProjectsInThatCategory
 let CATEGORIES = {
   "all": ProjectList.length,
   "linux": 0,
@@ -36,6 +39,19 @@ const Projects = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+
+    // Toast to notify users that you can click on project cards
+    toast.dark('Click on any tile to learn more!', {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      progressClassName: 'customToastProgressBar'
+    })
   }, []);
 
   useEffect(() => {
@@ -56,6 +72,7 @@ const Projects = () => {
     setProjects(sortProjects(ProjectList));
   }, [sortMethod]);
 
+
   return (
     <div className="background">
       <NavigationBar />
@@ -65,7 +82,7 @@ const Projects = () => {
 
           {/* DROPDOWN */}
           <Dropdown className="header">
-            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+            <Dropdown.Toggle as={HeaderToggle}>
               {sortMethod.toUpperCase()}
             </Dropdown.Toggle>
             <Dropdown.Menu>
@@ -76,8 +93,6 @@ const Projects = () => {
               ))}
             </Dropdown.Menu>
           </Dropdown>
-
-          <h5 className="header">Click on any tile to learn more!</h5>
 
           {/* CARDS */}
           <Row>
@@ -95,6 +110,18 @@ const Projects = () => {
             ))}
           </Row>
 
+          {/* Used for notifying user that you can click on cards */}
+          <ToastContainer
+            position="bottom-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </Container>
       </div>
       <Footer />
@@ -103,3 +130,24 @@ const Projects = () => {
 }
 
 export default Projects;
+
+
+// https://react-bootstrap.github.io/components/dropdowns/#custom-dropdown-components
+
+
+// The forwardRef is important!!
+// Dropdown needs access to the DOM node in order to position the Menu
+const HeaderToggle = React.forwardRef(({ children, onClick }, ref) => (
+  <a
+    href="/"
+    ref={ref}
+    onClick={(e) => {
+      e.preventDefault();
+      onClick(e);
+    }}
+    className="dropdownHeader"
+  >
+    {children}
+    &#x25bc;
+  </a>
+));

@@ -28,13 +28,16 @@ export default function NavigationBar() {
             <Nav.Link className="link">
               <Link to="/">HOME</Link>
             </Nav.Link>
-            <Nav.Link className="link" href="/resume">
+            <Nav.Link className="link">
               <Link to="/resume">RESUME</Link>
             </Nav.Link>
-            <Nav.Link className="link" href="/projects">
+            <Nav.Link className="link">
               <Link to="/projects">PROJECTS</Link>
             </Nav.Link>
-            <Nav.Link className="link" href="/about">
+            <Nav.Link className="link">
+              <Link to="/music">MUSIC</Link>
+            </Nav.Link>
+            <Nav.Link className="link">
               <Link to="/about">ABOUT</Link>
             </Nav.Link>
           </Nav>
@@ -69,12 +72,16 @@ export default function NavigationBar() {
               <Link to="/">HOME</Link>
             </ListItem>
 
+            <ListItem className="link" button key="RESUME">
+              <Link to="/resume">RESUME</Link>
+            </ListItem>
+
             <ListItem className="link" button key="PROJECTS">
               <Link to="/projects">PROJECTS</Link>
             </ListItem>
 
-            <ListItem className="link" button key="RESUME">
-              <Link to="/resume">RESUME</Link>
+            <ListItem className="link" button key="MUSIC">
+              <Link to="/music">MUSIC</Link>
             </ListItem>
 
             <ListItem className="link" button key="ABOUT">

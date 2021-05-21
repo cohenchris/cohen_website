@@ -22,11 +22,12 @@
     - android
     - security
     - professional
+    - school
  */
 
 const ProjectList = [
   {
-    /* HONEYPOT */
+    /* Honeypot */
     fullTitle: "HTTPS Webserver Honeypot in Python",
     title: "Webserver Honeypot",
     subtitle: "Extracurricular",
@@ -69,11 +70,11 @@ const ProjectList = [
   },
 
   {
-    /* SHELL */
+    /* Shell */
     fullTitle: "Shell Interpreter In C",
     title: "Shell",
     subtitle: "",
-    categories: ["linux"],
+    categories: ["linux", "school"],
     desc:
       "A shell interpreter written in C to combine behavior from common shells.",
     body: `<p>
@@ -128,7 +129,7 @@ const ProjectList = [
   },
 
   {
-    /* SUDOKU SOLVER */
+    /* Sudoku Solver */
     fullTitle: "Sudoku Solver in C++",
     title: "Sudoku Solver",
     subtitle: "Extracurricular",
@@ -164,10 +165,11 @@ const ProjectList = [
   },
 
   {
+    /* Kernel Scheduling */
     fullTitle: "Kernel Instrumentation and Completely Fair Scheduling in XINU OS",
     title: "Completely Fair Scheduling",
     subtitle: "",
-    categories: ["linux"],
+    categories: ["linux", "school"],
     desc:
       "A scheduling algorithm that attempts to efficiently juggle CPU and I/O bound processes based on typical behavior.",
     body: `<p>
@@ -203,11 +205,12 @@ const ProjectList = [
   },
 
   {
+    /* Async IPC and Callbacks */
     fullTitle:
       "Asynchronous Inter-Process Communication with Callback Functions",
     title: "Asynchronous IPC and Callbacks",
     subtitle: "",
-    categories: ["linux"],
+    categories: ["linux", "school"],
     desc:
       "Implementation of a responsive callback function using  ways for processes to communicate and return-oriented programming.",
     body: `<p>
@@ -231,7 +234,9 @@ const ProjectList = [
           </p>`,
     timestamp: "April 2020",
   },
+
   {
+    /* Personal Website */
     fullTitle: "A Personal Website written using ReactJS",
     title: "This Website",
     subtitle: "Extracurricular",
@@ -262,12 +267,13 @@ const ProjectList = [
   },
 
   {
+    /* Personal Web Server */
     fullTitle: "A Web Server Deployed Using Docker-Compose and Nginx",
     title: "Web Server",
     subtitle: "Extracurricular",
     categories: ["networks", "extracurricular", "web dev"],
     desc:
-      "A web server deployed using Nginx and docker-compose, hosting my website, the privacy-oriented metasearch engine 'Searx', and a personal news RSS feed",
+      "A web server deployed using Nginx and docker-compose, serving multiple different services for my personal use.",
     body: `<p>
               I used to deploy my website on GitHub Pages, but it was quite limiting.
               If I ever wanted to make some part of my website non-static, there would be
@@ -296,11 +302,11 @@ const ProjectList = [
   },
 
   {
-    /* MALLOC */
+    /* malloc() */
     fullTitle: "Memory Allocation Library in C, Replacement for 'stdlib.c'",
     title: "Memory Allocation Library",
     subtitle: "",
-    categories: ["linux"],
+    categories: ["linux", "school"],
     desc:
       "A memory allocation library written in C, helping me learn how traditional UNIX memory allocation works.",
     body: `<p>
@@ -316,11 +322,11 @@ const ProjectList = [
   },
 
   {
-    /* TWISTTER */
+    /* Twistter */
     fullTitle: "Twistter (Twitter + Reddit Crossover) in Javascript (ReactJS)",
     title: "Twistter",
     subtitle: "",
-    categories: ["web dev"],
+    categories: ["web dev", "school"],
     desc: "A twitter/reddit hybrid. I worked on front-end using ReactJS.",
     body: `<p>
               This group project focused on the SCRUM philosophy of software
@@ -337,11 +343,11 @@ const ProjectList = [
   },
 
   {
-    /* TASK MANAGER */
+    /* Task Manager */
     fullTitle: "UNIX Task Manager in C",
     title: "Task Manager",
     subtitle: "",
-    categories: ["linux"],
+    categories: ["linux", "school"],
     desc:
       "A task manager for UNIX written to learn about the structure of '/proc'",
     body: `<p>
@@ -356,7 +362,7 @@ const ProjectList = [
   },
 
   {
-    /* CRANE NLP PROJECT */
+    /* Crane NLP Project */
     fullTitle: "NLP (Natural Language Processing) Database Parsing in Python",
     title: "NLP on Databases",
     subtitle: "Internship at NSWC Crane",
@@ -374,11 +380,11 @@ const ProjectList = [
   },
 
   {
-    /* PRINTF */
+    /* printf() */
     fullTitle: "printf() Replacement in ARM Assembly",
     title: "printf()",
     subtitle: "",
-    categories: ["linux"],
+    categories: ["linux", "school"],
     desc: "A functional replacement for printf() written in ARM Assembly.",
     body: `<p>
               In my Computer Architecture course, we had to implement
@@ -395,7 +401,7 @@ const ProjectList = [
   },
 
   {
-    /* LINUX TWEAKING */
+    /* Linux Tweaking */
     fullTitle: "Linux Tweaking and Exploration",
     title: "Linux",
     subtitle: "Extracurricular",
@@ -423,7 +429,7 @@ const ProjectList = [
   },
 
   {
-    /* PIHOLE */
+    /* Pi-Hole */
     fullTitle: "Raspberry Pi DNS-Level AdBlocker - PiHole",
     title: "Pi-Hole",
     subtitle: "Extracurricular",
@@ -442,7 +448,7 @@ const ProjectList = [
   },
 
   {
-    /* WEEKLY BUDGET APP ON F-DROID */
+    /* Weekly Budget App - F-Droid */
     fullTitle: "A Minimalist Weekly Budgeting App available on F-Droid",
     title: "WeeklyBudget Android App",
     subtitle: "Extracurricular",
@@ -476,10 +482,11 @@ const ProjectList = [
   },
 
   {
+    /* TRACE - Senior Project */
     fullTitle: "TRACE - a digital footprint tracker",
     title: "TRACE",
     subtitle: "",
-    categories: ["web dev", "security"],
+    categories: ["web dev", "security", "school"],
     desc: "A privacy-focused website to track and manage your digital footprint",
     body: `<p>
           https://github.com/TRACE-Digital/
@@ -489,6 +496,7 @@ const ProjectList = [
   },
 
   {
+    /* NextCloud Server */
     fullTitle: "Personal Nextcloud Instance",
     title: "Nextcloud",
     subtitle: "Extracurricular",

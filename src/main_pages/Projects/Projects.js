@@ -20,7 +20,8 @@ let CATEGORIES = {
   "web dev": 0,
   "android": 0,
   "extracurricular": 0,
-  "professional": 0
+  "professional": 0,
+  "school": 0
 }
 
 /**

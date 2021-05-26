@@ -484,13 +484,14 @@ const ProjectList = [
           <a href="https://tracedigital.tk/">Try TRACE!</a>
           </p>
           <p>
-          <a href="">My Public Profile</a>
+          <a href="https://public.tracedigital.tk/u/cohenchris">My Public Profile</a>
           </p>
           
           <p>
           For our senior project, myself and 5 friends decided to make a privacy-conscious, automated way to analyze your
           digital footprint. We pulled inspiration from websites like <a href="https://linktr.ee/">linktr.ee</a> and 
           <a href="https://campsite.bio/">campsite.bio</a>. The Github repositories are located <a href="https://github.com/TRACE-Digital/">here</a>.
+          Please note that currently, new users are not allowed. We are keeping the website up for resume purposes.
           </p>
           </p>
           <p>

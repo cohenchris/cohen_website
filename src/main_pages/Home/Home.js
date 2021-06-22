@@ -32,13 +32,13 @@ export default function Home() {
         {width >= 650 && (
           <div>
             <h2>Software Engineer for Qualcomm</h2>
-            <h2>Cybersecurity Student at Purdue University</h2>
+            <h2>Purdue University Alumnus</h2>
           </div>
         )}
         {width < 650 && (
           <div>
             <h4>Software Engineer for Qualcomm</h4>
-            <h4>Cybersecurity Student at Purdue University</h4>
+            <h4>Purdue University Alumnus</h4>
           </div>
         )}
       </div>

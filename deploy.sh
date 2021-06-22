@@ -23,4 +23,4 @@ mv build/ html/
 scp -r html/ root@chriscohen.dev:/root/vps/nginx/config/www/chriscohen.dev/
 rm -rf ./html
 
-echo "${GREEN}Don't forget to commit to cohenchris/website!${NC}"
+echo -e "${GREEN}Don't forget to commit to cohenchris/website!${NC}"

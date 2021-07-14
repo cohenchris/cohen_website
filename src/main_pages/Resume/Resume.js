@@ -19,8 +19,6 @@ export default function Resume() {
     <div className="background">
       <NavigationBar />
       <div className="resumeStyle">
-        <h3>If you'd like to know more, please don't hesitate to ask!</h3>
-        <br />
         <a
           href={process.env.PUBLIC_URL + "files/ChrisCohen_resume.pdf"}
           download="ChrisCohen_resume"

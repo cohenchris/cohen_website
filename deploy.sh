@@ -20,7 +20,8 @@ npm run build
 
 # Move to build folder on webserver
 mv build/ html/
-scp -r html/ root@chriscohen.dev:/root/vps/nginx/config/www/chriscohen.dev/
+scp -r html/ phrog@192.168.24.3:/home/phrog/mediaserver/config/swag/www/chriscohen.dev/
+#scp -r html/ root@chriscohen.dev:/root/vps/nginx/config/www/chriscohen.dev/
 rm -rf ./html
 
 echo -e "${GREEN}Don't forget to commit to cohenchris/website!${NC}"

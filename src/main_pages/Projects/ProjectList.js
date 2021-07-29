@@ -404,7 +404,7 @@ const ProjectList = [
             I have this Nginx web server deployed on my server at home.
           </p>
           <p>
-            I also host my website as a TOR hidden service <a href="https://7idscmdkvt4x3h3anpgsg5magifug5hlkersokaed7x4ud2cvkb5dsid.onion/">here</a>.
+            I also host my website as a TOR v3 onion service <a href="https://7idscmdkvt4x3h3anpgsg5magifug5hlkersokaed7x4ud2cvkb5dsid.onion/">here</a>.
           </p>`,
     timestamp: "June 2020 - Present",
   },
@@ -437,7 +437,7 @@ const ProjectList = [
               More information on Nginx in the next tile.              
           </p>
           <p>
-          I also host this website as a TOR hidden service <a href="https://7idscmdkvt4x3h3anpgsg5magifug5hlkersokaed7x4ud2cvkb5dsid.onion/">here</a>.
+          I also host this website as a TOR v3 onion service <a href="https://7idscmdkvt4x3h3anpgsg5magifug5hlkersokaed7x4ud2cvkb5dsid.onion/">here</a>.
           </p>`,
     timestamp: "December 2020 - Present",
   },

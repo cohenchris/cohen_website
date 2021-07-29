@@ -393,18 +393,18 @@ const ProjectList = [
               <a href="https://chriscohen.dev">Main Website</a>,
               <a href="https://searx.chriscohen.dev">SearX</a>,
               <a href="https://rss.chriscohen.dev"/>FreshRSS</a>,
-              <a href="https://privatebin.chriscohen.dev"/>PrivateBin</a>, and
               <a href="https://nextcloud.chriscohen.dev"/>NextCloud</a>
               The main portion of my website is meant to be a portfolio of sorts, and a place that I can experiment
               and keep up-to-date with ReactJS. Another portion, Searx, is an open-source, metasearch engine that you can find on <a href="https://github.com/asciimoo/searx">GitHub</a>.
               It uses proxies to prevent your privacy from being compromised. It seemed like a fun project to learn about proxies.
               FreshRSS is for my personal RSS feed. I use this to centralize all of my news.
-              PrivateBin is a convenient, self-hosted, <strong>encrypted</strong> alternative to PasteBin, featuring self-destruct capability.
               NextCloud is my personal cloud server, away from the prying eyes of Google. Check out the NextCloud tile among my other projects.
           </p>
           <p>
-            I have this Nginx web server deployed on a <a href="https://njal.la/">Njalla</a> VPS.
-            I would highly recommend Njalla - it's a fantastic privacy-oriented provider that is not based in the United States (and most importantly, outside of the <a href="https://en.wikipedia.org/wiki/Five_Eyes#Other_international_cooperatives">9 eyes</a)
+            I have this Nginx web server deployed on my server at home.
+          </p>
+          <p>
+            I also host my website as a TOR hidden service <a href="https://7idscmdkvt4x3h3anpgsg5magifug5hlkersokaed7x4ud2cvkb5dsid.onion/">here</a>.
           </p>`,
     timestamp: "June 2020 - Present",
   },
@@ -435,6 +435,9 @@ const ProjectList = [
               using the command 'npm run build.' From there, I automatically pull down
               the latest version of my resume and deploy it to my Nginx web server.
               More information on Nginx in the next tile.              
+          </p>
+          <p>
+          I also host this website as a TOR hidden service <a href="https://7idscmdkvt4x3h3anpgsg5magifug5hlkersokaed7x4ud2cvkb5dsid.onion/">here</a>.
           </p>`,
     timestamp: "December 2020 - Present",
   },
@@ -447,27 +450,33 @@ const ProjectList = [
     categories: ["android", "extracurricular"],
     desc: "A minimalist budgeting app designed for people who have a set weekly budget.",
     body: `
-          <img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="75">
+          <a href="http://f-droid.org/en/packages/com.cohenchris.weeklybudget/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="75"></a>
           <p>
             For this project, I forked <a href="https://github.com/GittyMac/WalletCount">WalletCount</a>.
-            Since I am graduating college shortly, I wanted a simple budgeting app that suited my needs.
-            Personally, I give myself a set budget each week. If I go over the budget for the week, the
-            next week's budget is lessened. If I stay under, the available funds are carried over for the
-            next week. This project was the closest to what I wanted (a minimalistic, slim budgeting app).
-            The core functionality had to be changed for my purposes, though, so I set out to do it.
+            I wanted a simple budgeting app that suited my needs. Personally, I give myself a set budget
+            each week. If I go over the budget for the week, the next week's budget is lessened. If I
+            stay under, the available funds are carried over for the next week. This project was the
+            closest to what I wanted (a minimalist, slim budgeting app). The core functionality had to
+            be changed for my purposes, though, so I set out to do it.
           </p>
           <p>
-          If you set your weekly spending budget to $100, $100 would be added to your
-          available funds. Every time that you make a purchase, you subtract that
-          amount from your available funds. Every Sunday, another $100 would be added into
-          your available funds. I designed this for my purposes specifically, but I
-          hope that somebody else will find it useful!
+            If you set your weekly spending budget to $100, $100 would be added to your
+            available funds. Every time that you make a purchase, you subtract that
+            amount from your available funds. Every Sunday, another $100 would be added into
+            your available funds.
+          </p>
+          <p>          
+            The intent of this app is to help the user keep track of their "fun-money", or money left
+            over after all necessary expenses have been paid. My philosophy is that, once you
+            have paid all fixed expenses, the money left over should be completely guilt-free.
+            To encourage this view, past purchases are purposefully omitted. I designed this for
+            my purposes specifically, but I hope that somebody else will find it useful!
           </p>
           <p>
-          The GitHub link for this project can be found <a href="https://github.com/cohenchris/WeeklyBudget">here</a>.
+            The GitHub link for this project can be found <a href="https://github.com/cohenchris/WeeklyBudget">here</a>.
           </p>
           <p>
-          The Android app is fully open-source software, and is available on F-Droid <a href="">here</a>.
+            The Android app is fully open-source software, and is available on F-Droid <a href="http://f-droid.org/en/packages/com.cohenchris.weeklybudget/">here</a>.
           </p>`,
     timestamp: "April 2021",
   },
@@ -488,26 +497,26 @@ const ProjectList = [
           </p>
           
           <p>
-          For our senior project, myself and 5 friends decided to make a privacy-conscious, automated way to analyze your
-          digital footprint. We pulled inspiration from websites like <a href="https://linktr.ee/">linktr.ee</a> and 
-          <a href="https://campsite.bio/">campsite.bio</a>. The Github repositories are located <a href="https://github.com/TRACE-Digital/">here</a>.
-          Please note that currently, new users are not allowed. We are keeping the website up for resume purposes.
+            For our senior project, myself and 5 friends decided to make a privacy-conscious, automated way to analyze your
+            digital footprint. We pulled inspiration from websites like <a href="https://linktr.ee/">linktr.ee</a> and 
+            <a href="https://campsite.bio/">campsite.bio</a>. The Github repositories are located <a href="https://github.com/TRACE-Digital/">here</a>.
+            Please note that currently, new users are not allowed. We are keeping the website up for resume purposes.
           </p>
           </p>
           <p>
-          With the increasing popularity of social media, e-commerce, and countless other services, the average person
-          creates accounts on dozens of websites: a situation that can quickly become hard to keep track of. While existing
-          tools like password managers solve the issue of storing these accounts, none are tailored to gaining an understanding
-          of a user’s digital footprint. Our project seeks to provide users with a convenient account tracking solution
-          and information security learning tool by automatically discovering and presenting a comprehensive view of their digital footprint.
+            With the increasing popularity of social media, e-commerce, and countless other services, the average person
+            creates accounts on dozens of websites: a situation that can quickly become hard to keep track of. While existing
+            tools like password managers solve the issue of storing these accounts, none are tailored to gaining an understanding
+            of a user’s digital footprint. Our project seeks to provide users with a convenient account tracking solution
+            and information security learning tool by automatically discovering and presenting a comprehensive view of their digital footprint.
           </p>
           <p>
-          We decided use a "thick client", meaning that a large majority of the data processing happens on the user's computer.
-          Our intention was to completely contain the user's data to their machine unless they opt to synchronize their data with our servers.
-          A incredibly useful system combining <a href="https://pouchdb.com/">PouchDB</a> and <a href="https://couchdb.apache.org/">CouchDB</a>
-          enables this. Essentially, everything that the user does is stored in the local PouchDB database. If the user enables syncing on our website,
-          the local PouchDB replicates to the remote CouchDB. Then, if the user logs in on another device, all of their data will be available.
-          All data is securely end-to-end encrypted, ensuring that your data is always safe from prying eyes.
+            We decided use a "thick client", meaning that a large majority of the data processing happens on the user's computer.
+            Our intention was to completely contain the user's data to their machine unless they opt to synchronize their data with our servers.
+            A incredibly useful system combining <a href="https://pouchdb.com/">PouchDB</a> and <a href="https://couchdb.apache.org/">CouchDB</a>
+            enables this. Essentially, everything that the user does is stored in the local PouchDB database. If the user enables syncing on our website,
+            the local PouchDB replicates to the remote CouchDB. Then, if the user logs in on another device, all of their data will be available.
+            All data is securely end-to-end encrypted, ensuring that your data is always safe from prying eyes.
           </p>
           <p>
           Here are some features available:
@@ -520,15 +529,15 @@ const ProjectList = [
             </ul>
           </p>
           <p>
-          Unfortunately, many websites disable CORS (Cross-Origin Resource Sharing), which is a huge part of our project. To remedy this issue,
-          we developed a Chrome extension that intercepts each network request and acts like any other CORS-blocking extension, like
-          <a href="https://mybrowseraddon.com/access-control-allow-origin.html">this one</a>. It also acts like a password manager, detecting any
-          credentials entered on the web page. If you have not added the current website to your TRACE data, it gives you the option to do so.
-          There are also tabs available for generating secure passwords, testing your current passwords, and checking if your usernames or emails
-          have been implicated in any data breach.
+            Unfortunately, many websites disable CORS (Cross-Origin Resource Sharing), which is a huge part of our project. To remedy this issue,
+            we developed a Chrome extension that intercepts each network request and acts like any other CORS-blocking extension, like
+            <a href="https://mybrowseraddon.com/access-control-allow-origin.html">this one</a>. It also acts like a password manager, detecting any
+            credentials entered on the web page. If you have not added the current website to your TRACE data, it gives you the option to do so.
+            There are also tabs available for generating secure passwords, testing your current passwords, and checking if your usernames or emails
+            have been implicated in any data breach.
 
-          Our browser extension is available on <a href="https://chrome.google.com/webstore/detail/trace/klhmocgplcpemcdfeefpaikihedmikgk">Chrome</a>
-          and <a href="https://addons.mozilla.org/en-US/firefox/addon/trace-digital/">Firefox</a> web stores.
+            Our browser extension is available on <a href="https://chrome.google.com/webstore/detail/trace/klhmocgplcpemcdfeefpaikihedmikgk">Chrome</a>
+            and <a href="https://addons.mozilla.org/en-US/firefox/addon/trace-digital/">Firefox</a> web stores.
            </p>`,
     timestamp: "January 2021 - May 2021",
   },
@@ -541,27 +550,27 @@ const ProjectList = [
     categories: ["linux", "web dev", "extracurricular", "security"],
     desc: "A personal cloud server that I host myself - goodbye Google Drive!",
     body: `<p>
-          In an effort to move away from my Google-reliant digital life, and free myself from having to pay a yearly fee for storage, I decided
-          to set up my own cloud storage system. Nextcloud is an open-source cloud storage system that you can host yourself. It is under very
-          active development, and is estimated to have over 20 million users worldwide. I can access my instance from anywhere in the world, with
-          all of the functionality of Google Drive. The obvious caveat of this solution is that you must manage it yourself. Google Drive is incredibly
-          convenient - there are no worries of data loss, and <strong>it just works</strong>. Using Nextcloud, I've had to set up lots of functionality
-          for myself. I currently use it for cloud storage, a TODO list (Nextcloud Tasks), Find My Phone (Nextcloud PhoneTrack), and video chatting (Nextcloud Talk). 
+            In an effort to move away from my Google-reliant digital life, and free myself from having to pay a yearly fee for storage, I decided
+            to set up my own cloud storage system. Nextcloud is an open-source cloud storage system that you can host yourself. It is under very
+            active development, and is estimated to have over 20 million users worldwide. I can access my instance from anywhere in the world, with
+            all of the functionality of Google Drive. The obvious caveat of this solution is that you must manage it yourself. Google Drive is incredibly
+            convenient - there are no worries of data loss, and <strong>it just works</strong>. Using Nextcloud, I've had to set up lots of functionality
+            for myself. I currently use it for cloud storage, a TODO list (Nextcloud Tasks), Find My Phone (Nextcloud PhoneTrack), and video chatting (Nextcloud Talk). 
            </p>
            <p>
-           All of this data is at risk of loss at any time, whether it be a fire, drive failure, power surge, or anything else. I've decided to practice
-           the tried-and-true 3-2-1 system of backing up data. This states the following:
+            All of this data is at risk of loss at any time, whether it be a fire, drive failure, power surge, or anything else. I've decided to practice
+            the tried-and-true 3-2-1 system of backing up data. This states the following:
             <ul>
               <li>Keep 3 copies of your data</li>
               <li>Stored on 2 different media</li>
               <li>With 1 copy off-site for disaster recovery</li>
             </ul>
-            Right now, I have my Nextcloud server running in my own home. Every 2 days, I send a zipped, encrypted copy of my data to my desktop computer, which
-            retains the most recent 14 copies. I also send one to my <a href="https://www.backblaze.com/">Backblaze</a> bucket storage, which retains
-            the most recent 7 copies. Therefore, I have 3 copies (one production copy and 2 backup copies), stored on 2 different media
-            (2 different physical hard drives), and one off-site disaster recovery copy (Backblaze). All of this is automated using bash scripts and cron jobs,
-            so I don't have to worry about micro-managing everything. If I ever need to recover my data, I simply decrypt it with my passphrase and start the docker
-            containers with the docker-compose files.
+              Right now, I have my Nextcloud server running in my own home. Every 2 days, I send a zipped, encrypted copy of my data to my desktop computer, which
+              retains the most recent 14 copies. I also send one to my <a href="https://www.backblaze.com/">Backblaze</a> bucket storage, which retains
+              the most recent 7 copies. Therefore, I have 3 copies (one production copy and 2 backup copies), stored on 2 different media
+              (2 different physical hard drives), and one off-site disaster recovery copy (Backblaze). All of this is automated using bash scripts and cron jobs,
+              so I don't have to worry about micro-managing everything. If I ever need to recover my data, I simply decrypt it with my passphrase and start the docker
+              containers with the docker-compose files.
            </p>`,
     timestamp: "January 2021 - Present",
   },

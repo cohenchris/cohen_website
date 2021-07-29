@@ -17,6 +17,7 @@ export default function Footer() {
             LINKEDIN
           </Nav.Link>
           <Nav.Link href="https://github.com/cohenchris">GITHUB</Nav.Link>
+          <Nav.Link href="https://7idscmdkvt4x3h3anpgsg5magifug5hlkersokaed7x4ud2cvkb5dsid.onion/">ONION SERVICE</Nav.Link>
         </Nav>
 
         <Navbar.Brand className="copyright">

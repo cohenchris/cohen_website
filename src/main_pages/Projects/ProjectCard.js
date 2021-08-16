@@ -42,7 +42,7 @@ export default function ProjectCard(props) {
             <Typography variant="h4" className="title">
               {props.title.toUpperCase()}
             </Typography>
-            <Typography variant="h6" className="subtitle" gutterBottom>
+            <Typography variant="h7" className="subtitle" gutterBottom>
               {props.subtitle.toUpperCase()}
             </Typography>
             <Typography className="body">{props.desc}</Typography>
@@ -53,10 +53,11 @@ export default function ProjectCard(props) {
       {/* POPUP MODAL FOR EACH PROJECT */}
       <div className="popupDescription">
         <Modal show={show} onHide={modalHide} size="lg">
-          <Modal.Header closeButton style={{ "fontFamily": "Oswald" }}>
+          <Modal.Header>
             <Modal.Title>
               <strong>{props.fullTitle}</strong>
             </Modal.Title>
+            <button type="button" class="btn-close" aria-label="Close" onClick={modalHide}></button>
           </Modal.Header>
 
           <Modal.Body className="popupDescription">
@@ -68,7 +69,7 @@ export default function ProjectCard(props) {
           </Modal.Footer>
         </Modal>
       </div>
-    </div>
+    </div >
   );
 }
 

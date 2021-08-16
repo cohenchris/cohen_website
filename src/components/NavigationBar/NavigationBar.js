@@ -50,10 +50,10 @@ export default function NavigationBar() {
     return (
       <div>
         <Navbar className="mobileMenu" variant="dark">
-          <Navbar.Brand className="mr-auto" href="/">
+          <Navbar.Brand className="mr-auto mobileBrand" href="/">
             CHRIS COHEN
           </Navbar.Brand>
-          <IconButton onClick={handleOpen}>
+          <IconButton onClick={handleOpen} >
             <MenuIcon style={{ color: "white" }} />
           </IconButton>
           <Drawer

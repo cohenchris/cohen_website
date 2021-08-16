@@ -6,12 +6,12 @@ import {
   CardContent,
   Typography,
   MuiThemeProvider,
-  createMuiTheme,
+  createTheme,
 } from "@material-ui/core";
 import { Modal } from "react-bootstrap";
 import "./Projects.css";
 
-const muiBaseTheme = createMuiTheme();
+const muiBaseTheme = createTheme();
 
 export default function ProjectCard(props) {
   const [show, setShow] = useState(false);
@@ -22,7 +22,7 @@ export default function ProjectCard(props) {
   return (
     <div>
       <MuiThemeProvider
-        theme={createMuiTheme({
+        theme={createTheme({
           palette: {
             type: "dark",
           },
@@ -36,13 +36,13 @@ export default function ProjectCard(props) {
           className="card"
           variant="outlined"
           onClick={modalShow}
-          style={{ "background-color": "#262522" }}
+          style={{ "backgroundColor": "#262522" }}
         >
           <CardContent className="content">
             <Typography variant="h4" className="title">
               {props.title.toUpperCase()}
             </Typography>
-            <Typography variant="h7" className="subtitle" gutterBottom>
+            <Typography variant="h6" className="subtitle" gutterBottom>
               {props.subtitle.toUpperCase()}
             </Typography>
             <Typography className="body">{props.desc}</Typography>
@@ -53,7 +53,7 @@ export default function ProjectCard(props) {
       {/* POPUP MODAL FOR EACH PROJECT */}
       <div className="popupDescription">
         <Modal show={show} onHide={modalHide} size="lg">
-          <Modal.Header closeButton style={{ "font-family": "Oswald" }}>
+          <Modal.Header closeButton style={{ "fontFamily": "Oswald" }}>
             <Modal.Title>
               <strong>{props.fullTitle}</strong>
             </Modal.Title>

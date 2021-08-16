@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
-import "react-awesome-slider/dist/styles.css";
+// import "react-awesome-slider/dist/styles.css";
 import "./About.css";
 import "../../index.css";
 import me from "../../images/me.jpg";

@@ -8,6 +8,7 @@
 }
 
 .link * {
+  text-decoration: none;
   list-style: none;
   color: #262522;
   font-family: "Oswald", sans-serif;

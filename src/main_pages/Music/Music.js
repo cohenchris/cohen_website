@@ -79,7 +79,7 @@ const Music = () => {
         < div className="background" >
             <NavigationBar />
 
-            <div>
+            <div className="musicStyle">
                 <Container fluid>
                     <Dropdown>
                         <Dropdown.Toggle variant="dark">

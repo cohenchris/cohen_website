@@ -16,6 +16,7 @@ rm -f ./public/images/ChrisCohen_resume.png
 pdftoppm ./public/files/ChrisCohen_resume.pdf ./public/images/ChrisCohen_resume -png -singlefile
 
 # Create optimized build for upload
+rm -rf ./build
 npm run build
 
 # Move to build folder on webserver

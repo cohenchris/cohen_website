@@ -16,6 +16,6 @@ li {
     font-weight: bold;
 }
 
-.musicStyle {
+.musicStyle * {
     font-family: "Oswald", sans-serif;
 }

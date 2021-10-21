@@ -8,7 +8,7 @@ npm audit fix
 
 # Grab updated resume from github repository
 wget https://raw.githubusercontent.com/cohenchris/resume/master/ChrisCohen_resume.pdf
-rm -f ./public/files/ChrisCohen_resume.pdf
+mkdir ./public/{files,images}
 mv ChrisCohen_resume.pdf ./public/files/
 
 # Convert resume to png for display on resume page

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Container, Dropdown } from "react-bootstrap"
-import Select from 'react-select';
 import NavigationBar from "../../components/NavigationBar/NavigationBar.js";
 import Footer from "../../components/Footer/Footer.js";
 import AlbumCard from "./AlbumCard.js"
@@ -8,15 +7,8 @@ import AlbumCard from "./AlbumCard.js"
 const SORT_METHODS = ["A-Z", "Z-A", "rating (low-high)", "rating (high-low)"]
 
 const Music = () => {
-    let MusicLibrary = []   // base array of albums
-
-    const [Library, setLibrary] = useState(MusicLibrary)
-    const [genreFilter, setGenreFilter] = useState([])
-    const [genreOptions, setGenreOptions] = useState([])
-    const [yearFilter, setYearFilter] = useState([])
-    const [yearOptions, setYearOptions] = useState([])
+    const [Library, setLibrary] = useState([])
     const [sortMethod, setSortMethod] = useState("rating (high-low)")    // A-Z, Z-A, rating low-high, rating high-low, 
-
 
     // Initialization
     useEffect(() => {
@@ -30,10 +22,8 @@ const Music = () => {
                 else if (item1.rating < item2.rating) return 1;
                 else return 0;
             })
-            MusicLibrary = response
-            setLibrary(MusicLibrary)
+            setLibrary(response)
         }
-
         init()
     }, [])
 
@@ -72,6 +62,7 @@ const Music = () => {
             })
             setLibrary(temp)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [sortMethod])
 
 

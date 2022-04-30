@@ -23,10 +23,9 @@ npm run build
 mv build/ html/
 
 # Remove existing html from server
-ssh phrog@192.168.24.3 'rm -r /home/phrog/mediaserver/config/swag/www/chriscohen.dev/html/*'
+ssh phrog@192.168.24.3 'rm -r /home/phrog/server/config/swag/www/chriscohen.dev/html/*'
 # Copy new html over
-scp -r html/ phrog@192.168.24.3:/home/phrog/mediaserver/config/swag/www/chriscohen.dev/
-#scp -r html/ root@chriscohen.dev:/root/vps/nginx/config/www/chriscohen.dev/
+scp -r html/ phrog@192.168.24.3:/home/phrog/server/config/swag/www/chriscohen.dev/
 rm -rf ./html
 
 echo -e "${GREEN}Don't forget to commit to cohenchris/website!${NC}"

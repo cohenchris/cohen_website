@@ -5,11 +5,11 @@ import { Card, ListGroup, ListGroupItem } from "react-bootstrap"
 const AlbumCard = (props) => {
     const title = props.title
     const artist = props.artist
-    const genres = props.genres
+    // const genres = props.genres
     const label = props.label
     const year = props.year
-    const tracks = props.tracks
-    const favorites = props.favorites
+    // const tracks = props.tracks
+    // const favorites = props.favorites
     const rating = props.rating
     const cover = encodeURIComponent(process.env.PUBLIC_URL + "metadata/" + artist + "/" + title + "/cover.jpg")
 

@@ -13,7 +13,7 @@ mv ChrisCohen_resume.pdf ./public/files/
 
 # Convert resume to png for display on resume page
 rm -f ./public/images/ChrisCohen_resume.png
-pdftoppm ./public/files/ChrisCohen_resume.pdf ./public/images/ChrisCohen_resume -png -singlefile
+pdftoppm ./public/files/ChrisCohen_resume.pdf ./src/images/ChrisCohen_resume -png -singlefile
 
 # Create optimized build for upload
 rm -rf ./build

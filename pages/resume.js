@@ -1,9 +1,14 @@
-import Layout from "../components/layout"
+import { NextSeo } from 'next-seo';
 
 export default function Resume() {
   return(
-          <Layout>
+          <>
+            <NextSeo
+              title="Resume"
+              description="My resume."
+            />
+
             <h1>Resume</h1>
-          </Layout>
+          </>
         )
 }

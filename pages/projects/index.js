@@ -1,9 +1,14 @@
-import Layout from "../../components/layout"
+import { NextSeo } from 'next-seo';
 
 export default function Projects() {
   return(
-          <Layout>
+          <>
+            <NextSeo
+              title="Projects"
+              description="A blog documenting my personal projects."
+            />
+
             <h1>Projects</h1>
-          </Layout>
+          </>
         )
 }

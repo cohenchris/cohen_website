@@ -16,12 +16,12 @@ The updated website will immediately be available. Since this is a static websit
 
 ## Content
 ### Home
-This serves a simple home page with my name, picture, job title, and welcome message.
+A simple home page with my name, picture, job title, and welcome message.
 ### Resume
-This serves an image of my most up-to-date resume from Github, plus a link to download the full PDF.
+An image of my most up-to-date resume from Github, plus a link to download the full PDF.
 ### Projects
-This is a frequently updated blog page about any sort of project that I'm doing. The base page lists all topics that I've written about.
+A frequently updated blog page about any sort of project that I'm doing. The base page lists all topics that I've written about.
 ### Music
-This is a page dedicated to listing each album I've listened, along with its full average track rating. I've been amassing a collection of music for quite some time, ripping CDs to use on my Plex music server. Once I've rated each track in an album from 1-5, it is eligible to show up on this page. Daily, I run a script which scans my music library, indicates which albums have been fully rated, gives the album a rating (average of each track rating), and puts the information into 
+A page dedicated to listing each album I've listened to, along with its full average track rating. I've been amassing a collection of music for quite some time, ripping CDs to use on my Plex music server. Once I've rated each track in an album from 1-5, it is eligible to show up on this page. Daily, I run a script which scans my music library, indicates which albums have been fully rated, gives the album a rating (average of each track rating), and puts the information into 
 ### About
-This is a small page with more details about me and the content of this website.
+A small page with more details about me and the content of this website.

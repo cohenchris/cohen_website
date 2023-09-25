@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
   background-color: white;
   color: white;
+  border-bottom: 2px solid;
 }
 
 .brand {
@@ -12,7 +12,6 @@
   list-style: none;
   font-size: 200%;
   width: 100%;
-  margin-left: 10px;
   color: black;
 }
 
@@ -23,20 +22,18 @@
   margin-right: 20px;
 }
 
-.foot {
+.footer {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   position: fixed;
   width: 100%;
   bottom: 0;
-  right: 0;
   height: 50px;
 }
 
 .footerlink {
   display: flex;
-  flex-direction: row;
   list-style: none;
   color: black;
   margin-left: 10px;
@@ -50,6 +47,5 @@
   list-style: none;
   font-size: 75%;
   width: 100%;
-  margin-right: 20px;
   color: black;
 }

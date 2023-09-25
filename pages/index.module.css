@@ -1,0 +1,10 @@
+.homeContainer {
+  height: 100%;
+}
+
+.mainHeader {
+  margin: auto;
+  width: 75%;
+  text-align: center;
+  padding: 10px;
+}

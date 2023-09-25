@@ -7,7 +7,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return(
-          <div className={styles.foot}>
+          <div className={styles.footer}>
 
             <Link className={styles.footerlink} href="https://www.linkedin.com/cohenchristopher">
               <FontAwesomeIcon icon={faLinkedin}/>

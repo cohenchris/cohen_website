@@ -7,8 +7,6 @@ export default function Projects() {
               title="Projects"
               description="A blog documenting my personal projects."
             />
-
-            <h1>Projects</h1>
           </>
         )
 }

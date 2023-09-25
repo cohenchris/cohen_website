@@ -11,7 +11,6 @@ export default function Website({ Component, pageProps }) {
                 <main>
                   <Component {...pageProps} />
                 </main>
-            <Footer />
           </div>
         )
 }

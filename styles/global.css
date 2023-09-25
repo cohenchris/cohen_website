@@ -5,6 +5,10 @@
 html,
 body {
   font-size: 18px;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 * {
@@ -16,3 +20,8 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

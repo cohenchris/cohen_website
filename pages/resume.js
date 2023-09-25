@@ -17,8 +17,6 @@ export default function Resume() {
             <img
               src="https://raw.githubusercontent.com/cohenchris/resume/master/ChrisCohen_resume.png"
               alt="My resume"
-              height={1500}
-              width="auto"
             />
 
           </div>

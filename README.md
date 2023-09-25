@@ -6,18 +6,13 @@ As of October 2023, I've decided to overhaul my website, moving from my ReactJS-
 Next.js
 
 ### Build/Deploy process
-#### Build
-`./build.sh`
-
-This will build the production-ready website.
-
-#### Deploy
 `./deploy.sh`
 
-- Copies the entire production-built directory to my webserver's serving directory on my nginx server.
-- Pulls the most recent version of my resume from github.
-- Creates the music library JSON to be interpreted for the music page.
-- The updated website will immediately be available. Since this is a static website, rather than a website that uses a database, system downtime is not a requirement to deploy.
+1. Builds a production-optimized website
+2. Copies the entire production-built directory to my webserver's serving directory on my nginx server.
+3. Creates the music library JSON to be interpreted for the music page.
+
+The updated website will immediately be available. Since this is a static website, rather than a website that uses a database, system downtime is not a requirement to deploy.
 
 ## Content
 ### Home

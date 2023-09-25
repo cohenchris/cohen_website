@@ -8,7 +8,6 @@ export default function Music() {
               description="A compilation of music that I have rated."
             />
 
-            <h1>Music</h1>
           </>
         )
 }

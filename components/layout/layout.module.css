@@ -23,13 +23,14 @@
   margin-right: 20px;
 }
 
-.footer {
+.foot {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   position: fixed;
   width: 100%;
   bottom: 0;
+  right: 0;
   height: 50px;
 }
 
@@ -38,8 +39,7 @@
   flex-direction: row;
   list-style: none;
   color: black;
-  font-size: 75%;
-  margin-left: 15px;
+  margin-left: 10px;
   height: 100%;
 }
 
@@ -50,6 +50,6 @@
   list-style: none;
   font-size: 75%;
   width: 100%;
-  margin-right: 10px;
+  margin-right: 20px;
   color: black;
 }

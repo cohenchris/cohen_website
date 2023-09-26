@@ -1,0 +1,33 @@
+.artistCard {
+  border: 1px solid #000;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  height: 265px;
+  width: 200px;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  position: relative;
+  background-color: lightgrey;
+}
+
+.artistPicture {
+  max-width: 85%;
+  height: auto;
+  border-radius: 100px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.artistName {
+  font-size: 20px;
+  text-align: center;
+}

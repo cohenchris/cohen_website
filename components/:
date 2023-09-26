@@ -1,0 +1,25 @@
+import React, { useState } from 'react';
+
+export default function Dropdown(props) {
+  const [selectedOption, setSelectedOption] = useState('');
+  const options = props.options;
+
+  const handleChange = (event) => {
+        setSelectedOption(event.target.value);
+      };
+
+  return(
+          <div>
+            <label htmlFor="dropdown">Select an option:</label>
+            <select id="dropdown" value={selectedOption} onChange={handleChange}>
+              <option value="">Select an option</option>
+              {options.map((option, index) => (
+                            <option key={index} value={option}>
+                            {option}
+                          </option>
+                        ))}
+            </select>
+            <p>Selected option: {selectedOption}</p>
+          </div>
+      );
+}

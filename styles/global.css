@@ -2,6 +2,11 @@
   --dark-grey:#262522;
 }
 
+@font-face {
+  font-family: 'Video Terminal Screen';
+  src: url("../fonts/vts.ttf") format("truetype");
+}
+
 html,
 body {
   font-size: 18px;
@@ -13,7 +18,7 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: 'Video Terminal Screen';
 }
 
 a {

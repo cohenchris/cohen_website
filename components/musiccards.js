@@ -2,15 +2,11 @@ import styles from './musiccards.module.css';
 
 export function AlbumCard(props) {
   // Consume album props
-  const title = props.title;
+  const name = props.name;
   const artist = props.artist;
   const year = props.year;
   const rating = props.rating;
-  const cover = encodeURIComponent("music/metadata/" + artist + "/" + title + "/cover.jpg")
-  
-  console.log(cover)
-  console.log(artist)
-  console.log(title)
+  const cover = encodeURIComponent("music/metadata/" + artist + "/" + name + "/cover.jpg")
 
   // Determine rating color
   let ratingColor = ""
@@ -31,7 +27,7 @@ export function AlbumCard(props) {
           <div className={styles.albumCard}>
             <img className={styles.albumCover} src={cover}/>
             <div className={styles.albumInfo}>
-              <h4>{title} ({year})</h4>
+              <h4>{name} ({year})</h4>
               <h5>{artist}</h5>
               <h5 style={{ "color": ratingColor }}>{rating} / 10</h5>
             </div>

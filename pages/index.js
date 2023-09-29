@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 export default function Home() {
   return(
-          <div classname={styles.homeContainer}>
+          <div className={styles.homeContainer}>
             <NextSeo
               title="Home"
               description="Home page."

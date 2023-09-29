@@ -7,7 +7,7 @@ export default function Dropdown(props) {
     // Handle the change event when an option is selected
     const handleChange = (event) => {
           setSelectedOption(event.target.value);
-          props.updateSelection(selectedOption);
+          props.updateSelection(event.target.value);
         };
 
     return (

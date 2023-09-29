@@ -6,7 +6,7 @@ import styles from "./music.module.css"
 import Dropdown from "../components/dropdown"
 
 const musicDataFilePath = path.join(process.cwd(), 'music');
-const ALL_SORT_OPTIONS = ["Artist", "Albums", "Artist's Albums"];
+const ALL_SORT_OPTIONS = ["Artists", "Albums", "Artist's Albums"];
 const USER_SORT_OPTIONS = ALL_SORT_OPTIONS.slice(0, 2);
 const SORT_METHODS = ["A-Z", "Z-A", "rating (low-high)", "rating (high-low)"];
 const ARTIST_SORT_METHODS = SORT_METHODS.slice(0, 2);
@@ -31,7 +31,7 @@ export default function Music() {
   const [fullLibrary, setFullLibrary] = useState([]);
   const [displayLibrary, setDisplayLibrary] = useState([])
   const [sortOption, setSortOption] = useState(ALL_SORT_OPTIONS[0]);
-  const [artist, setArtist] = useState({});
+  const [artistName, setArtistName] = useState({});
   const [sortMethod, setSortMethod] = useState(SORT_METHODS[0]);
 
   const updateSelectionStatus = (newStatus) => {
@@ -61,14 +61,18 @@ export default function Music() {
   // Monitor sortOption for changes
   useEffect(() => {
     let temp = [];
-    if (sortMethod === "Artist") {
+    if (sortOption === "Artists") {
       temp = [...fullLibrary];
       setDisplayLibrary(temp);
     }
-    else if (sortMethod === "Artists Albums") {
+    else if (sortOption === "Artist's Albums") {
+      // TODO: find array element with 'artist.name' which matches 'artist'
+      temp = displayLibrary.find((artist) => artist.name === artistName).albums;
+      console.log(temp);
+      
       setDisplayLibrary(temp);
     }
-    else if (sortMethod === "Albums") {
+    else if (sortOption === "Albums") {
       setDisplayLibrary(temp);
     }
   }, [sortOption]);
@@ -119,21 +123,50 @@ export default function Music() {
               description="A compilation of music that I have rated."
             />
 
+            {/* This Dropdown gives the option of what to display - Artists or Albums */}
             <Dropdown options={USER_SORT_OPTIONS} selectedOption={sortOption} updateSelection={updateSelectionStatus}/>
+
+
+            {/**
+              * This Dropdown gives us the option of how to sort what's on display.
+              * Albums can be sorted any way, but artists can only be sorted A-Z or Z-A.
+              */}
             {(sortOption === "Albums") ?
               <Dropdown options={ALBUM_SORT_METHODS} selectedOption={sortMethod} updateSelection={setSortMethod}/>
               :
               <Dropdown options={ARTIST_SORT_METHODS} selectedOption={sortMethod} updateSelection={setSortMethod}/>
             }
 
-            {displayLibrary.map((artist) => (
-              <button
-                onClick={() => { setArtist(artist.name); setSortOption("Artist's Albums"); console.log(artist); console.log(sortOption) }}>
-              <ArtistCard
-                artist={artist.name}
-              />
-              </button>
-            ))}
+            {console.log(displayLibrary[0])}
+
+            {/**
+              * CARD DISPLAY
+              * Depending on the sort option (what is being displayed), show either artist cards or album cards
+              */}
+            {(sortOption === "Artists") ?
+
+              (displayLibrary.map((artist) => (
+                <div onClick={() => { setArtistName(artist.name); setSortOption("Artist's Albums"); }}>
+                <ArtistCard
+                  artist={artist.name}
+                  numRatedAlbums={artist.albums.length}
+                />
+                </div>
+              )))
+
+              :
+
+              (displayLibrary.map((album) => (
+                <AlbumCard
+                  title={album.title}
+                  artist={album.artist}
+                  label={album.label}
+                  year={album.year}
+                  rating={album.rating}
+                />
+              )))
+            }
+
           </div>
         );
 }

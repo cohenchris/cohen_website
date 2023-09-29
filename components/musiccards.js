@@ -4,10 +4,13 @@ export function AlbumCard(props) {
   // Consume album props
   const title = props.title;
   const artist = props.artist;
-  const label = props.label;
   const year = props.year;
   const rating = props.rating;
-  const cover = encodeURIComponent(process.env.PUBLIC_URL + "metadata/" + artist + "/" + title + "/cover.jpg")
+  const cover = encodeURIComponent("music/metadata/" + artist + "/" + title + "/cover.jpg")
+  
+  console.log(cover)
+  console.log(artist)
+  console.log(title)
 
   // Determine rating color
   let ratingColor = ""
@@ -25,17 +28,28 @@ export function AlbumCard(props) {
   }
 
   return(
-          <div/> 
+          <div className={styles.albumCard}>
+            <img className={styles.albumCover} src={cover}/>
+            <div className={styles.albumInfo}>
+              <h4>{title} ({year})</h4>
+              <h5>{artist}</h5>
+              <h5 style={{ "color": ratingColor }}>{rating} / 10</h5>
+            </div>
+          </div>
   );
 }
 
 export function ArtistCard(props) {
   const name = props.artist;
+  const numRatedAlbums = props.numRatedAlbums;
   const image = encodeURIComponent("music/metadata/" + name + "/image.jpg");
 
   return(
           <div className={styles.artistCard}>
-            <h1 className={styles.artistName}>{name}</h1>
+            <div className={styles.artistInfo}>
+              <h2>{name}</h2>
+              <p>{numRatedAlbums} albums</p>
+            </div>
             <img className={styles.artistPicture} src={image}/>
           </div>
   );

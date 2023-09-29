@@ -1,17 +1,15 @@
-.artistCard {
+.artistCard,
+.albumCard {
   border: 1px solid #000;
-  border-radius: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   background-color: #fff;
-  height: 265px;
-  width: 200px;
+  height: 350px;
+  width: 250px;
 
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 5px;
   margin-left: 5px;
   position: relative;
-  background-color: lightgrey;
 }
 
 .artistPicture {
@@ -27,7 +25,31 @@
   transform: translateX(-50%);
 }
 
-.artistName {
-  font-size: 20px;
+.artistInfo {
   text-align: center;
+}
+
+.albumCover {
+  max-width: 90%;
+  max-height: 60%;
+  height: auto;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.albumInfo {
+  width: 100%;
+  max-height: 50%;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+}
+
+.albumInfo h5 {
+  line-height: 0px;
 }

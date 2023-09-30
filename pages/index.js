@@ -1,5 +1,6 @@
 import { NextSeo } from 'next-seo';
 import styles from './index.module.css';
+import React, { useEffect, useState } from 'react';
 
 export default function Home() {
   return(
@@ -9,8 +10,8 @@ export default function Home() {
               description="Home page."
             />
 
-            <h2 className={styles.mainHeader}>Software Security Engineer for Qualcomm</h2>
-            <h2 className={styles.mainHeader}>Purdue University Alumnus</h2>
+            <h1 className={styles.jobTitle}>Software Security Engineer for Qualcomm</h1>
+            <h1 className={styles.alumnus}>Purdue University Alumnus</h1>
           </div>
         );
 }

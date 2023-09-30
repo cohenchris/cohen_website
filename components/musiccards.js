@@ -25,9 +25,11 @@ export function AlbumCard(props) {
 
   return(
           <div className={styles.albumCard}>
-            <img className={styles.albumCover} src={cover}/>
+            <div className={styles.albumCoverAndTitle}>
+              <img src={cover}/>
+              <h3>{name} ({year})</h3>
+            </div>
             <div className={styles.albumInfo}>
-              <h4>{name} ({year})</h4>
               <h5>{artist}</h5>
               <h5 style={{ "color": ratingColor }}>{rating} / 10</h5>
             </div>

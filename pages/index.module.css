@@ -2,8 +2,38 @@
   height: 100%;
 }
 
-.mainHeader {
-  margin: auto;
-  text-align: center;
-  padding: 10px;
+.jobTitle {
+  width: max-content;
+  border-right: .10em solid black;
+  white-space: nowrap;
+  padding-right: 5px;
+  overflow: hidden;
+  animation:
+    typing-jobTitle 3s steps(50,end),
+    blink-caret .5s step-end infinite;
+}
+
+.alumnus {
+  width: max-content;
+  overflow: hidden;
+  border-right: .10em solid black;
+  white-space: nowrap;
+  padding-right: 5px;
+  animation:
+    typing-alumnus 3s steps(50,end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing-jobTitle {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+@keyframes typing-alumnus {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
 }

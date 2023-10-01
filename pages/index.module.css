@@ -12,7 +12,6 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid transparent;
-  padding-right: 2.5px;
   width: 0;
   animation:
     typing-jobTitle 1.5s steps(40,end) forwards 1s,
@@ -24,7 +23,6 @@
   white-space: nowrap;
   width: 0;
   border-right: 3px solid transparent;
-  padding-right: 2.5px;
   animation:
     typing-alumnus 1s steps(40,end) forwards 4.5s,
     blink-caret .5s step-end 6 3.5s;

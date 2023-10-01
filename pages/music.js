@@ -175,7 +175,7 @@ export default function Music() {
                 * Albums can be sorted any way, but artists can only be sorted A-Z or Z-A.
                 */}
                 <select id="sortMethodsDropdown" value={howToSortItems} onChange={(event) => { setHowToSortItems(event.target.value); }}>
-                  {Object.values((whichItemsToDisplay === DisplayOptions.Albums) ? AlbumSortMethods : ArtistSortMethods ).map((sortMethod) => {
+                  {Object.values((whichItemsToDisplay === DisplayOptions.Artists) ? ArtistSortMethods : AlbumSortMethods ).map((sortMethod) => {
                     return <option key={sortMethod} value={sortMethod}>{sortMethod}</option>
                   })}
                 </select>

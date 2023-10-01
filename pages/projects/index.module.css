@@ -1,0 +1,15 @@
+.projectsPage {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+  line-height: 50px;
+}
+
+.directoryTable {
+}
+
+.files:hover {
+  color: grey;
+  cursor: pointer;
+}

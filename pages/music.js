@@ -3,7 +3,6 @@ import path from 'path';
 import React, { useEffect, useState } from 'react';
 import { AlbumCard, ArtistCard } from "../components/musiccards"
 import styles from "./music.module.css"
-import Dropdown from "../components/dropdown"
 
 const musicDataFilePath = path.join(process.cwd(), 'music');
 
@@ -12,11 +11,6 @@ const DisplayOptions = {
   Albums: "Albums",
   ArtistsAlbums: "Artist's Albums"
 };
-
-const UserSelectableDisplayOptions = {
-  Artists: DisplayOptions.Artists,
-  Albums: DisplayOptions.Albums,
-}
 
 const SortMethods = {
   Random: "Random",
@@ -52,7 +46,7 @@ export default function Music() {
   // Full library for later reference
   const [fullLibrary, setFullLibrary] = useState([]);
   // Library that the website displays
-  const [displayLibrary, setDisplayLibrary] = useState([])
+  const [displayLibrary, setDisplayLibrary] = useState([]);
   // Determines which items are displayed
   const [whichItemsToDisplay, setWhichItemsToDisplay] = useState(DisplayOptions.Albums);
   // How the displayed items are sorted
@@ -67,9 +61,23 @@ export default function Music() {
       response = await fetchAndParseMusicJSON();
 
       setFullLibrary(response);
-      setDisplayLibrary(response);
+      // Default display sort
+      let temp = []
+      // All Albums
+      for (let i = 0; i < response.length; i++)
+      {
+        temp = temp.concat(response[i].albums);
+      }
+      // High --> Low
+      temp.sort((a, b) => {
+        if (a.rating > b.rating) return -1;
+        else if (a.rating < b.rating) return 1;
+        else return 0;
+      })
+      setDisplayLibrary(temp);
     }
     init();
+
   }, [])
 
   // Monitors and handles changes to which items we display
@@ -77,12 +85,16 @@ export default function Music() {
     let temp = [];
     if (whichItemsToDisplay === DisplayOptions.Artists) {
       // Default viewing method
-      temp = [...fullLibrary]
+      temp = [...fullLibrary];
       setDisplayLibrary(temp);
+      // Default sort method
+      setHowToSortItems(SortMethods.Random);
     }
     else if (whichItemsToDisplay === DisplayOptions.ArtistsAlbums) {
       // Find array element where 'artist.name' matches the global state variable 'displayedArtistName'
       temp = displayLibrary.find((artist) => artist.name === displayedArtistName).albums;
+      // Default sort method
+      setHowToSortItems(SortMethods.HighToLow);
     }
     else if (whichItemsToDisplay === DisplayOptions.Albums) {
       // Append each artist's albums to the display library
@@ -90,9 +102,12 @@ export default function Music() {
       {
         temp = temp.concat(fullLibrary[i].albums);
       }
+      // Default sort method
+      setHowToSortItems(SortMethods.HighToLow);
     }
 
     setDisplayLibrary(temp);
+
   }, [whichItemsToDisplay]);
 
   // Monitors and handles changes to how we sort the displayed items
@@ -104,7 +119,7 @@ export default function Music() {
         else if (a.name > b.name) return 1;
         else return 0;
       })
-      setDisplayLibrary(temp)
+      setDisplayLibrary(temp);
     }
     else if (howToSortItems === SortMethods.ZA) {
       temp.sort((a, b) => {
@@ -112,7 +127,7 @@ export default function Music() {
         if (a.name < b.name) return 1;
         else return 0;
       })
-      setDisplayLibrary(temp)
+      setDisplayLibrary(temp);
     }
     else if (howToSortItems === SortMethods.LowToHigh) {
       temp.sort((a, b) => {
@@ -120,7 +135,7 @@ export default function Music() {
         else if (a.rating > b.rating) return 1;
         else return 0
       })
-      setDisplayLibrary(temp)
+      setDisplayLibrary(temp);
     }
     else if (howToSortItems === SortMethods.HighToLow) {
       temp.sort((a, b) => {
@@ -128,17 +143,16 @@ export default function Music() {
         else if (a.rating < b.rating) return 1;
         else return 0;
       })
-      setDisplayLibrary(temp)
+      setDisplayLibrary(temp);
     }
     else if (howToSortItems === SortMethods.Random) {
-      /*
       temp = displayLibrary
                 .map(value => ({ value, sort: Math.random() }))
                 .sort((a, b) => a.sort - b.sort)
                 .map(({ value }) => value)
-                */
       setDisplayLibrary(temp);
     }
+
   }, [howToSortItems])
 
   return(
@@ -150,16 +164,29 @@ export default function Music() {
 
             <div className={styles.dropdowns}>
               {/* This Dropdown gives the option of what to display - Artists or Albums */}
-              <Dropdown options={UserSelectableDisplayOptions} selectedOption={whichItemsToDisplay} updateSelection={(selection) => setWhichItemsToDisplay(selection)}/>
+                <select id="displayOptionsDropdown" value={whichItemsToDisplay} onChange={(event) => { setWhichItemsToDisplay(event.target.value); }}>
+                  {Object.values(DisplayOptions).map((displayOption) => {
+                    return <option key={displayOption} value={displayOption} style={{display: (displayOption === DisplayOptions.ArtistsAlbums) ? "none" : "initial"}}>{displayOption}</option>
+                  })}
+                </select>
 
               {/**
                 * This Dropdown gives us the option of how to sort what's on display.
                 * Albums can be sorted any way, but artists can only be sorted A-Z or Z-A.
                 */}
-              {(whichItemsToDisplay === DisplayOptions.Albums) ?
-                <Dropdown options={AlbumSortMethods} selectedOption={howToSortItems} updateSelection={setHowToSortItems}/>
-                :
-                <Dropdown options={ArtistSortMethods} selectedOption={howToSortItems} updateSelection={setHowToSortItems}/>
+                <select id="sortMethodsDropdown" value={howToSortItems} onChange={(event) => { setHowToSortItems(event.target.value); }}>
+                  {Object.values((whichItemsToDisplay === DisplayOptions.Albums) ? AlbumSortMethods : ArtistSortMethods ).map((sortMethod) => {
+                    return <option key={sortMethod} value={sortMethod}>{sortMethod}</option>
+                  })}
+                </select>
+
+              {/**
+                * This back button is to take the user back to the artists page after viewing the artist's albums
+                */}
+              {(whichItemsToDisplay === DisplayOptions.ArtistsAlbums) &&
+                (<button className={styles.backButton} onClick={() => { setDisplayedArtistName(""); setWhichItemsToDisplay(DisplayOptions.Artists); }}>
+                  &lt;- Back to Artists View
+                </button>)
               }
             </div>
 
@@ -175,7 +202,7 @@ export default function Music() {
                     <ArtistCard
                       key={artist.name}
                       artist={artist.name}
-                      numRatedAlbums={artist.album?.length}
+                      numRatedAlbums={artist.albums?.length}
                     />
                   </div>
                 )))
@@ -194,6 +221,7 @@ export default function Music() {
                 )))
               }
             </div>
+
           </div>
         );
 }

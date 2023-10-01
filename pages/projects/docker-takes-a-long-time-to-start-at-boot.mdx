@@ -1,0 +1,14 @@
+import { NextSeo } from 'next-seo'
+
+<NextSeo
+  title="Docker Takes a Long Time To Start At Boot"
+  description="A short fix for docker taking a while to start at boot"
+/>
+
+#### September 30, 2023
+
+# Docker Takes a Long Time To Start At Boot
+
+[Solution: remove the dependency on network-online.target for docker.service](https://superuser.com/questions/1356698/docker-service-takes-1-minute-and-30-seconds-causing-slow-boot)
+
+```sudo vim /lib/systemd/system/docker.service```

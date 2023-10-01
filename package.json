@@ -17,6 +17,7 @@
     "@nextui-org/react": "^2.1.13",
     "@radix-ui/themes": "^2.0.0-rc.3",
     "@stitches/react": "^1.2.8",
+    "esm": "^3.2.25",
     "fs": "^0.0.1-security",
     "next": "^13.5.2",
     "next-seo": "^6.1.0",

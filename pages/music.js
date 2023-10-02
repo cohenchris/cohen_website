@@ -166,7 +166,13 @@ export default function Music() {
               {/* This Dropdown gives the option of what to display - Artists or Albums */}
                 <select id="displayOptionsDropdown" value={whichItemsToDisplay} onChange={(event) => { setWhichItemsToDisplay(event.target.value); }}>
                   {Object.values(DisplayOptions).map((displayOption) => {
-                    return <option key={displayOption} value={displayOption} style={{display: (displayOption === DisplayOptions.ArtistsAlbums) ? "none" : "initial"}}>{displayOption}</option>
+                    return <option
+                              key={displayOption}
+                              value={displayOption}
+                              style={{display: (displayOption === DisplayOptions.ArtistsAlbums) ? "none" : "initial"}}
+                            >
+                              {displayOption}
+                            </option>
                   })}
                 </select>
 
@@ -184,7 +190,10 @@ export default function Music() {
                 * This back button is to take the user back to the artists page after viewing the artist's albums
                 */}
               {(whichItemsToDisplay === DisplayOptions.ArtistsAlbums) &&
-                (<button className={styles.backButton} onClick={() => { setDisplayedArtistName(""); setWhichItemsToDisplay(DisplayOptions.Artists); }}>
+                (<button
+                    className={styles.backButton}
+                    onClick={() => { setDisplayedArtistName(""); setWhichItemsToDisplay(DisplayOptions.Artists); }}
+                  >
                   &lt;- Back to Artists View
                 </button>)
               }

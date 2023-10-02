@@ -2,43 +2,77 @@ import { NextSeo } from 'next-seo';
 import React, { useEffect, useState } from 'react';
 import styles from "./index.module.css"
 
+const root = { "path": "projects/", "displayedName": "Projects" }
+
 export default function Projects() {
-  const [fileName, setFileName] = useState("");
-  const [directoryInfo, setDirectoryInfo] = useState({});
-  const [directoryView, setDirectoryView] = useState([]);
+  const [currDir, setCurrDir] = useState(root);
+  const [selectedFile, setSelectedFile] = useState("");
+  const [directoryInfo, setDirectoryInfo] = useState([]);
 
   useEffect(() => {
-    const listProjectsFromDir = async () => {
-      let isDir = false;
-      if (directoryInfo.length > 0) {
-        for (const subarray of directoryInfo) {
-          if (subarray[0] === fileName && subarray[1])
-          {
-            isDir = true;
-          }
-        }
-      }
-
-      let name = fileName.replace(/\.[^.]+$/, "");
-
-      if (name === "" || isDir) {
-        const endpoint = '/api/listProjectsFromDir' + ((fileName === "") ? "" : "?dirName=" + fileName);
-        const response = await fetch(endpoint);
-        const data = await response.json();
-        setDirectoryInfo(data.valueArray);
-        console.log(data.valueArray);
-        setDirectoryView(Array.from(data.valueArray.map((item) => item[0])));
-
-        const newPath = window.location.pathname + ((name === "") ? "" : ("/" + name));
-        window.history.pushState({}, '', newPath);
-      }
-      else {
-        window.location.href = window.location.pathname + "/" + name;
+    // Determine whether or not the clicked file is a directory.
+    // A file is a directory if we're at the projects root OR it exists in the current directory (and is marked as a directory itself)
+    let isDir = (selectedFile === "");
+    for (const fileMap of directoryInfo) {
+      if (fileMap.path === selectedFile && fileMap.isDir)
+      {
+        isDir = true;
       }
     }
 
-    listProjectsFromDir();
-  }, [fileName]);
+    // Handle click
+    if (isDir) { // Update current directory info
+      // Beautify the directory name for nicer display
+      let displayedDirName = beautifyDirName(selectedFile);
+
+      // Update current directory info
+      setCurrDir({"path": selectedFile, "displayedName": displayedDirName});
+    }
+    else { // Route page directly to file
+      // Remove extensions from file name
+      let fileName = selectedFile.replace(/\.[^.]+$/, "");
+      window.location.href = fileName;
+    }
+
+  }, [selectedFile]);
+
+  // When changing directories, update to show that directory's contents
+  useEffect(() => {
+    const updateDirectoryView = async () => {
+      // Get directory contents via API
+      const endpoint = "/api/listProjectsFromDir?dirName=" + currDir.path;
+      console.log(endpoint);
+      const response = await fetch(endpoint);
+      const data = await response.json();
+      setDirectoryInfo(data.valueArray);
+      console.log(data.valueArray);
+    }
+
+    updateDirectoryView();
+  }, [currDir]);
+
+  const handleSelectFile = (name) => {
+    if (name === "../") { // Handle back traversing
+      const lastIndex = currDir.path.lastIndexOf("/");
+      const oneDirUp = (lastIndex !== -1) ? currDir.path.slice(0, lastIndex) : "";
+      setCurrDir({"path": oneDirUp, "displayedName": beautifyDirName(oneDirUp)});
+    }
+    else { // The file that was clicked is now the selected file
+      console.log("name = " + name);
+      setSelectedFile(name);
+    }
+  }
+
+  const beautifyDirName = (dirName) => {
+    let beautifiedDirName = dirName 
+                              .substring("projects/".length)
+                              .split("/")
+                              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                              .join("/")
+    if (beautifiedDirName !== "") beautifiedDirName += "/";
+
+    return beautifiedDirName;
+  }
 
   return(
           <div className={styles.projectsPage}>
@@ -50,16 +84,34 @@ export default function Projects() {
             <table className={styles.directoryTable}>
               <thead>
                 <tr>
-                  <th><h1>Posts</h1></th>
+                  <th className={styles.tableHeader}>
+                    <h1 className={styles.tableTitle}>Posts</h1>
+                    <button
+                      className={styles.backButton}
+                      style={{display: (currDir.path === root.path || currDir.path === "") ? "none" : "initial"}}
+                      onClick={() => { handleSelectFile("../") }}
+                    >
+    {console.log(currDir)}
+                      &lt;- Back
+                    </button>
+                  </th>
                 </tr>
+                  <tr>
+                    <th><h3>{currDir.displayedName}</h3></th>
+                  </tr>
               </thead>
               <tbody>
-                {directoryView.map((file, index) => {
+                {directoryInfo.map((file, index) => {
+                  let beautifiedFileName = file.title;
+                  beautifiedFileName = beautifiedFileName.charAt(0).toUpperCase() + beautifiedFileName.slice(1);
+                  if (file.isDir) beautifiedFileName += "/";
+
                   return(
                           <tr key={index}>
                             <td className={styles.files}>
-                              <a onClick={() => { setFileName(file) }} >
-                                {file.replace(/\.[^.]+$/, "")}
+                    {console.log(file)}
+                              <a onClick={() => { handleSelectFile(file.path) }} >
+                                {beautifiedFileName}
                               </a>
                             </td>
                           </tr>

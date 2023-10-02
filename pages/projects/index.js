@@ -13,8 +13,8 @@ export default function Projects() {
     // Determine whether or not the clicked file is a directory.
     // A file is a directory if we're at the projects root OR it exists in the current directory (and is marked as a directory itself)
     let isDir = (selectedFile === "");
-    for (const fileMap of directoryInfo) {
-      if (fileMap.path === selectedFile && fileMap.isDir)
+    for (const fileInfo of directoryInfo) {
+      if (fileInfo.path === selectedFile && fileInfo.isDir)
       {
         isDir = true;
       }
@@ -41,27 +41,28 @@ export default function Projects() {
     const updateDirectoryView = async () => {
       // Get directory contents via API
       const endpoint = "/api/listProjectsFromDir?dirName=" + currDir.path;
-      console.log(endpoint);
       const response = await fetch(endpoint);
       const data = await response.json();
-      console.log(data.valueArray);
       setDirectoryInfo(data.valueArray);
     }
 
     updateDirectoryView();
   }, [currDir]);
 
+  // Handle a file selection. Can be either a file/directory name, or "../" to go back 
   const handleSelectFile = (name) => {
     if (name === "../") { // Handle back traversing
       const lastIndex = currDir.path.lastIndexOf("/");
       const oneDirUp = (lastIndex !== -1) ? currDir.path.slice(0, lastIndex) : "";
       setCurrDir({"path": oneDirUp, "displayedName": beautifyDirName(oneDirUp)});
+      setSelectedFile(oneDirUp);
     }
     else { // The file that was clicked is now the selected file
       setSelectedFile(name);
     }
   }
 
+  // Take a dir name as text and make it presentable for frontend
   const beautifyDirName = (dirName) => {
     let beautifiedDirName = dirName 
                               .substring("projects/".length)

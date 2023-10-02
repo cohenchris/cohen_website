@@ -3,8 +3,13 @@ import path from 'path';
 
 export default function handle(req, res) {
   let { dirName } = req.query;
+
+  // Validate input - prevent directory traversal attacks
+  dirName = dirName.replace(/\.\.\/?/g, '');
+
+  // Format directory name
   dirName = (dirName === undefined || dirName === "") ? "projects/" : dirName
-  const directoryPath = 'pages/' + dirName; // Replace with the path to the directory you want to list.
+  const directoryPath = 'pages/' + dirName;
 
   // Files to hide
   const hiddenFiles = ["index.js", "index.module.css"]

@@ -44,8 +44,8 @@ export default function Projects() {
       console.log(endpoint);
       const response = await fetch(endpoint);
       const data = await response.json();
-      setDirectoryInfo(data.valueArray);
       console.log(data.valueArray);
+      setDirectoryInfo(data.valueArray);
     }
 
     updateDirectoryView();
@@ -58,7 +58,6 @@ export default function Projects() {
       setCurrDir({"path": oneDirUp, "displayedName": beautifyDirName(oneDirUp)});
     }
     else { // The file that was clicked is now the selected file
-      console.log("name = " + name);
       setSelectedFile(name);
     }
   }
@@ -91,7 +90,6 @@ export default function Projects() {
                       style={{display: (currDir.path === root.path || currDir.path === "") ? "none" : "initial"}}
                       onClick={() => { handleSelectFile("../") }}
                     >
-    {console.log(currDir)}
                       &lt;- Back
                     </button>
                   </th>
@@ -109,7 +107,6 @@ export default function Projects() {
                   return(
                           <tr key={index}>
                             <td className={styles.files}>
-                    {console.log(file)}
                               <a onClick={() => { handleSelectFile(file.path) }} >
                                 {beautifiedFileName}
                               </a>

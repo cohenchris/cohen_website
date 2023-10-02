@@ -6,7 +6,7 @@ export function AlbumCard(props) {
   const artist = props.artist;
   const year = props.year;
   const rating = props.rating;
-  const cover = encodeURIComponent("music/metadata/" + artist + "/" + name + "/cover.jpg")
+  const cover = encodeURIComponent("music/metadata/" + artist + "/" + name + "/cover.webp")
 
   // Determine rating color
   let ratingColor = ""
@@ -40,7 +40,7 @@ export function AlbumCard(props) {
 export function ArtistCard(props) {
   const name = props.artist;
   const numRatedAlbums = props.numRatedAlbums;
-  const image = encodeURIComponent("music/metadata/" + name + "/image.jpg");
+  const image = encodeURIComponent("music/metadata/" + name + "/image.webp");
 
   return(
           <div className={styles.artistCard}>

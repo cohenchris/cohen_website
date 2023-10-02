@@ -55,7 +55,6 @@ export default function Projects() {
       const lastIndex = currDir.path.lastIndexOf("/");
       const oneDirUp = (lastIndex !== -1) ? currDir.path.slice(0, lastIndex) : "";
       setCurrDir({"path": oneDirUp, "displayedName": beautifyDirName(oneDirUp)});
-      setSelectedFile(oneDirUp);
     }
     else { // The file that was clicked is now the selected file
       setSelectedFile(name);
